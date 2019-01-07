@@ -1,0 +1,214 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{5736F5E0-5773-4AAA-B826-2441F991F525}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Veros.Data</RootNamespace>
+    <AssemblyName>Veros.Data</AssemblyName>
+    <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Castle.Components.Validator, Version=2.5.0.0, Culture=neutral, PublicKeyToken=407dd0808d44fbdc, processorArchitecture=MSIL">
+      <HintPath>..\packages\Castle.Components.Validator.2.5.0\lib\NET40\Castle.Components.Validator.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="FluentNHibernate, Version=2.0.3.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\FluentNHibernate.2.0.3.0\lib\net40\FluentNHibernate.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Iesi.Collections, Version=4.0.0.4000, Culture=neutral, PublicKeyToken=aa95f207798dfdb4, processorArchitecture=MSIL">
+      <HintPath>..\packages\Iesi.Collections.4.0.4\lib\net40\Iesi.Collections.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="log4net, Version=2.0.8.0, Culture=neutral, PublicKeyToken=669e0ddf0bb1aa2a, processorArchitecture=MSIL">
+      <HintPath>..\packages\log4net.2.0.8\lib\net45-full\log4net.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Migrator, Version=0.9.0.21904, Culture=neutral, PublicKeyToken=3b3586e9632ecfce, processorArchitecture=MSIL">
+      <HintPath>..\packages\Migrator.1.1\lib\net40\Migrator.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Migrator.Framework, Version=0.0.0.0, Culture=neutral, PublicKeyToken=3b3586e9632ecfce, processorArchitecture=MSIL">
+      <HintPath>..\packages\Migrator.1.1\lib\net40\Migrator.Framework.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Migrator.Providers, Version=0.0.0.0, Culture=neutral, PublicKeyToken=3b3586e9632ecfce, processorArchitecture=MSIL">
+      <HintPath>..\packages\Migrator.1.1\lib\net40\Migrator.Providers.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="NHibernate, Version=4.1.0.4000, Culture=neutral, PublicKeyToken=aa95f207798dfdb4, processorArchitecture=MSIL">
+      <HintPath>..\packages\NHibernate.4.1.2.4000\lib\net40\NHibernate.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Quartz, Version=3.0.7.0, Culture=neutral, PublicKeyToken=f6b8c98a402cc8a4, processorArchitecture=MSIL">
+      <HintPath>..\packages\Quartz.3.0.7\lib\net452\Quartz.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="StructureMap, Version=4.7.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\StructureMap.4.7.0\lib\net45\StructureMap.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Runtime.Remoting" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Boot\ConfiguracaoBoot.cs" />
+    <Compile Include="Boot\RegistraDependencias.cs" />
+    <Compile Include="ConnectionExtensions.cs" />
+    <Compile Include="ConnectionString.cs" />
+    <Compile Include="Database.cs" />
+    <Compile Include="DatabaseConfiguration.cs" />
+    <Compile Include="DatabaseConfigurationException.cs" />
+    <Compile Include="DatabaseSchema.cs" />
+    <Compile Include="DatabaseSeed.cs" />
+    <Compile Include="Entities\SeedInfo.cs" />
+    <Compile Include="Entities\SeedLog.cs" />
+    <Compile Include="Entities\SeedMetadata.cs" />
+    <Compile Include="Helpers\SqlScriptExecutor.cs" />
+    <Compile Include="Hibernate\ConfigurationBuilder.cs" />
+    <Compile Include="Hibernate\CustomResultTransformer.cs" />
+    <Compile Include="Hibernate\DaoBase.cs" />
+    <Compile Include="Hibernate\EnumConvention.cs" />
+    <Compile Include="Hibernate\Enumerations\EnumerationIntType.cs" />
+    <Compile Include="Hibernate\Enumerations\EnumerationIntTypeConvention.cs" />
+    <Compile Include="Hibernate\Enumerations\EnumerationStringType.cs" />
+    <Compile Include="Hibernate\Enumerations\EnumerationStringTypeConvention.cs" />
+    <Compile Include="Hibernate\EnumerationTypeInt.cs" />
+    <Compile Include="Hibernate\HibernateConfiguration.cs" />
+    <Compile Include="Hibernate\HibernateRepositoryConvention.cs" />
+    <Compile Include="Hibernate\IConfigurationBuilder.cs" />
+    <Compile Include="Hibernate\IHibernateConfiguration.cs" />
+    <Compile Include="Hibernate\ISessionBuilder.cs" />
+    <Compile Include="Hibernate\ISessionFactoryBuilder.cs" />
+    <Compile Include="Hibernate\ISessionStore.cs" />
+    <Compile Include="Hibernate\PropertyPartExtension.cs" />
+    <Compile Include="Hibernate\QueryOverExtensions.cs" />
+    <Compile Include="Hibernate\Repositorio.cs" />
+    <Compile Include="Hibernate\RepositorioReadOnly.cs" />
+    <Compile Include="Hibernate\RepositorioUnico.cs" />
+    <Compile Include="Hibernate\SessionBuilder.cs" />
+    <Compile Include="Hibernate\SessionExtensions.cs" />
+    <Compile Include="Hibernate\SessionFactoryBuilder.cs" />
+    <Compile Include="Hibernate\SessionStore.cs" />
+    <Compile Include="Hibernate\SimNaoType.cs" />
+    <Compile Include="IDatabaseProvider.cs" />
+    <Compile Include="IDatabaseSchema.cs" />
+    <Compile Include="IDatabaseSeed.cs" />
+    <Compile Include="IUnitOfWork.cs" />
+    <Compile Include="IUnitOfWorkStore.cs" />
+    <Compile Include="IUnitOfWorkTransaction.cs" />
+    <Compile Include="IUnitOfWorkTransactionFactory.cs" />
+    <Compile Include="Jobs\Agendamento.cs" />
+    <Compile Include="Jobs\Agendamentos.cs" />
+    <Compile Include="Jobs\Job.cs" />
+    <Compile Include="Jobs\StructureMapJobFactory.cs" />
+    <Compile Include="Maps\SeedInfoMap.cs" />
+    <Compile Include="Maps\SeedLogMap.cs" />
+    <Compile Include="MigrationExtensions.cs" />
+    <Compile Include="Migrations\201306101526_CriaSeedVersion.cs" />
+    <Compile Include="Migrations\201308011720_AdicionaDataNoSeed.cs" />
+    <Compile Include="Migrations\201403181930_AdicionaSeedLog.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Providers\AssemblyExtensions.cs" />
+    <Compile Include="Providers\DatabaseProviderBase.cs" />
+    <Compile Include="Providers\MySqlDatabaseProvider.cs" />
+    <Compile Include="Providers\OracleDatabaseProvider.cs" />
+    <Compile Include="Providers\OracleGuestDatabaseProvider.cs" />
+    <Compile Include="Providers\OracleManagedConfiguration.cs" />
+    <Compile Include="Providers\OracleManagedDriver.cs" />
+    <Compile Include="Providers\PostgreDatabaseProvider.cs" />
+    <Compile Include="Providers\SQLiteDatabaseProvider.cs" />
+    <Compile Include="Providers\SqlServerDatabaseProvider.cs" />
+    <Compile Include="Repositories\DatabaseRepository.cs" />
+    <Compile Include="Repositories\IDatabaseRepository.cs" />
+    <Compile Include="Seeds\ISeedExecutor.cs" />
+    <Compile Include="Seeds\Seed.cs" />
+    <Compile Include="Seeds\SeedExecutor.cs" />
+    <Compile Include="StringLength.cs" />
+    <Compile Include="Tarefas\DatabaseDateSyncTarefa.cs" />
+    <Compile Include="Tarefas\DatabaseMigrateTarefa.cs" />
+    <Compile Include="Tarefas\DatabaseSetTarefa.cs" />
+    <Compile Include="Tarefas\SeedExecuteTarefa.cs" />
+    <Compile Include="Tarefas\SeedStatusTarefa.cs" />
+    <Compile Include="Tarefas\ShowTarefa.cs" />
+    <Compile Include="TransformationProviderExtensions.cs" />
+    <Compile Include="UnitOfWork.cs" />
+    <Compile Include="UnitOfWorkException.cs" />
+    <Compile Include="UnitOfWorkStore.cs" />
+    <Compile Include="UnitOfWorkTransaction.cs" />
+    <Compile Include="UnitOfWorkTransactionFactory.cs" />
+    <Compile Include="Validation\CastleValidationRunner.cs" />
+    <Compile Include="Validation\FileNonEmptyValidator.cs" />
+    <Compile Include="Validation\IValidationRunner.cs" />
+    <Compile Include="Validation\MaxLengthValidator.cs" />
+    <Compile Include="Validation\UniqueValidator.cs" />
+    <Compile Include="Validation\Validable.cs" />
+    <Compile Include="Validation\ValidateFileNonEmptyAttribute.cs" />
+    <Compile Include="Validation\ValidateMaxLengthAttribute.cs" />
+    <Compile Include="Validation\ValidateUniqueAttribute.cs" />
+    <Compile Include="Validation\ViewModel.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="app.config" />
+    <None Include="job_scheduling_data_2_0.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Mono.Security.dll" />
+    <Content Include="MySql.Data.dll" />
+    <Content Include="Npgsql.dll" />
+    <Content Include="SQLite.Interop.dll" />
+    <Content Include="System.Data.SQLite.dll" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Providers\Migrator\" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Veros.Framework\Veros.Framework.csproj">
+      <Project>{1f95af6f-9ffd-4b33-86cd-08aa19e9c634}</Project>
+      <Name>Veros.Framework</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

@@ -1,0 +1,242 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{1F95AF6F-9FFD-4B33-86CD-08AA19E9C634}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Veros.Framework</RootNamespace>
+    <AssemblyName>Veros.Framework</AssemblyName>
+    <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Castle.Components.Validator, Version=2.5.0.0, Culture=neutral, PublicKeyToken=407dd0808d44fbdc, processorArchitecture=MSIL">
+      <HintPath>..\packages\Castle.Components.Validator.2.5.0\lib\NET40\Castle.Components.Validator.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Iesi.Collections, Version=4.0.0.4000, Culture=neutral, PublicKeyToken=aa95f207798dfdb4, processorArchitecture=MSIL">
+      <HintPath>..\packages\Iesi.Collections.4.0.4\lib\net40\Iesi.Collections.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="log4net, Version=2.0.8.0, Culture=neutral, PublicKeyToken=669e0ddf0bb1aa2a, processorArchitecture=MSIL">
+      <HintPath>..\packages\log4net.2.0.8\lib\net45-full\log4net.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="NHibernate, Version=4.1.0.4000, Culture=neutral, PublicKeyToken=aa95f207798dfdb4, processorArchitecture=MSIL">
+      <HintPath>..\packages\NHibernate.4.1.2.4000\lib\net40\NHibernate.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="StructureMap, Version=4.7.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\StructureMap.4.7.0\lib\net45\StructureMap.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.configuration" />
+    <Reference Include="System.Configuration.Install" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.DirectoryServices.AccountManagement" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.ServiceProcess" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Aplicacao.cs" />
+    <Compile Include="ArquivoDeConfiguracao.cs" />
+    <Compile Include="AttributeExtensions.cs" />
+    <Compile Include="Bootstrapper.cs" />
+    <Compile Include="Boot\RegistraDependencias.cs" />
+    <Compile Include="Class1.cs" />
+    <Compile Include="CollectionExtensions.cs" />
+    <Compile Include="Console2.cs" />
+    <Compile Include="DateTimeExtensions.cs" />
+    <Compile Include="Dependencias.cs" />
+    <Compile Include="DependencyResolver\Registrar.cs" />
+    <Compile Include="DependencyResolver\StructureMapContainer.cs" />
+    <Compile Include="Do.cs" />
+    <Compile Include="EnumerableExtension.cs" />
+    <Compile Include="EnumerationInt.cs" />
+    <Compile Include="EnumerationString.cs" />
+    <Compile Include="Enumeration`1.cs" />
+    <Compile Include="EnumExtension.cs" />
+    <Compile Include="EnviromentExtension.cs" />
+    <Compile Include="ExceptionExtension.cs" />
+    <Compile Include="FactoryBase.cs" />
+    <Compile Include="HumanizeExtensions.cs" />
+    <Compile Include="IArquivoDeConfiguracao.cs" />
+    <Compile Include="IIoC.cs" />
+    <Compile Include="Image\Converter.cs" />
+    <Compile Include="IntegerExtension.cs" />
+    <Compile Include="IoC.cs" />
+    <Compile Include="IO\Directories.cs" />
+    <Compile Include="IO\Files.cs" />
+    <Compile Include="IO\FileSystem.cs" />
+    <Compile Include="IO\IFile.cs" />
+    <Compile Include="IO\IFileSystem.cs" />
+    <Compile Include="IO\IStream.cs" />
+    <Compile Include="IO\IStreamCreator.cs" />
+    <Compile Include="IO\Stream.cs" />
+    <Compile Include="ITarefaM2.cs" />
+    <Compile Include="ListExtension.cs" />
+    <Compile Include="Log.cs" />
+    <Compile Include="LogConfiguration.cs" />
+    <Compile Include="LogExtensions.cs" />
+    <Compile Include="LogHelpers\ApplicationLogger.cs" />
+    <Compile Include="LogHelpers\BaseLogger.cs" />
+    <Compile Include="LogHelpers\ConsoleAppenderLog.cs" />
+    <Compile Include="LogHelpers\DebugAppenderLog.cs" />
+    <Compile Include="LogHelpers\FileAppenderLog.cs" />
+    <Compile Include="LogHelpers\FrameworkAppender.cs" />
+    <Compile Include="LogHelpers\FrameworkLogger.cs" />
+    <Compile Include="LogHelpers\HibernateLogger.cs" />
+    <Compile Include="LongExtension.cs" />
+    <Compile Include="Mail\Email.cs" />
+    <Compile Include="Mail\EmailAttachment.cs" />
+    <Compile Include="Mail\IPop3Client.cs" />
+    <Compile Include="Mail\ISmtpClient.cs" />
+    <Compile Include="Mail\SendMailException.cs" />
+    <Compile Include="Mail\SmtpClient.cs" />
+    <Compile Include="Modelo\Entidade.cs" />
+    <Compile Include="Modelo\EntidadeDicionario.cs" />
+    <Compile Include="Modelo\EntidadeUnica.cs" />
+    <Compile Include="Modelo\IEntidade.cs" />
+    <Compile Include="Modelo\IRepositorio.cs" />
+    <Compile Include="Modelo\IRepositorioDeDicionario.cs" />
+    <Compile Include="Modelo\IRepositorioReadOnly.cs" />
+    <Compile Include="Modelo\IRepositorioUnico.cs" />
+    <Compile Include="Modelo\IRepositorio`1.cs" />
+    <Compile Include="Modelo\IUsuario.cs" />
+    <Compile Include="Modelo\RegraDeNegocioException.cs" />
+    <Compile Include="Modelo\ViolacaoDeSeguranaException.cs" />
+    <Compile Include="Network\INetworkStream.cs" />
+    <Compile Include="Network\ITcpClient.cs" />
+    <Compile Include="Network\ITcpListener.cs" />
+    <Compile Include="Network\NetworkStream.cs" />
+    <Compile Include="Network\TcpClient.cs" />
+    <Compile Include="Network\TcpListener.cs" />
+    <Compile Include="ObjectComparer.cs" />
+    <Compile Include="ObjectExtensions.cs" />
+    <Compile Include="Performance\Medicao.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="ReflectionExtension.cs" />
+    <Compile Include="Security\Hash.cs" />
+    <Compile Include="Security\HashBase.cs" />
+    <Compile Include="Security\ICryptography.cs" />
+    <Compile Include="Security\IHash.cs" />
+    <Compile Include="Security\ILdapAuthenticator.cs" />
+    <Compile Include="Security\LdapAuthenticator.cs" />
+    <Compile Include="Security\SimpleCryptography.cs" />
+    <Compile Include="Security\SimplerAes.cs" />
+    <Compile Include="Security\StrongHash.cs" />
+    <Compile Include="Security\UpperCaseHash.cs" />
+    <Compile Include="Serializer\ISerializer.cs" />
+    <Compile Include="ServiceControl\ProcessHelper.cs" />
+    <Compile Include="ServiceControl\ProcessResult.cs" />
+    <Compile Include="ServiceControl\Sc.cs" />
+    <Compile Include="ServiceControl\StatusDeServico.cs" />
+    <Compile Include="Service\BackgroundRunner.cs" />
+    <Compile Include="Service\IApplicationBoot.cs" />
+    <Compile Include="Service\ICommand.cs" />
+    <Compile Include="Service\IConfiguracaoBoot.cs" />
+    <Compile Include="Service\IExecutable.cs" />
+    <Compile Include="Service\IFrameworkBoot.cs" />
+    <Compile Include="Service\IPluginBoot.cs" />
+    <Compile Include="Service\IRaffle.cs" />
+    <Compile Include="Service\IService.cs" />
+    <Compile Include="Service\ITrack.cs" />
+    <Compile Include="Service\IWindowsService.cs" />
+    <Compile Include="Service\Raffle.cs" />
+    <Compile Include="Service\RaffleExtensions.cs" />
+    <Compile Include="Service\ServiceRunner.cs" />
+    <Compile Include="Service\SimpleServiceInstaller.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Service\SimpleWindowsService.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Service\Track.cs" />
+    <Compile Include="Servicos\Autenticacao.cs" />
+    <Compile Include="Servicos\IAutenticacaoServico.cs" />
+    <Compile Include="Servicos\IPooledObject.cs" />
+    <Compile Include="Servicos\ISessaoDoUsuario.cs" />
+    <Compile Include="Servicos\ObjectPool.cs" />
+    <Compile Include="SettingsConfig.cs" />
+    <Compile Include="Sign\FileCerticateInvalidException.cs" />
+    <Compile Include="Sign\ISigner.cs" />
+    <Compile Include="Sign\LoginSessionException.cs" />
+    <Compile Include="Sign\PinInvalidException.cs" />
+    <Compile Include="Sign\ReaderNotConnectedException.cs" />
+    <Compile Include="Sign\TokenManager.cs" />
+    <Compile Include="Sign\TokenManagerNotFoundException.cs" />
+    <Compile Include="SqlAppender.cs" />
+    <Compile Include="StringExtension.cs" />
+    <Compile Include="Tarefas\HashFileTarefa.cs" />
+    <Compile Include="Tarefas\HelpTarefa.cs" />
+    <Compile Include="Tarefas\TarefaController.cs" />
+    <Compile Include="Tarefas\TarefaExecutor.cs" />
+    <Compile Include="Text\Cnpj.cs" />
+    <Compile Include="Text\Cpf.cs" />
+    <Compile Include="Text\ISoundex.cs" />
+    <Compile Include="Text\ISpellChecker.cs" />
+    <Compile Include="Text\IStopWord.cs" />
+    <Compile Include="Text\ITextFormatter.cs" />
+    <Compile Include="Text\ITextTokenizer.cs" />
+    <Compile Include="Text\Soundex.cs" />
+    <Compile Include="Text\StopWord.cs" />
+    <Compile Include="Text\TextTokenizer.cs" />
+    <Compile Include="Threads\ILocalData.cs" />
+    <Compile Include="Threads\LocalData.cs" />
+    <Compile Include="Threads\Paralelizar.cs" />
+    <Compile Include="Validation\CnpjValidation.cs" />
+    <Compile Include="Validation\CpfValidation.cs" />
+    <Compile Include="Validation\For.cs" />
+    <Compile Include="Validation\IValidable.cs" />
+    <Compile Include="Validation\PropertyError.cs" />
+    <Compile Include="Validation\ValidationSummary.cs" />
+    <Compile Include="Zip\Compressor.cs" />
+    <Compile Include="Zip\IZip.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="app.config" />
+    <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Initializers\" />
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Service References\" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

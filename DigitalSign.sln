@@ -1,0 +1,56 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 14
+VisualStudioVersion = 14.0.25420.1
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DigitalSign", "DigitalSign\DigitalSign.csproj", "{30404CAC-9D69-4970-A9A8-0F1FE1CC2B5A}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Veros.Paperless.Infra", "Veros.Paperless.Infra\Veros.Paperless.Infra.csproj", "{3B71DD32-5B56-477D-AC3A-7292AF943AE6}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Veros.Paperless.Model", "Veros.Paperless.Model\Veros.Paperless.Model.csproj", "{5BBDADF1-1789-4432-BBF1-021BD19E8366}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Veros.Framework", "Veros.Framework\Veros.Framework.csproj", "{1F95AF6F-9FFD-4B33-86CD-08AA19E9C634}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Veros.Data", "Veros.Data\Veros.Data.csproj", "{5736F5E0-5773-4AAA-B826-2441F991F525}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Core", "Core", "{D92E9396-F633-4CFA-BCD5-FA09913D5E6E}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Framework", "Framework", "{C250A31E-C8CB-4BD8-AF3E-A9A2BED4C54F}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{30404CAC-9D69-4970-A9A8-0F1FE1CC2B5A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{30404CAC-9D69-4970-A9A8-0F1FE1CC2B5A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{30404CAC-9D69-4970-A9A8-0F1FE1CC2B5A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{30404CAC-9D69-4970-A9A8-0F1FE1CC2B5A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3B71DD32-5B56-477D-AC3A-7292AF943AE6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3B71DD32-5B56-477D-AC3A-7292AF943AE6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3B71DD32-5B56-477D-AC3A-7292AF943AE6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3B71DD32-5B56-477D-AC3A-7292AF943AE6}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5BBDADF1-1789-4432-BBF1-021BD19E8366}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5BBDADF1-1789-4432-BBF1-021BD19E8366}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5BBDADF1-1789-4432-BBF1-021BD19E8366}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5BBDADF1-1789-4432-BBF1-021BD19E8366}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1F95AF6F-9FFD-4B33-86CD-08AA19E9C634}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1F95AF6F-9FFD-4B33-86CD-08AA19E9C634}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1F95AF6F-9FFD-4B33-86CD-08AA19E9C634}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1F95AF6F-9FFD-4B33-86CD-08AA19E9C634}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5736F5E0-5773-4AAA-B826-2441F991F525}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5736F5E0-5773-4AAA-B826-2441F991F525}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5736F5E0-5773-4AAA-B826-2441F991F525}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5736F5E0-5773-4AAA-B826-2441F991F525}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{3B71DD32-5B56-477D-AC3A-7292AF943AE6} = {D92E9396-F633-4CFA-BCD5-FA09913D5E6E}
+		{5BBDADF1-1789-4432-BBF1-021BD19E8366} = {D92E9396-F633-4CFA-BCD5-FA09913D5E6E}
+		{1F95AF6F-9FFD-4B33-86CD-08AA19E9C634} = {C250A31E-C8CB-4BD8-AF3E-A9A2BED4C54F}
+		{5736F5E0-5773-4AAA-B826-2441F991F525} = {C250A31E-C8CB-4BD8-AF3E-A9A2BED4C54F}
+	EndGlobalSection
+EndGlobal

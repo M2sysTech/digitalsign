@@ -1,0 +1,23 @@
+2019-01-04 13:11:43,676 [   10] [INFO ] > -------------------------------------------------------------- 
+2019-01-04 13:11:43,719 [   10] [INFO ] > Inicializando DigitalSign 
+2019-01-04 13:11:43,722 [   10] [INFO ] > Versão: 1.0.0.0 
+2019-01-04 13:11:43,723 [   10] [INFO ] > Local: D:\CodigoFonte\_OpenSource\DigitalSign\DigitalSign\bin\Debug\ 
+2019-01-04 13:11:43,724 [   10] [DEBUG] > x64 bit process? False 
+2019-01-04 13:11:51,965 [   10] [DEBUG] > Carregando configurações do banco de dados 
+2019-01-04 13:11:52,092 [   10] [DEBUG] > Provider Oracle, ConnectionString: data source=192.168.10.104/orcl;user id=mdi_approval_gedcef 
+2019-01-04 13:11:52,864 [   10] [ERROR] > Erro ao executar Veros.Paperless.Infra.Boot.ContextoBoot 
+Veros.Data.DatabaseConfigurationException: Não foi encontrado pasta com os drivers do Oracle para .NET: C:\Veros\Oracle. Verifique se o pacote da M2Sys com os drivers do Oracle foi instalado nesta máquina.
+   em Veros.Data.Providers.OracleDatabaseProvider.GetDriver() na D:\CodigoFonte\_OpenSource\DigitalSign\Veros.Data\Providers\OracleDatabaseProvider.cs:linha 67
+   em Veros.Data.Hibernate.HibernateConfiguration.BuildSessionFactory() na D:\CodigoFonte\_OpenSource\DigitalSign\Veros.Data\Hibernate\HibernateConfiguration.cs:linha 61
+   em Veros.Data.Hibernate.SessionFactoryBuilder.GetSessionFactory() na D:\CodigoFonte\_OpenSource\DigitalSign\Veros.Data\Hibernate\SessionFactoryBuilder.cs:linha 24
+   em Veros.Data.Hibernate.SessionBuilder.CreateSession() na D:\CodigoFonte\_OpenSource\DigitalSign\Veros.Data\Hibernate\SessionBuilder.cs:linha 38
+   em Veros.Data.Hibernate.SessionBuilder.GetSession() na D:\CodigoFonte\_OpenSource\DigitalSign\Veros.Data\Hibernate\SessionBuilder.cs:linha 30
+   em Veros.Data.UnitOfWorkTransaction.Begin(IsolationLevel isolationLevel, FlushMode flushMode) na D:\CodigoFonte\_OpenSource\DigitalSign\Veros.Data\UnitOfWorkTransaction.cs:linha 95
+   em Veros.Data.UnitOfWorkTransactionFactory.Create(IsolationLevel isolationLevel, FlushMode flushMode) na D:\CodigoFonte\_OpenSource\DigitalSign\Veros.Data\UnitOfWorkTransactionFactory.cs:linha 11
+   em Veros.Data.UnitOfWork.Begin(Int32 batchSize, IsolationLevel isolationLevel, FlushMode flushMode) na D:\CodigoFonte\_OpenSource\DigitalSign\Veros.Data\UnitOfWork.cs:linha 58
+   em Veros.Data.UnitOfWork.Transacionar(Action action, FlushMode flushMode) na D:\CodigoFonte\_OpenSource\DigitalSign\Veros.Data\UnitOfWork.cs:linha 100
+   em Veros.Paperless.Infra.Boot.ContextoBoot.Execute() na D:\CodigoFonte\_OpenSource\DigitalSign\Veros.Paperless.Infra\Boot\ContextoBoot.cs:linha 48
+   em Veros.Framework.Bootstrapper.ExecutarTarefasDoTipo[T]() na D:\CodigoFonte\_OpenSource\DigitalSign\Veros.Framework\Bootstrapper.cs:linha 136
+2019-01-04 13:11:53,254 [   10] [FATAL] > DigitalSign iniciado 
+2019-01-04 13:11:54,666 [   10] [DEBUG] > Configurando agendamento para SignJob a cada 5s 
+2019-01-04 13:11:54,674 [   10] [DEBUG] > Configurando agendamento para SignErrorJob a cada 5s 

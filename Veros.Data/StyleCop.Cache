@@ -1,0 +1,885 @@
+<stylecopresultscache>
+  <version>11</version>
+  <project key="-127096784">
+    <configuration>DEBUG;TRACE</configuration>
+  </project>
+  <project key="-1463653241">
+    <configuration>TRACE</configuration>
+  </project>
+  <sourcecode name="ConfiguracaoBoot.cs" parser="StyleCop.CSharp.CsParser">
+    <settings>
+      <timestamp>05/29/2015 16:47:12</timestamp>
+      <milliseconds>10</milliseconds>
+    </settings>
+    <timestamp>10/28/2014 15:29:03</timestamp>
+    <milliseconds>546</milliseconds>
+    <violations />
+  </sourcecode>
+  <sourcecode name="CacheRegion.cs" parser="StyleCop.CSharp.CsParser">
+    <settings>
+      <timestamp>05/29/2015 16:47:12</timestamp>
+      <milliseconds>10</milliseconds>
+    </settings>
+    <timestamp>10/28/2014 15:29:03</timestamp>
+    <milliseconds>717</milliseconds>
+    <violations />
+  </sourcecode>
+  <sourcecode name="DatabaseCache.cs" parser="StyleCop.CSharp.CsParser">
+    <settings>
+      <timestamp>05/29/2015 16:47:12</timestamp>
+      <milliseconds>10</milliseconds>
+    </settings>
+    <timestamp>10/28/2014 15:29:03</timestamp>
+    <milliseconds>717</milliseconds>
+    <violations />
+  </sourcecode>
+  <sourcecode name="ConnectionExtensions.cs" parser="StyleCop.CSharp.CsParser">
+    <settings>
+      <timestamp>05/29/2015 16:47:12</timestamp>
+      <milliseconds>10</milliseconds>
+    </settings>
+    <timestamp>10/28/2014 15:29:03</timestamp>
+    <milliseconds>670</milliseconds>
+    <violations />
+  </sourcecode>
+  <sourcecode name="VerosCacheProvider.cs" parser="StyleCop.CSharp.CsParser">
+    <settings>
+      <timestamp>05/29/2015 16:47:12</timestamp>
+      <milliseconds>10</milliseconds>
+    </settings>
+    <timestamp>10/28/2014 15:29:03</timestamp>
+    <milliseconds>717</milliseconds>
+    <violations />
+  </sourcecode>
+  <sourcecode name="DatabaseSeed.cs" parser="StyleCop.CSharp.CsParser">
+    <settings>
+      <timestamp>05/29/2015 16:47:12</timestamp>
+      <milliseconds>10</milliseconds>
+    </settings>
+    <timestamp>10/28/2014 15:29:03</timestamp>
+    <milliseconds>561</milliseconds>
+    <violations />
+  </sourcecode>
+  <sourcecode name="Database.cs" parser="StyleCop.CSharp.CsParser">
+    <settings>
+      <timestamp>05/29/2015 16:47:12</timestamp>
+      <milliseconds>10</milliseconds>
+    </settings>
+    <timestamp>01/06/2015 17:22:06</timestamp>
+    <milliseconds>871</milliseconds>
+    <violations />
+  </sourcecode>
+  <sourcecode name="ConnectionString.cs" parser="StyleCop.CSharp.CsParser">
+    <settings>
+      <timestamp>05/29/2015 16:47:12</timestamp>
+      <milliseconds>10</milliseconds>
+    </settings>
+    <timestamp>10/28/2014 15:29:03</timestamp>
+    <milliseconds>421</milliseconds>
+    <violations />
+  </sourcecode>
+  <sourcecode name="DatabaseConfigurationException.cs" parser="StyleCop.CSharp.CsParser">
+    <settings>
+      <timestamp>05/29/2015 16:47:12</timestamp>
+      <milliseconds>10</milliseconds>
+    </settings>
+    <timestamp>10/28/2014 15:29:03</timestamp>
+    <milliseconds>670</milliseconds>
+    <violations />
+  </sourcecode>
+  <sourcecode name="DatabaseSchema.cs" parser="StyleCop.CSharp.CsParser">
+    <settings>
+      <timestamp>05/29/2015 16:47:12</timestamp>
+      <milliseconds>10</milliseconds>
+    </settings>
+    <timestamp>10/28/2014 15:29:03</timestamp>
+    <milliseconds>592</milliseconds>
+    <violations />
+  </sourcecode>
+  <sourcecode name="SeedLog.cs" parser="StyleCop.CSharp.CsParser">
+    <settings>
+      <timestamp>05/29/2015 16:47:12</timestamp>
+      <milliseconds>10</milliseconds>
+    </settings>
+    <timestamp>10/28/2014 15:29:03</timestamp>
+    <milliseconds>577</milliseconds>
+    <violations />
+  </sourcecode>
+  <sourcecode name="SeedMetadata.cs" parser="StyleCop.CSharp.CsParser">
+    <settings>
+      <timestamp>05/29/2015 16:47:12</timestamp>
+      <milliseconds>10</milliseconds>
+    </settings>
+    <timestamp>10/28/2014 15:29:03</timestamp>
+    <milliseconds>577</milliseconds>
+    <violations />
+  </sourcecode>
+  <sourcecode name="SqlScriptExecutor.cs" parser="StyleCop.CSharp.CsParser">
+    <settings>
+      <timestamp>05/29/2015 16:47:12</timestamp>
+      <milliseconds>10</milliseconds>
+    </settings>
+    <timestamp>12/11/2015 16:05:50</timestamp>
+    <milliseconds>776</milliseconds>
+    <violations />
+  </sourcecode>
+  <sourcecode name="RepositorioReadOnly.cs" parser="StyleCop.CSharp.CsParser">
+    <settings>
+      <timestamp>05/29/2015 16:47:12</timestamp>
+      <milliseconds>10</milliseconds>
+    </settings>
+    <timestamp>10/28/2014 15:29:03</timestamp>
+    <milliseconds>483</milliseconds>
+    <violations />
+  </sourcecode>
+  <sourcecode name="SessionExtensions.cs" parser="StyleCop.CSharp.CsParser">
+    <settings>
+      <timestamp>05/29/2015 16:47:12</timestamp>
+      <milliseconds>10</milliseconds>
+    </settings>
+    <timestamp>10/28/2014 15:29:03</timestamp>
+    <milliseconds>514</milliseconds>
+    <violations />
+  </sourcecode>
+  <sourcecode name="DatabaseConfiguration.cs" parser="StyleCop.CSharp.CsParser">
+    <settings>
+      <timestamp>05/29/2015 16:47:12</timestamp>
+      <milliseconds>10</milliseconds>
+    </settings>
+    <timestamp>10/28/2014 15:29:03</timestamp>
+    <milliseconds>624</milliseconds>
+    <violations />
+  </sourcecode>
+  <sourcecode name="EnumerationIntTypeConvention.cs" parser="StyleCop.CSharp.CsParser">
+    <settings>
+      <timestamp>05/29/2015 16:47:12</timestamp>
+      <milliseconds>10</milliseconds>
+    </settings>
+    <timestamp>10/28/2014 15:29:03</timestamp>
+    <milliseconds>530</milliseconds>
+    <violations />
+  </sourcecode>
+  <sourcecode name="EnumerationIntType.cs" parser="StyleCop.CSharp.CsParser">
+    <settings>
+      <timestamp>05/29/2015 16:47:12</timestamp>
+      <milliseconds>10</milliseconds>
+    </settings>
+    <timestamp>10/28/2014 15:29:03</timestamp>
+    <milliseconds>514</milliseconds>
+    <violations />
+  </sourcecode>
+  <sourcecode name="EnumerationStringTypeConvention.cs" parser="StyleCop.CSharp.CsParser">
+    <settings>
+      <timestamp>05/29/2015 16:47:12</timestamp>
+      <milliseconds>10</milliseconds>
+    </settings>
+    <timestamp>10/28/2014 15:29:03</timestamp>
+    <milliseconds>514</milliseconds>
+    <violations />
+  </sourcecode>
+  <sourcecode name="Agendamentos.cs" parser="StyleCop.CSharp.CsParser">
+    <settings>
+      <timestamp>05/29/2015 16:47:12</timestamp>
+      <milliseconds>10</milliseconds>
+    </settings>
+    <timestamp>10/28/2014 15:29:03</timestamp>
+    <milliseconds>608</milliseconds>
+    <violations />
+  </sourcecode>
+  <sourcecode name="SeedLogMap.cs" parser="StyleCop.CSharp.CsParser">
+    <settings>
+      <timestamp>05/29/2015 16:47:12</timestamp>
+      <milliseconds>10</milliseconds>
+    </settings>
+    <timestamp>10/28/2014 15:29:03</timestamp>
+    <milliseconds>468</milliseconds>
+    <violations />
+  </sourcecode>
+  <sourcecode name="SeedInfoMap.cs" parser="StyleCop.CSharp.CsParser">
+    <settings>
+      <timestamp>05/29/2015 16:47:12</timestamp>
+      <milliseconds>10</milliseconds>
+    </settings>
+    <timestamp>10/28/2014 15:29:03</timestamp>
+    <milliseconds>483</milliseconds>
+    <violations />
+  </sourcecode>
+  <sourcecode name="201306101526_CriaSeedVersion.cs" parser="StyleCop.CSharp.CsParser">
+    <settings>
+      <timestamp>05/29/2015 16:47:12</timestamp>
+      <milliseconds>10</milliseconds>
+    </settings>
+    <timestamp>10/28/2014 15:29:03</timestamp>
+    <milliseconds>639</milliseconds>
+    <violations />
+  </sourcecode>
+  <sourcecode name="201308011720_AdicionaDataNoSeed.cs" parser="StyleCop.CSharp.CsParser">
+    <settings>
+      <timestamp>05/29/2015 16:47:12</timestamp>
+      <milliseconds>10</milliseconds>
+    </settings>
+    <timestamp>10/28/2014 15:29:03</timestamp>
+    <milliseconds>639</milliseconds>
+    <violations />
+  </sourcecode>
+  <sourcecode name="OracleManagedConfiguration.cs" parser="StyleCop.CSharp.CsParser">
+    <settings>
+      <timestamp>05/29/2015 16:47:12</timestamp>
+      <milliseconds>10</milliseconds>
+    </settings>
+    <timestamp>10/28/2014 15:29:03</timestamp>
+    <milliseconds>655</milliseconds>
+    <violations />
+  </sourcecode>
+  <sourcecode name="201403181930_AdicionaSeedLog.cs" parser="StyleCop.CSharp.CsParser">
+    <settings>
+      <timestamp>05/29/2015 16:47:12</timestamp>
+      <milliseconds>10</milliseconds>
+    </settings>
+    <timestamp>10/28/2014 15:29:03</timestamp>
+    <milliseconds>639</milliseconds>
+    <violations />
+  </sourcecode>
+  <sourcecode name="DatabaseRepository.cs" parser="StyleCop.CSharp.CsParser">
+    <settings>
+      <timestamp>05/29/2015 16:47:12</timestamp>
+      <milliseconds>10</milliseconds>
+    </settings>
+    <timestamp>10/28/2014 15:29:03</timestamp>
+    <milliseconds>592</milliseconds>
+    <violations />
+  </sourcecode>
+  <sourcecode name="IDatabaseRepository.cs" parser="StyleCop.CSharp.CsParser">
+    <settings>
+      <timestamp>05/29/2015 16:47:12</timestamp>
+      <milliseconds>10</milliseconds>
+    </settings>
+    <timestamp>10/28/2014 15:29:03</timestamp>
+    <milliseconds>592</milliseconds>
+    <violations />
+  </sourcecode>
+  <sourcecode name="ISeedExecutor.cs" parser="StyleCop.CSharp.CsParser">
+    <settings>
+      <timestamp>05/29/2015 16:47:12</timestamp>
+      <milliseconds>10</milliseconds>
+    </settings>
+    <timestamp>10/28/2014 15:29:03</timestamp>
+    <milliseconds>546</milliseconds>
+    <violations />
+  </sourcecode>
+  <sourcecode name="Seed.cs" parser="StyleCop.CSharp.CsParser">
+    <settings>
+      <timestamp>05/29/2015 16:47:12</timestamp>
+      <milliseconds>10</milliseconds>
+    </settings>
+    <timestamp>10/28/2014 15:29:03</timestamp>
+    <milliseconds>546</milliseconds>
+    <violations />
+  </sourcecode>
+  <sourcecode name="SeedExecutor.cs" parser="StyleCop.CSharp.CsParser">
+    <settings>
+      <timestamp>05/29/2015 16:47:12</timestamp>
+      <milliseconds>10</milliseconds>
+    </settings>
+    <timestamp>10/28/2014 15:29:03</timestamp>
+    <milliseconds>546</milliseconds>
+    <violations />
+  </sourcecode>
+  <sourcecode name="SeedInfo.cs" parser="StyleCop.CSharp.CsParser">
+    <settings>
+      <timestamp>05/29/2015 16:47:12</timestamp>
+      <milliseconds>10</milliseconds>
+    </settings>
+    <timestamp>10/28/2014 15:29:03</timestamp>
+    <milliseconds>561</milliseconds>
+    <violations />
+  </sourcecode>
+  <sourcecode name="SeedStatusTarefa.cs" parser="StyleCop.CSharp.CsParser">
+    <settings>
+      <timestamp>05/29/2015 16:47:12</timestamp>
+      <milliseconds>10</milliseconds>
+    </settings>
+    <timestamp>10/28/2014 15:29:03</timestamp>
+    <milliseconds>577</milliseconds>
+    <violations />
+  </sourcecode>
+  <sourcecode name="ShowTarefa.cs" parser="StyleCop.CSharp.CsParser">
+    <settings>
+      <timestamp>05/29/2015 16:47:12</timestamp>
+      <milliseconds>10</milliseconds>
+    </settings>
+    <timestamp>10/28/2014 15:29:03</timestamp>
+    <milliseconds>592</milliseconds>
+    <violations />
+  </sourcecode>
+  <sourcecode name="DatabaseDateSyncTarefa.cs" parser="StyleCop.CSharp.CsParser">
+    <settings>
+      <timestamp>05/29/2015 16:47:12</timestamp>
+      <milliseconds>10</milliseconds>
+    </settings>
+    <timestamp>10/28/2014 15:29:03</timestamp>
+    <milliseconds>577</milliseconds>
+    <violations />
+  </sourcecode>
+  <sourcecode name="SeedExecuteTarefa.cs" parser="StyleCop.CSharp.CsParser">
+    <settings>
+      <timestamp>05/29/2015 16:47:12</timestamp>
+      <milliseconds>10</milliseconds>
+    </settings>
+    <timestamp>10/28/2014 15:29:03</timestamp>
+    <milliseconds>577</milliseconds>
+    <violations />
+  </sourcecode>
+  <sourcecode name="DatabaseSetTarefa.cs" parser="StyleCop.CSharp.CsParser">
+    <settings>
+      <timestamp>05/29/2015 16:47:12</timestamp>
+      <milliseconds>10</milliseconds>
+    </settings>
+    <timestamp>10/28/2014 15:29:03</timestamp>
+    <milliseconds>592</milliseconds>
+    <violations />
+  </sourcecode>
+  <sourcecode name="DatabaseMigrateTarefa.cs" parser="StyleCop.CSharp.CsParser">
+    <settings>
+      <timestamp>05/29/2015 16:47:12</timestamp>
+      <milliseconds>10</milliseconds>
+    </settings>
+    <timestamp>10/28/2014 15:29:03</timestamp>
+    <milliseconds>577</milliseconds>
+    <violations />
+  </sourcecode>
+  <sourcecode name="OracleManagedDriver.cs" parser="StyleCop.CSharp.CsParser">
+    <settings>
+      <timestamp>05/29/2015 16:47:12</timestamp>
+      <milliseconds>10</milliseconds>
+    </settings>
+    <timestamp>11/13/2014 11:48:38</timestamp>
+    <milliseconds>341</milliseconds>
+    <violations />
+  </sourcecode>
+  <sourcecode name="ConfigurationBuilder.cs" parser="StyleCop.CSharp.CsParser">
+    <settings>
+      <timestamp>05/29/2015 16:47:12</timestamp>
+      <milliseconds>10</milliseconds>
+    </settings>
+    <timestamp>10/28/2014 15:29:03</timestamp>
+    <milliseconds>483</milliseconds>
+    <violations />
+  </sourcecode>
+  <sourcecode name="PropertyPartExtension.cs" parser="StyleCop.CSharp.CsParser">
+    <settings>
+      <timestamp>05/29/2015 16:47:12</timestamp>
+      <milliseconds>10</milliseconds>
+    </settings>
+    <timestamp>10/28/2014 15:29:03</timestamp>
+    <milliseconds>530</milliseconds>
+    <violations />
+  </sourcecode>
+  <sourcecode name="DaoBase.cs" parser="StyleCop.CSharp.CsParser">
+    <settings>
+      <timestamp>05/29/2015 16:47:12</timestamp>
+      <milliseconds>10</milliseconds>
+    </settings>
+    <timestamp>10/28/2014 15:29:03</timestamp>
+    <milliseconds>499</milliseconds>
+    <violations />
+  </sourcecode>
+  <sourcecode name="EnumConvention.cs" parser="StyleCop.CSharp.CsParser">
+    <settings>
+      <timestamp>05/29/2015 16:47:12</timestamp>
+      <milliseconds>10</milliseconds>
+    </settings>
+    <timestamp>10/28/2014 15:29:03</timestamp>
+    <milliseconds>530</milliseconds>
+    <violations />
+  </sourcecode>
+  <sourcecode name="EnumerationStringType.cs" parser="StyleCop.CSharp.CsParser">
+    <settings>
+      <timestamp>05/29/2015 16:47:12</timestamp>
+      <milliseconds>10</milliseconds>
+    </settings>
+    <timestamp>10/28/2014 15:29:03</timestamp>
+    <milliseconds>514</milliseconds>
+    <violations />
+  </sourcecode>
+  <sourcecode name="CustomResultTransformer.cs" parser="StyleCop.CSharp.CsParser">
+    <settings>
+      <timestamp>05/29/2015 16:47:12</timestamp>
+      <milliseconds>10</milliseconds>
+    </settings>
+    <timestamp>10/28/2014 15:29:03</timestamp>
+    <milliseconds>499</milliseconds>
+    <violations />
+  </sourcecode>
+  <sourcecode name="HibernateConfiguration.cs" parser="StyleCop.CSharp.CsParser">
+    <settings>
+      <timestamp>05/29/2015 16:47:12</timestamp>
+      <milliseconds>10</milliseconds>
+    </settings>
+    <timestamp>11/10/2014 13:54:00</timestamp>
+    <milliseconds>1</milliseconds>
+    <violations />
+  </sourcecode>
+  <sourcecode name="Repositorio.cs" parser="StyleCop.CSharp.CsParser">
+    <settings>
+      <timestamp>05/29/2015 16:47:12</timestamp>
+      <milliseconds>10</milliseconds>
+    </settings>
+    <timestamp>10/28/2014 15:29:03</timestamp>
+    <milliseconds>483</milliseconds>
+    <violations />
+  </sourcecode>
+  <sourcecode name="RepositorioUnico.cs" parser="StyleCop.CSharp.CsParser">
+    <settings>
+      <timestamp>05/29/2015 16:47:12</timestamp>
+      <milliseconds>10</milliseconds>
+    </settings>
+    <timestamp>10/28/2014 15:29:03</timestamp>
+    <milliseconds>483</milliseconds>
+    <violations />
+  </sourcecode>
+  <sourcecode name="IHibernateConfiguration.cs" parser="StyleCop.CSharp.CsParser">
+    <settings>
+      <timestamp>05/29/2015 16:47:12</timestamp>
+      <milliseconds>10</milliseconds>
+    </settings>
+    <timestamp>10/28/2014 15:29:03</timestamp>
+    <milliseconds>514</milliseconds>
+    <violations />
+  </sourcecode>
+  <sourcecode name="IConfigurationBuilder.cs" parser="StyleCop.CSharp.CsParser">
+    <settings>
+      <timestamp>05/29/2015 16:47:12</timestamp>
+      <milliseconds>10</milliseconds>
+    </settings>
+    <timestamp>10/28/2014 15:29:03</timestamp>
+    <milliseconds>499</milliseconds>
+    <violations />
+  </sourcecode>
+  <sourcecode name="ISessionBuilder.cs" parser="StyleCop.CSharp.CsParser">
+    <settings>
+      <timestamp>05/29/2015 16:47:12</timestamp>
+      <milliseconds>10</milliseconds>
+    </settings>
+    <timestamp>10/28/2014 15:29:03</timestamp>
+    <milliseconds>514</milliseconds>
+    <violations />
+  </sourcecode>
+  <sourcecode name="ISessionFactoryBuilder.cs" parser="StyleCop.CSharp.CsParser">
+    <settings>
+      <timestamp>05/29/2015 16:47:12</timestamp>
+      <milliseconds>10</milliseconds>
+    </settings>
+    <timestamp>10/28/2014 15:29:03</timestamp>
+    <milliseconds>499</milliseconds>
+    <violations />
+  </sourcecode>
+  <sourcecode name="ISessionStore.cs" parser="StyleCop.CSharp.CsParser">
+    <settings>
+      <timestamp>05/29/2015 16:47:12</timestamp>
+      <milliseconds>10</milliseconds>
+    </settings>
+    <timestamp>10/28/2014 15:29:03</timestamp>
+    <milliseconds>530</milliseconds>
+    <violations />
+  </sourcecode>
+  <sourcecode name="HibernateRepositoryConvention.cs" parser="StyleCop.CSharp.CsParser">
+    <settings>
+      <timestamp>05/29/2015 16:47:12</timestamp>
+      <milliseconds>10</milliseconds>
+    </settings>
+    <timestamp>10/28/2014 15:29:03</timestamp>
+    <milliseconds>514</milliseconds>
+    <violations />
+  </sourcecode>
+  <sourcecode name="QueryOverExtensions.cs" parser="StyleCop.CSharp.CsParser">
+    <settings>
+      <timestamp>05/29/2015 16:47:12</timestamp>
+      <milliseconds>10</milliseconds>
+    </settings>
+    <timestamp>10/28/2014 15:29:03</timestamp>
+    <milliseconds>483</milliseconds>
+    <violations />
+  </sourcecode>
+  <sourcecode name="SessionBuilder.cs" parser="StyleCop.CSharp.CsParser">
+    <settings>
+      <timestamp>05/29/2015 16:47:12</timestamp>
+      <milliseconds>10</milliseconds>
+    </settings>
+    <timestamp>10/28/2014 15:29:03</timestamp>
+    <milliseconds>499</milliseconds>
+    <violations />
+  </sourcecode>
+  <sourcecode name="SessionFactoryBuilder.cs" parser="StyleCop.CSharp.CsParser">
+    <settings>
+      <timestamp>05/29/2015 16:47:12</timestamp>
+      <milliseconds>10</milliseconds>
+    </settings>
+    <timestamp>10/28/2014 15:29:03</timestamp>
+    <milliseconds>483</milliseconds>
+    <violations />
+  </sourcecode>
+  <sourcecode name="SessionStore.cs" parser="StyleCop.CSharp.CsParser">
+    <settings>
+      <timestamp>05/29/2015 16:47:12</timestamp>
+      <milliseconds>10</milliseconds>
+    </settings>
+    <timestamp>10/28/2014 15:29:03</timestamp>
+    <milliseconds>499</milliseconds>
+    <violations />
+  </sourcecode>
+  <sourcecode name="SimNaoType.cs" parser="StyleCop.CSharp.CsParser">
+    <settings>
+      <timestamp>05/29/2015 16:47:12</timestamp>
+      <milliseconds>10</milliseconds>
+    </settings>
+    <timestamp>10/28/2014 15:29:03</timestamp>
+    <milliseconds>499</milliseconds>
+    <violations />
+  </sourcecode>
+  <sourcecode name="IDatabaseProvider.cs" parser="StyleCop.CSharp.CsParser">
+    <settings>
+      <timestamp>05/29/2015 16:47:12</timestamp>
+      <milliseconds>10</milliseconds>
+    </settings>
+    <timestamp>10/28/2014 15:29:03</timestamp>
+    <milliseconds>468</milliseconds>
+    <violations />
+  </sourcecode>
+  <sourcecode name="RegistraDependencias.cs" parser="StyleCop.CSharp.CsParser">
+    <settings>
+      <timestamp>05/29/2015 16:47:12</timestamp>
+      <milliseconds>10</milliseconds>
+    </settings>
+    <timestamp>11/06/2014 14:58:35</timestamp>
+    <milliseconds>90</milliseconds>
+    <violations />
+  </sourcecode>
+  <sourcecode name="IDatabaseSeed.cs" parser="StyleCop.CSharp.CsParser">
+    <settings>
+      <timestamp>05/29/2015 16:47:12</timestamp>
+      <milliseconds>10</milliseconds>
+    </settings>
+    <timestamp>10/28/2014 15:29:03</timestamp>
+    <milliseconds>561</milliseconds>
+    <violations />
+  </sourcecode>
+  <sourcecode name="IUnitOfWork.cs" parser="StyleCop.CSharp.CsParser">
+    <settings>
+      <timestamp>05/29/2015 16:47:12</timestamp>
+      <milliseconds>10</milliseconds>
+    </settings>
+    <timestamp>10/28/2014 15:29:03</timestamp>
+    <milliseconds>577</milliseconds>
+    <violations />
+  </sourcecode>
+  <sourcecode name="IUnitOfWorkStore.cs" parser="StyleCop.CSharp.CsParser">
+    <settings>
+      <timestamp>05/29/2015 16:47:12</timestamp>
+      <milliseconds>10</milliseconds>
+    </settings>
+    <timestamp>10/28/2014 15:29:03</timestamp>
+    <milliseconds>530</milliseconds>
+    <violations />
+  </sourcecode>
+  <sourcecode name="IUnitOfWorkTransaction.cs" parser="StyleCop.CSharp.CsParser">
+    <settings>
+      <timestamp>05/29/2015 16:47:12</timestamp>
+      <milliseconds>10</milliseconds>
+    </settings>
+    <timestamp>10/28/2014 15:29:03</timestamp>
+    <milliseconds>608</milliseconds>
+    <violations />
+  </sourcecode>
+  <sourcecode name="IUnitOfWorkTransactionFactory.cs" parser="StyleCop.CSharp.CsParser">
+    <settings>
+      <timestamp>05/29/2015 16:47:12</timestamp>
+      <milliseconds>10</milliseconds>
+    </settings>
+    <timestamp>10/28/2014 15:29:03</timestamp>
+    <milliseconds>561</milliseconds>
+    <violations />
+  </sourcecode>
+  <sourcecode name="IDatabaseSchema.cs" parser="StyleCop.CSharp.CsParser">
+    <settings>
+      <timestamp>05/29/2015 16:47:12</timestamp>
+      <milliseconds>10</milliseconds>
+    </settings>
+    <timestamp>10/28/2014 15:29:03</timestamp>
+    <milliseconds>624</milliseconds>
+    <violations />
+  </sourcecode>
+  <sourcecode name="MigrationExtensions.cs" parser="StyleCop.CSharp.CsParser">
+    <settings>
+      <timestamp>05/29/2015 16:47:12</timestamp>
+      <milliseconds>10</milliseconds>
+    </settings>
+    <timestamp>10/28/2014 15:29:03</timestamp>
+    <milliseconds>561</milliseconds>
+    <violations />
+  </sourcecode>
+  <sourcecode name="AssemblyExtensions.cs" parser="StyleCop.CSharp.CsParser">
+    <settings>
+      <timestamp>05/29/2015 16:47:12</timestamp>
+      <milliseconds>10</milliseconds>
+    </settings>
+    <timestamp>10/28/2014 15:29:03</timestamp>
+    <milliseconds>639</milliseconds>
+    <violations />
+  </sourcecode>
+  <sourcecode name="SQLiteDatabaseProvider.cs" parser="StyleCop.CSharp.CsParser">
+    <settings>
+      <timestamp>05/29/2015 16:47:12</timestamp>
+      <milliseconds>10</milliseconds>
+    </settings>
+    <timestamp>10/28/2014 15:29:03</timestamp>
+    <milliseconds>655</milliseconds>
+    <violations />
+  </sourcecode>
+  <sourcecode name="MySqlDatabaseProvider.cs" parser="StyleCop.CSharp.CsParser">
+    <settings>
+      <timestamp>05/29/2015 16:47:12</timestamp>
+      <milliseconds>10</milliseconds>
+    </settings>
+    <timestamp>10/28/2014 15:29:03</timestamp>
+    <milliseconds>655</milliseconds>
+    <violations />
+  </sourcecode>
+  <sourcecode name="OracleDatabaseProvider.cs" parser="StyleCop.CSharp.CsParser">
+    <settings>
+      <timestamp>05/29/2015 16:47:12</timestamp>
+      <milliseconds>10</milliseconds>
+    </settings>
+    <timestamp>11/13/2014 11:36:24</timestamp>
+    <milliseconds>387</milliseconds>
+    <violations />
+  </sourcecode>
+  <sourcecode name="OracleGuestDatabaseProvider.cs" parser="StyleCop.CSharp.CsParser">
+    <settings>
+      <timestamp>05/29/2015 16:47:12</timestamp>
+      <milliseconds>10</milliseconds>
+    </settings>
+    <timestamp>11/11/2014 14:50:06</timestamp>
+    <milliseconds>578</milliseconds>
+    <violations />
+  </sourcecode>
+  <sourcecode name="PostgreDatabaseProvider.cs" parser="StyleCop.CSharp.CsParser">
+    <settings>
+      <timestamp>05/29/2015 16:47:12</timestamp>
+      <milliseconds>10</milliseconds>
+    </settings>
+    <timestamp>10/28/2014 15:29:03</timestamp>
+    <milliseconds>655</milliseconds>
+    <violations />
+  </sourcecode>
+  <sourcecode name="DatabaseProviderBase.cs" parser="StyleCop.CSharp.CsParser">
+    <settings>
+      <timestamp>05/29/2015 16:47:12</timestamp>
+      <milliseconds>10</milliseconds>
+    </settings>
+    <timestamp>10/28/2014 15:29:03</timestamp>
+    <milliseconds>655</milliseconds>
+    <violations />
+  </sourcecode>
+  <sourcecode name="SqlServerDatabaseProvider.cs" parser="StyleCop.CSharp.CsParser">
+    <settings>
+      <timestamp>05/29/2015 16:47:12</timestamp>
+      <milliseconds>10</milliseconds>
+    </settings>
+    <timestamp>10/28/2014 15:29:03</timestamp>
+    <milliseconds>655</milliseconds>
+    <violations />
+  </sourcecode>
+  <sourcecode name="StringLength.cs" parser="StyleCop.CSharp.CsParser">
+    <settings>
+      <timestamp>05/29/2015 16:47:12</timestamp>
+      <milliseconds>10</milliseconds>
+    </settings>
+    <timestamp>10/28/2014 15:29:03</timestamp>
+    <milliseconds>639</milliseconds>
+    <violations />
+  </sourcecode>
+  <sourcecode name="UnitOfWork.cs" parser="StyleCop.CSharp.CsParser">
+    <settings>
+      <timestamp>05/29/2015 16:47:12</timestamp>
+      <milliseconds>10</milliseconds>
+    </settings>
+    <timestamp>10/28/2014 15:29:03</timestamp>
+    <milliseconds>561</milliseconds>
+    <violations />
+  </sourcecode>
+  <sourcecode name="UnitOfWorkException.cs" parser="StyleCop.CSharp.CsParser">
+    <settings>
+      <timestamp>05/29/2015 16:47:12</timestamp>
+      <milliseconds>10</milliseconds>
+    </settings>
+    <timestamp>10/28/2014 15:29:03</timestamp>
+    <milliseconds>421</milliseconds>
+    <violations />
+  </sourcecode>
+  <sourcecode name="UnitOfWorkStore.cs" parser="StyleCop.CSharp.CsParser">
+    <settings>
+      <timestamp>05/29/2015 16:47:12</timestamp>
+      <milliseconds>10</milliseconds>
+    </settings>
+    <timestamp>10/28/2014 15:29:03</timestamp>
+    <milliseconds>592</milliseconds>
+    <violations />
+  </sourcecode>
+  <sourcecode name="UnitOfWorkTransaction.cs" parser="StyleCop.CSharp.CsParser">
+    <settings>
+      <timestamp>05/29/2015 16:47:12</timestamp>
+      <milliseconds>10</milliseconds>
+    </settings>
+    <timestamp>11/13/2015 17:43:36</timestamp>
+    <milliseconds>521</milliseconds>
+    <violations />
+  </sourcecode>
+  <sourcecode name="UnitOfWorkTransactionFactory.cs" parser="StyleCop.CSharp.CsParser">
+    <settings>
+      <timestamp>05/29/2015 16:47:12</timestamp>
+      <milliseconds>10</milliseconds>
+    </settings>
+    <timestamp>10/28/2014 15:29:03</timestamp>
+    <milliseconds>546</milliseconds>
+    <violations />
+  </sourcecode>
+  <sourcecode name="TransformationProviderExtensions.cs" parser="StyleCop.CSharp.CsParser">
+    <settings>
+      <timestamp>05/29/2015 16:47:12</timestamp>
+      <milliseconds>10</milliseconds>
+    </settings>
+    <timestamp>10/28/2014 15:29:03</timestamp>
+    <milliseconds>624</milliseconds>
+    <violations />
+  </sourcecode>
+  <sourcecode name="FileNonEmptyValidator.cs" parser="StyleCop.CSharp.CsParser">
+    <settings>
+      <timestamp>05/29/2015 16:47:12</timestamp>
+      <milliseconds>10</milliseconds>
+    </settings>
+    <timestamp>10/28/2014 15:29:03</timestamp>
+    <milliseconds>452</milliseconds>
+    <violations />
+  </sourcecode>
+  <sourcecode name="IValidationRunner.cs" parser="StyleCop.CSharp.CsParser">
+    <settings>
+      <timestamp>05/29/2015 16:47:12</timestamp>
+      <milliseconds>10</milliseconds>
+    </settings>
+    <timestamp>10/28/2014 15:29:03</timestamp>
+    <milliseconds>452</milliseconds>
+    <violations />
+  </sourcecode>
+  <sourcecode name="CastleValidationRunner.cs" parser="StyleCop.CSharp.CsParser">
+    <settings>
+      <timestamp>05/29/2015 16:47:12</timestamp>
+      <milliseconds>10</milliseconds>
+    </settings>
+    <timestamp>10/28/2014 15:29:03</timestamp>
+    <milliseconds>452</milliseconds>
+    <violations />
+  </sourcecode>
+  <sourcecode name="MaxLengthValidator.cs" parser="StyleCop.CSharp.CsParser">
+    <settings>
+      <timestamp>05/29/2015 16:47:12</timestamp>
+      <milliseconds>10</milliseconds>
+    </settings>
+    <timestamp>10/28/2014 15:29:03</timestamp>
+    <milliseconds>452</milliseconds>
+    <violations />
+  </sourcecode>
+  <sourcecode name="UniqueValidator.cs" parser="StyleCop.CSharp.CsParser">
+    <settings>
+      <timestamp>05/29/2015 16:47:12</timestamp>
+      <milliseconds>10</milliseconds>
+    </settings>
+    <timestamp>10/28/2014 15:29:03</timestamp>
+    <milliseconds>452</milliseconds>
+    <violations />
+  </sourcecode>
+  <sourcecode name="ValidateFileNonEmptyAttribute.cs" parser="StyleCop.CSharp.CsParser">
+    <settings>
+      <timestamp>05/29/2015 16:47:12</timestamp>
+      <milliseconds>10</milliseconds>
+    </settings>
+    <timestamp>10/28/2014 15:29:03</timestamp>
+    <milliseconds>468</milliseconds>
+    <violations />
+  </sourcecode>
+  <sourcecode name="ValidateMaxLengthAttribute.cs" parser="StyleCop.CSharp.CsParser">
+    <settings>
+      <timestamp>05/29/2015 16:47:12</timestamp>
+      <milliseconds>10</milliseconds>
+    </settings>
+    <timestamp>10/28/2014 15:29:03</timestamp>
+    <milliseconds>468</milliseconds>
+    <violations />
+  </sourcecode>
+  <sourcecode name="ValidateUniqueAttribute.cs" parser="StyleCop.CSharp.CsParser">
+    <settings>
+      <timestamp>05/29/2015 16:47:12</timestamp>
+      <milliseconds>10</milliseconds>
+    </settings>
+    <timestamp>10/28/2014 15:29:03</timestamp>
+    <milliseconds>468</milliseconds>
+    <violations />
+  </sourcecode>
+  <sourcecode name="ViewModel.cs" parser="StyleCop.CSharp.CsParser">
+    <settings>
+      <timestamp>05/29/2015 16:47:12</timestamp>
+      <milliseconds>10</milliseconds>
+    </settings>
+    <timestamp>10/28/2014 15:29:03</timestamp>
+    <milliseconds>468</milliseconds>
+    <violations />
+  </sourcecode>
+  <sourcecode name=".NETFramework,Version=v4.0.AssemblyAttributes.cs" parser="StyleCop.CSharp.CsParser">
+    <settings>
+      <timestamp>05/29/2015 16:47:12</timestamp>
+      <milliseconds>10</milliseconds>
+    </settings>
+    <timestamp>04/06/2016 11:34:11</timestamp>
+    <milliseconds>10</milliseconds>
+    <violations />
+  </sourcecode>
+  <sourcecode name="Validable.cs" parser="StyleCop.CSharp.CsParser">
+    <settings>
+      <timestamp>05/29/2015 16:47:12</timestamp>
+      <milliseconds>10</milliseconds>
+    </settings>
+    <timestamp>10/28/2014 15:29:03</timestamp>
+    <milliseconds>468</milliseconds>
+    <violations />
+  </sourcecode>
+  <sourcecode name="Job.cs" parser="StyleCop.CSharp.CsParser">
+    <settings>
+      <timestamp>05/29/2015 16:47:12</timestamp>
+      <milliseconds>10</milliseconds>
+    </settings>
+    <timestamp>05/11/2016 10:25:14</timestamp>
+    <milliseconds>289</milliseconds>
+    <violations />
+  </sourcecode>
+  <sourcecode name="StructureMapJobFactory.cs" parser="StyleCop.CSharp.CsParser">
+    <settings>
+      <timestamp>05/29/2015 16:47:12</timestamp>
+      <milliseconds>10</milliseconds>
+    </settings>
+    <timestamp>05/16/2016 10:38:21</timestamp>
+    <milliseconds>130</milliseconds>
+    <violations />
+  </sourcecode>
+  <sourcecode name="Agendamento.cs" parser="StyleCop.CSharp.CsParser">
+    <settings>
+      <timestamp>05/29/2015 16:47:12</timestamp>
+      <milliseconds>10</milliseconds>
+    </settings>
+    <timestamp>05/16/2016 10:42:51</timestamp>
+    <milliseconds>391</milliseconds>
+    <violations />
+  </sourcecode>
+  <project key="-1874955423">
+    <configuration>DEBUG;TRACE</configuration>
+  </project>
+</stylecopresultscache>

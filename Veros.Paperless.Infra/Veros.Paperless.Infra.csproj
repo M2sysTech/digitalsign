@@ -1,0 +1,939 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{3B71DD32-5B56-477D-AC3A-7292AF943AE6}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Veros.Paperless.Infra</RootNamespace>
+    <AssemblyName>Veros.Paperless.Infra</AssemblyName>
+    <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="AForge, Version=2.2.5.0, Culture=neutral, PublicKeyToken=c1db6ff4eaa06aeb, processorArchitecture=MSIL">
+      <HintPath>..\packages\AForge.2.2.5\lib\AForge.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="BouncyCastle.Crypto, Version=1.8.1.0, Culture=neutral, PublicKeyToken=0e99375e54769942, processorArchitecture=MSIL">
+      <HintPath>..\packages\Portable.BouncyCastle.1.8.1.3\lib\net40\BouncyCastle.Crypto.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Castle.Components.Validator, Version=2.5.0.0, Culture=neutral, PublicKeyToken=407dd0808d44fbdc, processorArchitecture=MSIL">
+      <HintPath>..\packages\Castle.Components.Validator.2.5.0\lib\NET40\Castle.Components.Validator.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Common.Logging, Version=3.4.1.0, Culture=neutral, PublicKeyToken=af08829b84f0328e, processorArchitecture=MSIL">
+      <HintPath>..\packages\Common.Logging.3.4.1\lib\net40\Common.Logging.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Common.Logging.Core, Version=3.4.1.0, Culture=neutral, PublicKeyToken=af08829b84f0328e, processorArchitecture=MSIL">
+      <HintPath>..\packages\Common.Logging.Core.3.4.1\lib\net40\Common.Logging.Core.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="FluentNHibernate, Version=2.0.3.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\FluentNHibernate.2.0.3.0\lib\net40\FluentNHibernate.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="HumbleNetwork, Version=2014.11.12.1, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\HumbleNetwork.2014.11.12.1\lib\HumbleNetwork.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Iesi.Collections, Version=4.0.0.4000, Culture=neutral, PublicKeyToken=aa95f207798dfdb4, processorArchitecture=MSIL">
+      <HintPath>..\packages\Iesi.Collections.4.0.4\lib\net40\Iesi.Collections.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="itext.barcodes, Version=7.1.4.0, Culture=neutral, PublicKeyToken=8354ae6d2174ddca, processorArchitecture=MSIL">
+      <HintPath>..\packages\itext7.7.1.4\lib\net40\itext.barcodes.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="itext.forms, Version=7.1.4.0, Culture=neutral, PublicKeyToken=8354ae6d2174ddca, processorArchitecture=MSIL">
+      <HintPath>..\packages\itext7.7.1.4\lib\net40\itext.forms.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="itext.io, Version=7.1.4.0, Culture=neutral, PublicKeyToken=8354ae6d2174ddca, processorArchitecture=MSIL">
+      <HintPath>..\packages\itext7.7.1.4\lib\net40\itext.io.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="itext.kernel, Version=7.1.4.0, Culture=neutral, PublicKeyToken=8354ae6d2174ddca, processorArchitecture=MSIL">
+      <HintPath>..\packages\itext7.7.1.4\lib\net40\itext.kernel.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="itext.layout, Version=7.1.4.0, Culture=neutral, PublicKeyToken=8354ae6d2174ddca, processorArchitecture=MSIL">
+      <HintPath>..\packages\itext7.7.1.4\lib\net40\itext.layout.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="itext.pdfa, Version=7.1.4.0, Culture=neutral, PublicKeyToken=8354ae6d2174ddca, processorArchitecture=MSIL">
+      <HintPath>..\packages\itext7.7.1.4\lib\net40\itext.pdfa.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="itext.sign, Version=7.1.4.0, Culture=neutral, PublicKeyToken=8354ae6d2174ddca, processorArchitecture=MSIL">
+      <HintPath>..\packages\itext7.7.1.4\lib\net40\itext.sign.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="itext.styledxmlparser, Version=7.1.4.0, Culture=neutral, PublicKeyToken=8354ae6d2174ddca, processorArchitecture=MSIL">
+      <HintPath>..\packages\itext7.7.1.4\lib\net40\itext.styledxmlparser.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="itext.svg, Version=7.1.4.0, Culture=neutral, PublicKeyToken=8354ae6d2174ddca, processorArchitecture=MSIL">
+      <HintPath>..\packages\itext7.7.1.4\lib\net40\itext.svg.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="log4net, Version=2.0.8.0, Culture=neutral, PublicKeyToken=669e0ddf0bb1aa2a, processorArchitecture=MSIL">
+      <HintPath>..\packages\log4net.2.0.8\lib\net45-full\log4net.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Migrator, Version=0.9.0.21904, Culture=neutral, PublicKeyToken=3b3586e9632ecfce, processorArchitecture=MSIL">
+      <HintPath>..\packages\Migrator.1.1\lib\net40\Migrator.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Migrator.Framework, Version=0.0.0.0, Culture=neutral, PublicKeyToken=3b3586e9632ecfce, processorArchitecture=MSIL">
+      <HintPath>..\packages\Migrator.1.1\lib\net40\Migrator.Framework.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Migrator.Providers, Version=0.0.0.0, Culture=neutral, PublicKeyToken=3b3586e9632ecfce, processorArchitecture=MSIL">
+      <HintPath>..\packages\Migrator.1.1\lib\net40\Migrator.Providers.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="NHibernate, Version=4.1.0.4000, Culture=neutral, PublicKeyToken=aa95f207798dfdb4, processorArchitecture=MSIL">
+      <HintPath>..\packages\NHibernate.4.1.2.4000\lib\net40\NHibernate.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="StructureMap, Version=4.7.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\StructureMap.4.7.0\lib\net45\StructureMap.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xml" />
+    <Reference Include="Veros.Queues">
+      <HintPath>..\DigitalSign\Veros.Queues.dll</HintPath>
+    </Reference>
+    <Reference Include="Veros.Storage.FileTransfer">
+      <HintPath>..\DigitalSign\Veros.Storage.FileTransfer.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AssinaturaDigital\CarimboBry.cs" />
+    <Compile Include="AssinaturaDigital\CertificadoA3.cs" />
+    <Compile Include="AssinaturaDigital\MetaData.cs" />
+    <Compile Include="AssinaturaDigital\TimeStampSigner.cs" />
+    <Compile Include="AssinaturaDigital\X509Certificate2Signature.cs" />
+    <Compile Include="Boot\ContextoBoot.cs" />
+    <Compile Include="Boot\DatabaseBoot.cs" />
+    <Compile Include="Boot\RegistraDependencias.cs" />
+    <Compile Include="Consultas\AcompanhamentoPorHoraConsulta.cs" />
+    <Compile Include="Consultas\AcompanhamentoProcessoDevolvidoOuLiberadoConsulta.cs" />
+    <Compile Include="Consultas\AnaliseDevolucaoDeCaixaConsulta.cs" />
+    <Compile Include="Consultas\CaixasParaDevolucaoConsulta.cs" />
+    <Compile Include="Consultas\CamposReconhecidosPorDocumentoECampoConsulta.cs" />
+    <Compile Include="Consultas\CamposReconhecidosPorLoteConsulta.cs" />
+    <Compile Include="Consultas\CertificadosConcluídosConsulta.cs" />
+    <Compile Include="Consultas\ConferenciaDevolucaoDeCaixaConsulta.cs" />
+    <Compile Include="Consultas\ConsultaPfFabrica.cs" />
+    <Compile Include="Consultas\ContasLiberadasSemAprovacaoConsulta.cs" />
+    <Compile Include="Consultas\DataInstalacaoConsulta.cs" />
+    <Compile Include="Consultas\DevolucaoDeCaixaConsulta.cs" />
+    <Compile Include="Consultas\DocumentosPdfPorStatusConsulta.cs" />
+    <Compile Include="Consultas\DocumentosPdfPorStatusParaRecontagemPaginasConsulta.cs" />
+    <Compile Include="Consultas\DossiePorLoteCefConsulta.cs" />
+    <Compile Include="Consultas\DossiesDaCaixaConsulta.cs" />
+    <Compile Include="Consultas\DossieStatusConsulta.cs" />
+    <Compile Include="Consultas\EstoqueFilasProducaoConsulta.cs" />
+    <Compile Include="Consultas\FaturamentoPorPeriodoConsulta.cs" />
+    <Compile Include="Consultas\GeracaoDeCertificadoConsulta.cs" />
+    <Compile Include="Consultas\HistoricoBasicoConsulta.cs" />
+    <Compile Include="Consultas\IAcompanhamentoPorHoraConsulta.cs" />
+    <Compile Include="Consultas\IEstoqueFilasProducaoConsulta.cs" />
+    <Compile Include="Consultas\IntervaloDeRajada.cs" />
+    <Compile Include="Consultas\LicencaConsumidaPorTipoDocumentoConsulta.cs" />
+    <Compile Include="Consultas\LogsAjusteConsulta.cs" />
+    <Compile Include="Consultas\LogsReprovadosCefConsulta.cs" />
+    <Compile Include="Consultas\LoteCefProntoParaFecharConsulta.cs" />
+    <Compile Include="Consultas\MassaTesteConfigPalavrasChavesConsulta.cs" />
+    <Compile Include="Consultas\ObtemLoteParaExpurgoConsulta.cs" />
+    <Compile Include="Consultas\ObtemLotesParaAmostragemQualidadeCefConsulta.cs" />
+    <Compile Include="Consultas\ObtemPacotesParaExpurgoConsulta.cs" />
+    <Compile Include="Consultas\ObtemPaginasParaExpurgoConsulta.cs" />
+    <Compile Include="Consultas\ObterColetaParaConferenciaConsulta.cs" />
+    <Compile Include="Consultas\PainelDeAcompanhamentoColetaConsulta.cs" />
+    <Compile Include="Consultas\PainelDeAcompanhamentoPorCaixaConsulta.cs" />
+    <Compile Include="Consultas\PeriodoFaturamentoConsulta.cs" />
+    <Compile Include="Consultas\Ph3Consulta.cs" />
+    <Compile Include="Consultas\ProdutividadeOperadorConsulta.cs" />
+    <Compile Include="Consultas\Rajada.cs" />
+    <Compile Include="Consultas\RegrasReprovadasCefConsulta.cs" />
+    <Compile Include="Consultas\RelatorioDeCaixasETotalDeDossiesConsulta.cs" />
+    <Compile Include="Consultas\RelatorioDeCaixasPorUniColRecArmConsulta.cs" />
+    <Compile Include="Consultas\RelatorioDeDossiesNaQualidadeCefConsulta.cs" />
+    <Compile Include="Consultas\RelatorioDeFaturamentoConsulta.cs" />
+    <Compile Include="Consultas\RelatorioDeQuantitativoDeAssinaturaDigitalConsulta.cs" />
+    <Compile Include="Consultas\RelatorioDosIndPrepDigPrevConsulta.cs" />
+    <Compile Include="Consultas\RelatorioFaturamentoConsulta.cs" />
+    <Compile Include="Consultas\RemontagemDeTermoConsulta.cs" />
+    <Compile Include="Consultas\SequencialDeIdentificadorConsulta.cs" />
+    <Compile Include="Consultas\TotaisAguardandoQualidadeCefConsulta.cs" />
+    <Compile Include="Consultas\TotaisPorPacoteProcessadoConsulta.cs" />
+    <Compile Include="Consultas\TotalDeLotesPorSituacaoAmostragemConsulta.cs" />
+    <Compile Include="Consultas\VersaoMigrateConsulta.cs" />
+    <Compile Include="ContextoInfra.cs" />
+    <Compile Include="Extensions.cs" />
+    <Compile Include="Filas\ConfiguracoesDeFila.cs" />
+    <Compile Include="Filas\FilaAprovacaoCliente.cs" />
+    <Compile Include="Filas\FilaAprovacaoEspecialCliente.cs" />
+    <Compile Include="Filas\FilaClienteGenerica.cs" />
+    <Compile Include="Filas\FilaComparacao.cs" />
+    <Compile Include="Filas\FilaComparacaoCliente.cs" />
+    <Compile Include="Filas\FilaComparacaoClientePool.cs" />
+    <Compile Include="Filas\FilaFaceExtractor.cs" />
+    <Compile Include="Filas\FilaFaceExtractorCliente.cs" />
+    <Compile Include="Filas\FilaFaceExtractorClientePool.cs" />
+    <Compile Include="Filas\FilaIdentificacaoCliente.cs" />
+    <Compile Include="Filas\FilaOcrCliente.cs" />
+    <Compile Include="Filas\FilaOcrClientePool.cs" />
+    <Compile Include="Filas\FilaSelfieDi.cs" />
+    <Compile Include="Filas\FilaSelfieDiCliente.cs" />
+    <Compile Include="Filas\FilaSelfieDiClientePool.cs" />
+    <Compile Include="Filas\IFilaComparacao.cs" />
+    <Compile Include="Filas\IFilaFaceExtractor.cs" />
+    <Compile Include="Filas\IFilaFaceExtractorCliente.cs" />
+    <Compile Include="Filas\IFilaOcrCliente.cs" />
+    <Compile Include="Filas\IFilaSelfieDi.cs" />
+    <Compile Include="Filas\RepositorioFilaBase.cs" />
+    <Compile Include="Maps\AberturaContaMap.cs" />
+    <Compile Include="Maps\AcessoMap.cs" />
+    <Compile Include="Maps\AgenciaMap.cs" />
+    <Compile Include="Maps\AjusteDeDocumentoMap.cs" />
+    <Compile Include="Maps\ArquivoColetaMap.cs" />
+    <Compile Include="Maps\ArquivoPackMap.cs" />
+    <Compile Include="Maps\BancoMap.cs" />
+    <Compile Include="Maps\CampoMap.cs" />
+    <Compile Include="Maps\CamposValidacaoMap.cs" />
+    <Compile Include="Maps\ColetaMap.cs" />
+    <Compile Include="Maps\ComparaBioMap.cs" />
+    <Compile Include="Maps\ConfiguracaoDeFasesMap.cs" />
+    <Compile Include="Maps\ConfiguracaoDeLoteCefMap.cs" />
+    <Compile Include="Maps\ConfiguracaoDeTipoDeProcessoMap.cs" />
+    <Compile Include="Maps\ConfiguracaoIpMap.cs" />
+    <Compile Include="Maps\ConfiguracaoRemessaCampoMap.cs" />
+    <Compile Include="Maps\ConfiguracaoRemessaMap.cs" />
+    <Compile Include="Maps\ConsumoCarimboDigitalMap.cs" />
+    <Compile Include="Maps\CursoMap.cs" />
+    <Compile Include="Maps\DllMap.cs" />
+    <Compile Include="Maps\DocumentoExpurgoMap.cs" />
+    <Compile Include="Maps\DocumentoMap.cs" />
+    <Compile Include="Maps\DominioCampoMap.cs" />
+    <Compile Include="Maps\DossieContingenciaMap.cs" />
+    <Compile Include="Maps\DossieEsperadoMap.cs" />
+    <Compile Include="Maps\EmailPendenteMap.cs" />
+    <Compile Include="Maps\EnderecoDeInstituicaoDeEnsinoMap.cs" />
+    <Compile Include="Maps\EnderecoMap.cs" />
+    <Compile Include="Maps\EstatisticaAprovacaoMap.cs" />
+    <Compile Include="Maps\EstoquePortalMap.cs" />
+    <Compile Include="Maps\ExpurgoConfigMap.cs" />
+    <Compile Include="Maps\ExpurgoLogMap.cs" />
+    <Compile Include="Maps\FaceMap.cs" />
+    <Compile Include="Maps\FaturamentoMap.cs" />
+    <Compile Include="Maps\FeriadoMap.cs" />
+    <Compile Include="Maps\FileTransferMap.cs" />
+    <Compile Include="Maps\GrupoCampoMap.cs" />
+    <Compile Include="Maps\ImagemMap.cs" />
+    <Compile Include="Maps\IndexacaoMap.cs" />
+    <Compile Include="Maps\InstituicaoDeEnsinoMap.cs" />
+    <Compile Include="Maps\LicencaConsumidaMap.cs" />
+    <Compile Include="Maps\ListaNegraCpfMap.cs" />
+    <Compile Include="Maps\LogDocumentoMap.cs" />
+    <Compile Include="Maps\LogDossieEsperadoMap.cs" />
+    <Compile Include="Maps\LogGenericoMap.cs" />
+    <Compile Include="Maps\LoginLogoutMap.cs" />
+    <Compile Include="Maps\LogLoteMap.cs" />
+    <Compile Include="Maps\LogPacoteMap.cs" />
+    <Compile Include="Maps\LogPacoteProcessadoMap.cs" />
+    <Compile Include="Maps\LogPaginaMap.cs" />
+    <Compile Include="Maps\LogProcessoMap.cs" />
+    <Compile Include="Maps\LojaMap.cs" />
+    <Compile Include="Maps\LoteCefMap.cs" />
+    <Compile Include="Maps\LoteMap.cs" />
+    <Compile Include="Maps\MapeamentoCampoMap.cs" />
+    <Compile Include="Maps\OcorrenciaLogMap.cs" />
+    <Compile Include="Maps\OcorrenciaMap.cs" />
+    <Compile Include="Maps\OcorrenciaTipoMap.cs" />
+    <Compile Include="Maps\PacoteMap.cs" />
+    <Compile Include="Maps\PacoteProcessadoMap.cs" />
+    <Compile Include="Maps\PaginaMap.cs" />
+    <Compile Include="Maps\PaginaRestauradaMap.cs" />
+    <Compile Include="Maps\PalavraReconhecidaMap.cs" />
+    <Compile Include="Maps\PalavraTipoMap.cs" />
+    <Compile Include="Maps\PendenciaColetaMap.cs" />
+    <Compile Include="Maps\PendenciaPortalMap.cs" />
+    <Compile Include="Maps\PerfilMap.cs" />
+    <Compile Include="Maps\ProcessoMap.cs" />
+    <Compile Include="Maps\RankReclassificacaoMap.cs" />
+    <Compile Include="Maps\RecepcaoMap.cs" />
+    <Compile Include="Maps\RegraAcaoMap.cs" />
+    <Compile Include="Maps\RegraCondicionaisMap.cs" />
+    <Compile Include="Maps\RegraImportadaMap.cs" />
+    <Compile Include="Maps\RegraMap.cs" />
+    <Compile Include="Maps\RegraVioladaMap.cs" />
+    <Compile Include="Maps\RelacionamentoDeCursoMap.cs" />
+    <Compile Include="Maps\RemessaMap.cs" />
+    <Compile Include="Maps\TabelaItensMap.cs" />
+    <Compile Include="Maps\TagMap.cs" />
+    <Compile Include="Maps\TarjaMap.cs" />
+    <Compile Include="Maps\TemplateMap.cs" />
+    <Compile Include="Maps\TipoDocumentoMap.cs" />
+    <Compile Include="Maps\TipoProcessoMap.cs" />
+    <Compile Include="Maps\TransportadoraMap.cs" />
+    <Compile Include="Maps\TratamentoRegraMap.cs" />
+    <Compile Include="Maps\UsuarioMap.cs" />
+    <Compile Include="Maps\ValorReconhecidoMap.cs" />
+    <Compile Include="Migrations\201209190001_CriaAbbyytemplate.cs" />
+    <Compile Include="Migrations\201209190002_CriaAberturaproc.cs" />
+    <Compile Include="Migrations\201209190003_CriaAccess_Module.cs" />
+    <Compile Include="Migrations\201209190004_CriaAccess_Moduleweb.cs" />
+    <Compile Include="Migrations\201209190005_CriaAcces_Module_Bk.cs" />
+    <Compile Include="Migrations\201209190006_CriaAccountcaptured.cs" />
+    <Compile Include="Migrations\201209190007_CriaAcesso.cs" />
+    <Compile Include="Migrations\201209190008_CriaAcompprodusr.cs" />
+    <Compile Include="Migrations\201209190009_CriaAgencia.cs" />
+    <Compile Include="Migrations\201209190010_CriaAgencia_Bk.cs" />
+    <Compile Include="Migrations\201209190011_CriaAlc.cs" />
+    <Compile Include="Migrations\201209190012_CriaAlc_Bk.cs" />
+    <Compile Include="Migrations\201209190013_CriaAmbient.cs" />
+    <Compile Include="Migrations\201209190014_CriaArr.cs" />
+    <Compile Include="Migrations\201209190015_CriaAutentic.cs" />
+    <Compile Include="Migrations\201209190016_CriaAutoriz.cs" />
+    <Compile Include="Migrations\201209190017_CriaAutorizbkp.cs" />
+    <Compile Include="Migrations\201209190018_CriaBackups.cs" />
+    <Compile Include="Migrations\201209190019_CriaBairros.cs" />
+    <Compile Include="Migrations\201209190020_CriaBanco.cs" />
+    <Compile Include="Migrations\201209190021_CriaBatch.cs" />
+    <Compile Include="Migrations\201209190022_CriaBatch_Bk.cs" />
+    <Compile Include="Migrations\201209190023_CriaBatch_Lix.cs" />
+    <Compile Include="Migrations\201209190024_CriaBkptype.cs" />
+    <Compile Include="Migrations\201209190025_CriaCampoformdoccaneta.cs" />
+    <Compile Include="Migrations\201209190026_CriaCartao.cs" />
+    <Compile Include="Migrations\201209190027_CriaCash.cs" />
+    <Compile Include="Migrations\201209190028_CriaCash_Bk.cs" />
+    <Compile Include="Migrations\201209190029_CriaCc.cs" />
+    <Compile Include="Migrations\201209190030_CriaCctarifa.cs" />
+    <Compile Include="Migrations\201209190031_CriaCc_Bk.cs" />
+    <Compile Include="Migrations\201209190032_CriaCdsend.cs" />
+    <Compile Include="Migrations\201209190033_CriaCidades.cs" />
+    <Compile Include="Migrations\201209190034_CriaClassif.cs" />
+    <Compile Include="Migrations\201209190035_CriaCliente.cs" />
+    <Compile Include="Migrations\201209190036_CriaCnsbdu.cs" />
+    <Compile Include="Migrations\201209190037_CriaCompany.cs" />
+    <Compile Include="Migrations\201209190038_CriaCompe.cs" />
+    <Compile Include="Migrations\201209190039_CriaConces.cs" />
+    <Compile Include="Migrations\201209190040_CriaConfigfases.cs" />
+    <Compile Include="Migrations\201209190041_CriaConsultacc.cs" />
+    <Compile Include="Migrations\201209190042_CriaControle.cs" />
+    <Compile Include="Migrations\201209190043_CriaConven.cs" />
+    <Compile Include="Migrations\201209190044_CriaCpf.cs" />
+    <Compile Include="Migrations\201209190045_CriaCtragenc.cs" />
+    <Compile Include="Migrations\201209190046_CriaCtragenc_Bk.cs" />
+    <Compile Include="Migrations\201209190047_CriaCtragenc_Old.cs" />
+    <Compile Include="Migrations\201209190048_CriaCtrlprod.cs" />
+    <Compile Include="Migrations\201209190049_CriaDarf.cs" />
+    <Compile Include="Migrations\201209190050_CriaDbinfo.cs" />
+    <Compile Include="Migrations\201209190051_CriaDiapico.cs" />
+    <Compile Include="Migrations\201209190052_CriaDll.cs" />
+    <Compile Include="Migrations\201209190053_CriaDll_Ang.cs" />
+    <Compile Include="Migrations\201209190054_CriaDoc.cs" />
+    <Compile Include="Migrations\201209190055_CriaDoc_Bk.cs" />
+    <Compile Include="Migrations\201209190056_CriaDoc_Lix.cs" />
+    <Compile Include="Migrations\201209190057_CriaDoc_Twin.cs" />
+    <Compile Include="Migrations\201209190058_CriaDraft.cs" />
+    <Compile Include="Migrations\201209190059_CriaDraft2.cs" />
+    <Compile Include="Migrations\201209190060_CriaDraft3.cs" />
+    <Compile Include="Migrations\201209190061_CriaEnv.cs" />
+    <Compile Include="Migrations\201209190062_CriaEnv_Bk.cs" />
+    <Compile Include="Migrations\201209190063_CriaEquipe.cs" />
+    <Compile Include="Migrations\201209190064_CriaEquipeproc.cs" />
+    <Compile Include="Migrations\201209190065_CriaEquipeusr.cs" />
+    <Compile Include="Migrations\201209190066_CriaExportconfig.cs" />
+    <Compile Include="Migrations\201209190067_CriaExportconfiggus.cs" />
+    <Compile Include="Migrations\201209190068_CriaExportfield.cs" />
+    <Compile Include="Migrations\201209190069_CriaExportfieldgus.cs" />
+    <Compile Include="Migrations\201209190070_CriaFaseoff.cs" />
+    <Compile Include="Migrations\201209190071_CriaFeriado.cs" />
+    <Compile Include="Migrations\201209190072_CriaFeriadonac.cs" />
+    <Compile Include="Migrations\201209190073_CriaFieldrecognize.cs" />
+    <Compile Include="Migrations\201209190074_CriaFormalistica.cs" />
+    <Compile Include="Migrations\201209190075_CriaFormalisticagus.cs" />
+    <Compile Include="Migrations\201209190076_CriaFormdoccaneta.cs" />
+    <Compile Include="Migrations\201209190077_CriaFormrealizada.cs" />
+    <Compile Include="Migrations\201209190078_CriaFraude.cs" />
+    <Compile Include="Migrations\201209190079_CriaGare.cs" />
+    <Compile Include="Migrations\201209190080_CriaGps.cs" />
+    <Compile Include="Migrations\201209190081_CriaGrupocampo.cs" />
+    <Compile Include="Migrations\201209190082_CriaGrupomon.cs" />
+    <Compile Include="Migrations\201209190083_CriaIcr.cs" />
+    <Compile Include="Migrations\201209190084_CriaIcrper.cs" />
+    <Compile Include="Migrations\201209190085_CriaImagefeatures.cs" />
+    <Compile Include="Migrations\201209190086_CriaInfoag.cs" />
+    <Compile Include="Migrations\201209190087_CriaIp.cs" />
+    <Compile Include="Migrations\201209190088_CriaIpconfig.cs" />
+    <Compile Include="Migrations\201209190089_CriaIpconfiggrupos.cs" />
+    <Compile Include="Migrations\201209190090_CriaIpconfigjava.cs" />
+    <Compile Include="Migrations\201209190091_CriaIpconfig_Phe.cs" />
+    <Compile Include="Migrations\201209190092_CriaIpconfig_Teste.cs" />
+    <Compile Include="Migrations\201209190093_CriaIpmap.cs" />
+    <Compile Include="Migrations\201209190094_CriaLog.cs" />
+    <Compile Include="Migrations\201209190095_CriaLogbatch.cs" />
+    <Compile Include="Migrations\201209190096_CriaLogbatch_Bk.cs" />
+    <Compile Include="Migrations\201209190097_CriaLogdoc.cs" />
+    <Compile Include="Migrations\201209190098_CriaLogdoc_Bk.cs" />
+    <Compile Include="Migrations\201209190099_CriaLogint.cs" />
+    <Compile Include="Migrations\201209190100_CriaLogmdoc.cs" />
+    <Compile Include="Migrations\201209190101_CriaLogmdoc_Bk.cs" />
+    <Compile Include="Migrations\201209190102_CriaLogoperador.cs" />
+    <Compile Include="Migrations\201209190103_CriaLogpend.cs" />
+    <Compile Include="Migrations\201209190104_CriaLogpend_Bk.cs" />
+    <Compile Include="Migrations\201209190105_CriaLogproc.cs" />
+    <Compile Include="Migrations\201209190106_CriaLogproc_Bk.cs" />
+    <Compile Include="Migrations\201209190107_CriaLogprod.cs" />
+    <Compile Include="Migrations\201209190108_CriaLogradouros.cs" />
+    <Compile Include="Migrations\201209190109_CriaLogremessa.cs" />
+    <Compile Include="Migrations\201209190110_CriaLogremessa_Bk.cs" />
+    <Compile Include="Migrations\201209190111_CriaLogsvr.cs" />
+    <Compile Include="Migrations\201209190112_CriaLogsvr_Bk.cs" />
+    <Compile Include="Migrations\201209190113_CriaLog_Bk.cs" />
+    <Compile Include="Migrations\201209190114_CriaMappedfield.cs" />
+    <Compile Include="Migrations\201209190115_CriaMdoc.cs" />
+    <Compile Include="Migrations\201209190116_CriaMdocdados.cs" />
+    <Compile Include="Migrations\201209190117_CriaMdocdados_Bk.cs" />
+    <Compile Include="Migrations\201209190118_CriaMdocdados_Lix.cs" />
+    <Compile Include="Migrations\201209190119_CriaMdoc_Bk.cs" />
+    <Compile Include="Migrations\201209190120_CriaMdoc_Ern.cs" />
+    <Compile Include="Migrations\201209190121_CriaMdoc_Lix.cs" />
+    <Compile Include="Migrations\201209190122_CriaMdoc_Lixo.cs" />
+    <Compile Include="Migrations\201209190123_CriaMdoc_Phe.cs" />
+    <Compile Include="Migrations\201209190124_CriaModuleweb.cs" />
+    <Compile Include="Migrations\201209190125_CriaMotiv.cs" />
+    <Compile Include="Migrations\201209190126_CriaMotivo.cs" />
+    <Compile Include="Migrations\201209190127_CriaMotivorecaptura.cs" />
+    <Compile Include="Migrations\201209190128_CriaMsgcode.cs" />
+    <Compile Include="Migrations\201209190129_CriaMunic.cs" />
+    <Compile Include="Migrations\201209190130_CriaMuniccompe.cs" />
+    <Compile Include="Migrations\201209190131_CriaMunicferiado.cs" />
+    <Compile Include="Migrations\201209190132_CriaOcr.cs" />
+    <Compile Include="Migrations\201209190133_CriaPack.cs" />
+    <Compile Include="Migrations\201209190134_CriaPack_Bk.cs" />
+    <Compile Include="Migrations\201209190135_CriaPack_Lix.cs" />
+    <Compile Include="Migrations\201209190136_CriaParbkp.cs" />
+    <Compile Include="Migrations\201209190137_CriaPendencia.cs" />
+    <Compile Include="Migrations\201209190138_CriaPendencia_Bk.cs" />
+    <Compile Include="Migrations\201209190139_CriaPendetiqueta.cs" />
+    <Compile Include="Migrations\201209190140_CriaPerfil.cs" />
+    <Compile Include="Migrations\201209190141_CriaPformal.cs" />
+    <Compile Include="Migrations\201209190142_CriaPga_Diagrams.cs" />
+    <Compile Include="Migrations\201209190143_CriaPga_Forms.cs" />
+    <Compile Include="Migrations\201209190144_CriaPga_Graphs.cs" />
+    <Compile Include="Migrations\201209190145_CriaPga_Images.cs" />
+    <Compile Include="Migrations\201209190146_CriaPga_Layout.cs" />
+    <Compile Include="Migrations\201209190147_CriaPga_Queries.cs" />
+    <Compile Include="Migrations\201209190148_CriaPga_Reports.cs" />
+    <Compile Include="Migrations\201209190149_CriaPga_Scripts.cs" />
+    <Compile Include="Migrations\201209190150_CriaPlan_Table.cs" />
+    <Compile Include="Migrations\201209190151_CriaPmonit.cs" />
+    <Compile Include="Migrations\201209190152_CriaPreferenc.cs" />
+    <Compile Include="Migrations\201209190153_CriaPrest.cs" />
+    <Compile Include="Migrations\201209190154_CriaPrinter.cs" />
+    <Compile Include="Migrations\201209190155_CriaProbot.cs" />
+    <Compile Include="Migrations\201209190156_CriaProc.cs" />
+    <Compile Include="Migrations\201209190157_CriaProc_Ang.cs" />
+    <Compile Include="Migrations\201209190158_CriaProc_Bk.cs" />
+    <Compile Include="Migrations\201209190159_CriaProc_Lix.cs" />
+    <Compile Include="Migrations\201209190160_CriaProc_Phe.cs" />
+    <Compile Include="Migrations\201209190161_CriaQpriordet.cs" />
+    <Compile Include="Migrations\201209190162_CriaQpriority.cs" />
+    <Compile Include="Migrations\201209190163_CriaQpriorityfield.cs" />
+    <Compile Include="Migrations\201209190164_CriaRds.cs" />
+    <Compile Include="Migrations\201209190165_CriaRecvalue.cs" />
+    <Compile Include="Migrations\201209190166_CriaReenvtif.cs" />
+    <Compile Include="Migrations\201209190167_CriaRegiao.cs" />
+    <Compile Include="Migrations\201209190168_CriaRegister.cs" />
+    <Compile Include="Migrations\201209190169_CriaRegister_Control.cs" />
+    <Compile Include="Migrations\201209190170_CriaRegra.cs" />
+    <Compile Include="Migrations\201209190171_CriaRegraacao.cs" />
+    <Compile Include="Migrations\201209190172_CriaRegracond.cs" />
+    <Compile Include="Migrations\201209190173_CriaRegraproc.cs" />
+    <Compile Include="Migrations\201209190174_CriaRegraproc_Lix.cs" />
+    <Compile Include="Migrations\201209190175_CriaRegratrat.cs" />
+    <Compile Include="Migrations\201209190176_CriaRelat.cs" />
+    <Compile Include="Migrations\201209190177_CriaRemessa.cs" />
+    <Compile Include="Migrations\201209190178_CriaRemessa_Phe.cs" />
+    <Compile Include="Migrations\201209190179_CriaRme.cs" />
+    <Compile Include="Migrations\201209190180_CriaRme_Bk.cs" />
+    <Compile Include="Migrations\201209190181_CriaRng.cs" />
+    <Compile Include="Migrations\201209190182_CriaRobot.cs" />
+    <Compile Include="Migrations\201209190183_CriaScanner.cs" />
+    <Compile Include="Migrations\201209190184_CriaSchemainfo.cs" />
+    <Compile Include="Migrations\201209190185_CriaScore.cs" />
+    <Compile Include="Migrations\201209190186_CriaScore_Bk.cs" />
+    <Compile Include="Migrations\201209190187_CriaSecurity.cs" />
+    <Compile Include="Migrations\201209190188_CriaSegmento.cs" />
+    <Compile Include="Migrations\201209190189_CriaSeqtable.cs" />
+    <Compile Include="Migrations\201209190190_CriaSimul.cs" />
+    <Compile Include="Migrations\201209190191_CriaSolinv.cs" />
+    <Compile Include="Migrations\201209190192_CriaSoljpg.cs" />
+    <Compile Include="Migrations\201209190193_CriaSoljpg200.cs" />
+    <Compile Include="Migrations\201209190194_CriaSolverso.cs" />
+    <Compile Include="Migrations\201209190195_CriaStatus.cs" />
+    <Compile Include="Migrations\201209190196_CriaSystem.cs" />
+    <Compile Include="Migrations\201209190197_CriaTabelaitens.cs" />
+    <Compile Include="Migrations\201209190198_CriaTag.cs" />
+    <Compile Include="Migrations\201209190199_CriaTcon.cs" />
+    <Compile Include="Migrations\201209190200_CriaTdcampos.cs" />
+    <Compile Include="Migrations\201209190201_CriaTdcamposgus.cs" />
+    <Compile Include="Migrations\201209190202_CriaTdcampos_Bkgus.cs" />
+    <Compile Include="Migrations\201209190203_CriaTdcampos_Bkpmaio2.cs" />
+    <Compile Include="Migrations\201209190204_CriaTdoctproc.cs" />
+    <Compile Include="Migrations\201209190205_CriaTdoctprocgus.cs" />
+    <Compile Include="Migrations\201209190206_CriaTemplatecampos.cs" />
+    <Compile Include="Migrations\201209190207_CriaTempofaseproc.cs" />
+    <Compile Include="Migrations\201209190208_CriaTempofaseproc_Bk.cs" />
+    <Compile Include="Migrations\201209190209_CriaTipific.cs" />
+    <Compile Include="Migrations\201209190210_CriaTprocequipe.cs" />
+    <Compile Include="Migrations\201209190211_CriaTrans.cs" />
+    <Compile Include="Migrations\201209190212_CriaTrans_Bk.cs" />
+    <Compile Include="Migrations\201209190213_CriaTratdig.cs" />
+    <Compile Include="Migrations\201209190214_CriaTuni.cs" />
+    <Compile Include="Migrations\201209190215_CriaTvd.cs" />
+    <Compile Include="Migrations\201209190216_CriaTwfproc.cs" />
+    <Compile Include="Migrations\201209190217_CriaTypedoc.cs" />
+    <Compile Include="Migrations\201209190218_CriaTypedocgus.cs" />
+    <Compile Include="Migrations\201209190219_CriaTypedoctemplate.cs" />
+    <Compile Include="Migrations\201209190220_CriaTypeproc.cs" />
+    <Compile Include="Migrations\201209190221_CriaTypeprocgus.cs" />
+    <Compile Include="Migrations\201209190222_CriaUf.cs" />
+    <Compile Include="Migrations\201209190223_CriaUsr.cs" />
+    <Compile Include="Migrations\201209190224_CriaUsrbkp.cs" />
+    <Compile Include="Migrations\201209190225_CriaUsrequipe.cs" />
+    <Compile Include="Migrations\201209190226_CriaUsrlog.cs" />
+    <Compile Include="Migrations\201209190227_CriaUsrpwd.cs" />
+    <Compile Include="Migrations\201209190228_CriaUsrteste.cs" />
+    <Compile Include="Migrations\201209190229_CriaUsr_Ang.cs" />
+    <Compile Include="Migrations\201209190230_CriaUsr_Bk.cs" />
+    <Compile Include="Migrations\201209190231_CriaUsr_Rmo.cs" />
+    <Compile Include="Migrations\201209190232_CriaValfat.cs" />
+    <Compile Include="Migrations\201209190233_CriaVolume.cs" />
+    <Compile Include="Migrations\201209190234_CriaV_Endereco.cs" />
+    <Compile Include="Migrations\201209190235_CriaXmltrans.cs" />
+    <Compile Include="Migrations\201209241544_AdicionaIndicioFraudeNoDocumento.cs" />
+    <Compile Include="Migrations\201209241656_CriaEstatisticaAprovacao.cs" />
+    <Compile Include="Migrations\201210021654_AdicionaTypeProcNaExportConfig.cs" />
+    <Compile Include="Migrations\201210091009_AdicionaAbandonadasNaEstatisticaAprovacao.cs" />
+    <Compile Include="Migrations\201210311819_CriaFaturamento.cs" />
+    <Compile Include="Migrations\201211051413_AdicionaDocumentoNaRegraProc.cs" />
+    <Compile Include="Migrations\201211060846_AdicionaVinculoNaRegra.cs" />
+    <Compile Include="Migrations\201211061146_CriaCamposValidacao.cs" />
+    <Compile Include="Migrations\201211081750_AdicionaFaturamentoCodeNoLote.cs" />
+    <Compile Include="Migrations\201211141600_CriaRegraImportada.cs" />
+    <Compile Include="Migrations\201211201711_AdicionaStatusDeConsultaNoDocumento.cs" />
+    <Compile Include="Migrations\201211290738_AdicionaFraudesNaEstatisticaDeAprovacao.cs" />
+    <Compile Include="Migrations\201212031916_CriaPacoteProcessado.cs" />
+    <Compile Include="Migrations\201212031941_AdicionaPacoteProcessadoNoLote.cs" />
+    <Compile Include="Migrations\201212031942_RemoveFaturamentoCodeDoLote.cs" />
+    <Compile Include="Migrations\201212041051_AdicionaPacoteProcessadoeEnviadoEm.cs" />
+    <Compile Include="Migrations\201212121635_AdicionaPacoteProcessadoStatus.cs" />
+    <Compile Include="Migrations\201212131105_AdicionaFaturamentoStatus.cs" />
+    <Compile Include="Migrations\201212180936_AdicionaValorUtilizadoParaValorFinal.cs" />
+    <Compile Include="Migrations\201301281053_AdicionaIndexadorNoCampo.cs" />
+    <Compile Include="Migrations\201301281055_AtualizaIndexadorCampo.cs" />
+    <Compile Include="Migrations\201301281232_AdicionaControleAtalhosNoTipoDeDocumento.cs" />
+    <Compile Include="Migrations\201301281240_AtualizaControleDeAtalhosNoTipoDeDocumento.cs" />
+    <Compile Include="Migrations\201302271453_AdicionaRegraImpVinculoNaRegraViolada.cs" />
+    <Compile Include="Migrations\201303071529_AdicionaCPFNaRegraProc.cs" />
+    <Compile Include="Migrations\201303072268_AdicionaQtdeLimiteDescEmTypeDoc.cs" />
+    <Compile Include="Migrations\201303111518_AdicionaReconhecivelEmTdCampos.cs" />
+    <Compile Include="Migrations\201303121411_AdicionaReconhecivelEmTypeDoc.cs" />
+    <Compile Include="Migrations\201303131006_CriaLicencaConsumida.cs" />
+    <Compile Include="Migrations\201303221132_AdicionaEnvioEmConfigFases.cs" />
+    <Compile Include="Migrations\201303261119_CriaRankReclassificacao.cs" />
+    <Compile Include="Migrations\201303271140_AdicionaFraudavelEmTypeDoc.cs" />
+    <Compile Include="Migrations\201303281500_AlteraColunaVinculoEmRegraproc.cs" />
+    <Compile Include="Migrations\201303281641_AdicionaRegraDeFraudavelEmRegra.cs" />
+    <Compile Include="Migrations\201304021122_AdicionaOcrComplementouEmMdocDados.cs" />
+    <Compile Include="Migrations\201304151627_AdicionaFaseEnvioEmConfiguracaoDeFases.cs" />
+    <Compile Include="Migrations\201304291500_AlteraPacoteProcessado.cs" />
+    <Compile Include="Migrations\201305031411_AdicionaDecisaoEmProc.cs" />
+    <Compile Include="Migrations\201305061118_AdicionarCamposRestantesParaBatch_Bk.cs" />
+    <Compile Include="Migrations\201305061627_AdicionarCamposRestantesParaMdocDados_Bk.cs" />
+    <Compile Include="Migrations\201305101530_AdicionaOcrPodeInserirEmTdCampos.cs" />
+    <Compile Include="Migrations\201305131353_CriaExpurgoConfig.cs" />
+    <Compile Include="Migrations\201305141123_CriaExpurgoLog.cs" />
+    <Compile Include="Migrations\201305141320_AdicionaDescFraudeNaRegra.cs" />
+    <Compile Include="Migrations\201305160854_AdicionaReclassificavelNoTipoDeDocumento.cs" />
+    <Compile Include="Migrations\201305171041_AdicionaTipoNoCampo.cs" />
+    <Compile Include="Migrations\201305171120_AdicionaReclassificadoNoDocumento.cs" />
+    <Compile Include="Migrations\201305201511_AlteraMensagemDeExpurgoLog.cs" />
+    <Compile Include="Migrations\201305211025_AdicionaTipoOriginalNoDocumento.cs" />
+    <Compile Include="Migrations\201305241630_CriaTarja.cs" />
+    <Compile Include="Migrations\201305311352_AdicionaGrupoCamoStyleNoCampo.cs" />
+    <Compile Include="Migrations\201306031400_AdicionaCamposHistoricoExpurgoConfig.cs" />
+    <Compile Include="Migrations\201306031420_CriaRegraProcBkCasoNaoExista.cs" />
+    <Compile Include="Migrations\201306031440_CriaRegraImpBkCasoNaoExista.cs" />
+    <Compile Include="Migrations\201306031445_CriaPacoteProcessadoBkCasoNaoExista.cs" />
+    <Compile Include="Migrations\201306031519_CriaRecValueBk.cs" />
+    <Compile Include="Migrations\201306031520_CriaRecValueHistorico.cs" />
+    <Compile Include="Migrations\201306031530_CriaMdocDadosHistorico.cs" />
+    <Compile Include="Migrations\201306031533_CriaLogDocHistorico.cs" />
+    <Compile Include="Migrations\201306031535_CriaDocHistorico.cs" />
+    <Compile Include="Migrations\201306031537_CriaLogMdocHistorico.cs" />
+    <Compile Include="Migrations\201306031559_CriaMdocHistorico.cs" />
+    <Compile Include="Migrations\201306031622_CriaLogRemessaHistorico.cs" />
+    <Compile Include="Migrations\201306031623_CriaRemessaBk.cs" />
+    <Compile Include="Migrations\201306031624_CriaRemessaHistorico.cs" />
+    <Compile Include="Migrations\201306031625_CriaRegraProcHistorico.cs" />
+    <Compile Include="Migrations\201306031627_CriaRegraImpHistorico.cs" />
+    <Compile Include="Migrations\201306031629_CriaLogProcHistorico.cs" />
+    <Compile Include="Migrations\201306031631_CriaProcHistorico.cs" />
+    <Compile Include="Migrations\201306031633_CriaLogBatchHistorico.cs" />
+    <Compile Include="Migrations\201306031635_CriaLogHistorico.cs" />
+    <Compile Include="Migrations\201306031637_CriaBatchHistorico.cs" />
+    <Compile Include="Migrations\201306031639_CriaPacoteProcessadoHistorico.cs" />
+    <Compile Include="Migrations\201306041120_AdicionarIntervaloDeExclusaoDefinitivaHistorico.cs" />
+    <Compile Include="Migrations\201306101222_CriaTabelaPackBkCasoNaoExista.cs" />
+    <Compile Include="Migrations\201306101227_CriaTabelaPackHistoricoCasoNaoExista.cs" />
+    <Compile Include="Migrations\201306181348_AdicionarQuantidadeMovimentosEmExpurgoConfig.cs" />
+    <Compile Include="Migrations\201306191013_CriaDocumentoExpurgo.cs" />
+    <Compile Include="Migrations\201306241825_CriaArquivoPack.cs" />
+    <Compile Include="Migrations\201306251521_AdicionarObservacaoArquivoPack.cs" />
+    <Compile Include="Migrations\201306271119_AdicionarDesfragmentacaoNaExpurgoConfig.cs" />
+    <Compile Include="Migrations\201306271147_AdicionarDesfragmentacaoDiasNaExpurgoConfig.cs" />
+    <Compile Include="Migrations\201306271358_AdicionarDesfragmentacaoHoraNaExpurgoConfig.cs" />
+    <Compile Include="Migrations\201306271626_CriaTabelaAcompProdUsr_BkCasoNaoExista.cs" />
+    <Compile Include="Migrations\201306271630_CriaTabelaAcompProdUsrHistCasoNaoExista.cs" />
+    <Compile Include="Migrations\201306281119_AdicionaCamposDeSlaFaturamento.cs" />
+    <Compile Include="Migrations\201307011546_AdicionaFaturadoNaPacoteProcessado.cs" />
+    <Compile Include="Migrations\201307101134_CriaImagem.cs" />
+    <Compile Include="Migrations\201308131013_AdicionaFimRecepcaoNaPacoteProcessado.cs" />
+    <Compile Include="Migrations\201308131442_AdicionaTFimXmlNoLote.cs" />
+    <Compile Include="Migrations\201308141657_AdicionaHoraUltimoArquivoRecebidoNaPacoteProcessado.cs" />
+    <Compile Include="Migrations\201308271806_AdicionaStartTimeNaDoc.cs" />
+    <Compile Include="Migrations\201308301423_CriaPalavraReconhecida.cs" />
+    <Compile Include="Migrations\201309041505_AdicionaFimOcrNaDoc.cs" />
+    <Compile Include="Migrations\201309101500_AdicionaDescExtensaoNaRemessa.cs" />
+    <Compile Include="Migrations\201309241054_AdicionaValidacaoComplementouNaMDocDados.cs" />
+    <Compile Include="Migrations\201310011100_AdicionaTimeStampNaProc.cs" />
+    <Compile Include="Migrations\201310031040_AdicionaTimeStampNaProcBK.cs" />
+    <Compile Include="Migrations\201310180944_AdicionaSeqTitularNaRegraProc.cs" />
+    <Compile Include="Migrations\201310181146_InsereQueueOcrNoIpConfig.cs" />
+    <Compile Include="Migrations\201311041000_AdicionaCpfNaMdoc.cs" />
+    <Compile Include="Migrations\201312091700_AdicionaChaveNaAcompProdUsr.cs" />
+    <Compile Include="Migrations\201312110110_AdicionaCampoNaTypedocTemplates.cs" />
+    <Compile Include="Migrations\201401081455_AdicionaIdentificacaoNoLote.cs" />
+    <Compile Include="Migrations\201401161702_CriaEstoquePortal.cs" />
+    <Compile Include="Migrations\201401171134_CriaRecepcao.cs" />
+    <Compile Include="Migrations\201401171424_AdicionaSolicitadoEmRecepcao.cs" />
+    <Compile Include="Migrations\201401171440_AlteraStatusEmRecepcao.cs" />
+    <Compile Include="Migrations\201401201031_CriaTabelasDeInstituicaoDeEnsino.cs" />
+    <Compile Include="Migrations\201401231332_CriaPendenciasRecepcao.cs" />
+    <Compile Include="Migrations\201401231859_AdicionarUltimaTentativaEmPendRecepcao.cs" />
+    <Compile Include="Migrations\201401231909_LimpaSchemaInfo.cs" />
+    <Compile Include="Migrations\201402061601_RenomeiaAdicionaOperacaoPendenciaPortal.cs" />
+    <Compile Include="Migrations\201402071319_RenomeiaPendenciaPortalCode.cs" />
+    <Compile Include="Migrations\201404291253_AdicionaFlagRevisaoNaRegra.cs" />
+    <Compile Include="Migrations\201404291438_AtualizaFlagRevisaoNaRegra.cs" />
+    <Compile Include="Migrations\201404301405_AdicionaFaseRevisaoNaConfigFases.cs" />
+    <Compile Include="Migrations\201404301409_AtualizaFaseRevisaoNaConfigFases.cs" />
+    <Compile Include="Migrations\201405121650_AdicionaRegraRevisadaEmRegraProc.cs" />
+    <Compile Include="Migrations\201405121651_AdicionaFimRevisaoEmLote.cs" />
+    <Compile Include="Migrations\201405291021_AdicionaRegraRevisadaEmRegraProcBk.cs" />
+    <Compile Include="Migrations\201406091137_AdicionaSequencialDeSolicitacaoNoLote.cs" />
+    <Compile Include="Migrations\201410081408_AdicionaValorRecuperadoNaMDocDados.cs" />
+    <Compile Include="Migrations\201412181759_InsereTagDiretorioDigitalizacao.cs" />
+    <Compile Include="Migrations\201506121529_InsereTagDeProxy.cs" />
+    <Compile Include="Migrations\201506291325_AdicionaDocVirtualNoDocumento.cs" />
+    <Compile Include="Migrations\201509301647_CriaAberturaConta.cs" />
+    <Compile Include="Migrations\201510071149_InsereTagDePortal.cs" />
+    <Compile Include="Migrations\201510201520_AdicionaListaDeTipoDeDocumentoNaRegraTrat.cs" />
+    <Compile Include="Migrations\201510281725_AdicionarRegraMotorEmRegra.cs" />
+    <Compile Include="Migrations\201510291345_AdicionarLoginBrSaeNoUsuario.cs" />
+    <Compile Include="Migrations\201511181120_AdicionaUsuarioBrsafeNaUsr.cs" />
+    <Compile Include="Migrations\201511181314_AdicionaCamposNaUsrlog.cs" />
+    <Compile Include="Migrations\201512081525_CriaDadosBrSafe.cs" />
+    <Compile Include="Migrations\201602100944_AdicionaImpostoRendaNaPagina.cs" />
+    <Compile Include="Migrations\201605231538_AdicionaFuncaoNaRegraCondicao.cs" />
+    <Compile Include="Migrations\201606011530_AdicionaFuncaoCompararNaRegraCondicao.cs" />
+    <Compile Include="Migrations\201606091146_AdicionaArquivoFotoNoUsuario.cs" />
+    <Compile Include="Migrations\201606101829_AdicionaTokenNoUsuario.cs" />
+    <Compile Include="Migrations\201606131638_AdicionaUsuarioCapturaNoLote.cs" />
+    <Compile Include="Migrations\201606151446_InsereTagConsultaPh3.cs" />
+    <Compile Include="Migrations\201606151534_AdicionaPh3OkNoLote.cs" />
+    <Compile Include="Migrations\201606161420_CriaListaNegraCpf.cs" />
+    <Compile Include="Migrations\201606161545_AdicionaDocumentoscopiaNaTdCampos.cs" />
+    <Compile Include="Migrations\201606181649_InsereTagDocumentoscopiaUrl.cs" />
+    <Compile Include="Migrations\201606201434_InsereTagVertrosParametros.cs" />
+    <Compile Include="Migrations\201606201453_AdicionaVertrosOkNoLote.cs" />
+    <Compile Include="Migrations\201607071637_AdicionaStatusFaceNaPagina.cs" />
+    <Compile Include="Migrations\201607071800_AdicionaTimeFaceNaPagina.cs" />
+    <Compile Include="Migrations\201607081638_CriaComparaBio.cs" />
+    <Compile Include="Migrations\201607081645_CriaFace.cs" />
+    <Compile Include="Migrations\201607111146_AdicionaStartTimeNaFace.cs" />
+    <Compile Include="Migrations\201607111421_AdicionaBatchCodeNaComparaBio.cs" />
+    <Compile Include="Migrations\201607111742_InsereTagCorteFaceComum.cs" />
+    <Compile Include="Migrations\201607211539_AdicionaStatusFraudeNoDocumento.cs" />
+    <Compile Include="Migrations\201702211623_AdicionaIndexadoresNoProcesso.cs" />
+    <Compile Include="Migrations\201702211813_AdicionaQuantidadePaginasNoProcesso.cs" />
+    <Compile Include="Migrations\201702231136_AdicionaVersaoNoDocumento.cs" />
+    <Compile Include="Migrations\201702270955_InsereTagOcrTypedocs.cs" />
+    <Compile Include="Migrations\201703011611_CriaColeta.cs" />
+    <Compile Include="Migrations\201703021200_AdicionaColetaNoPacote.cs" />
+    <Compile Include="Migrations\201703021400_AdicionaDevolucaoNaColeta.cs" />
+    <Compile Include="Migrations\201703021634_InsereTagAssinaturaDigital.cs" />
+    <Compile Include="Migrations\201703081140_InsereTagPosicaoCertificado.cs" />
+    <Compile Include="Migrations\201705111758_InsereIpConfigServicos.cs" />
+    <Compile Include="Migrations\201706051625_AdicionaDadosDaRecepcaoNaColeta.cs" />
+    <Compile Include="Migrations\201706051644_CriaEmailPendente.cs" />
+    <Compile Include="Migrations\201706061049_CriaDossieEsperado.cs" />
+    <Compile Include="Migrations\201706061312_CriaOcorrencia.cs" />
+    <Compile Include="Migrations\201706061323_CriaLogOcorrencia.cs" />
+    <Compile Include="Migrations\201706071327_CriaTipoOcorrencia.cs" />
+    <Compile Include="Migrations\201706071400_AdicionaDadosDaConferenciaNoPacote.cs" />
+    <Compile Include="Migrations\201706071730_CriaDossieContingencia.cs" />
+    <Compile Include="Migrations\201706131700_AdicionaDossieEsperadoNoLote.cs" />
+    <Compile Include="Migrations\201706141130_AdicionaQualidadeNoLote.cs" />
+    <Compile Include="Migrations\201706141348_CriaAjusteDocumento.cs" />
+    <Compile Include="Migrations\201706161508_ArrumaColunasAjusteDocumento.cs" />
+    <Compile Include="Migrations\201706191558_AdicionaAssinaturaNaConfiguracaoDeFases.cs" />
+    <Compile Include="Migrations\201706211000_CriaTransportadora.cs" />
+    <Compile Include="Migrations\201706211015_AdicionaDadosNaColeta.cs" />
+    <Compile Include="Migrations\201706211415_AdicionaStatusNaTransportadora.cs" />
+    <Compile Include="Migrations\201706221515_AdicionaArquivoNaColeta.cs" />
+    <Compile Include="Migrations\201706230940_AdicionaStartTimeNoAjusteDeDocumento.cs" />
+    <Compile Include="Migrations\201706261130_AdicionaCodAlternativoNoPacote.cs" />
+    <Compile Include="Migrations\201706261710_AdicionaOrdemNoDocumento.cs" />
+    <Compile Include="Migrations\201708021100_InsereEAtualizaTagQualidade.cs" />
+    <Compile Include="Migrations\201708031035_AdicionaDataFaturamentoNoLote.cs" />
+    <Compile Include="Migrations\201708041011_AdicionaPaginaNaRegraViolada.cs" />
+    <Compile Include="Migrations\201708041012_InsereRegraDeDocComProblemaNaClassificacao.cs" />
+    <Compile Include="Migrations\201708081433_InsereTagAlarmeEmailPara.cs" />
+    <Compile Include="Migrations\201708091043_CriaLogPacoteProcessado.cs" />
+    <Compile Include="Migrations\201708101145_AdicionaResultadoQualidadeCefNoLote.cs" />
+    <Compile Include="Migrations\201708111440_AdicionaAcaoNoLogOcorrencia.cs" />
+    <Compile Include="Migrations\201708181515_AdicionaResponsavelNaOcorrencia.cs" />
+    <Compile Include="Migrations\201708250800_CriaCodigoBarrasCef.cs" />
+    <Compile Include="Migrations\201708290800_AdicionaDataCriacaoECodigoOcorrenciaNoTipoDeDocumento.cs" />
+    <Compile Include="Migrations\201708291100_AdicionaCaixaEtiquetaNaDossieEsperado.cs" />
+    <Compile Include="Migrations\201708311011_AdicionaQuantidadePaginasDocumento.cs" />
+    <Compile Include="Migrations\201708311527_AdicionaTermoAvulsoNoLote.cs" />
+    <Compile Include="Migrations\201709211045_AlteraCampoNomeArquivoEmColeta.cs" />
+    <Compile Include="Migrations\201709271100_InsereTagImagemBranco.cs" />
+    <Compile Include="Migrations\201709291622_AdicionaRecontadoNoDocumento.cs" />
+    <Compile Include="Migrations\201710021052_AdicionaRecontagemFilaNoDocumento.cs" />
+    <Compile Include="Migrations\201710031053_CriaPaginaRestaurada.cs" />
+    <Compile Include="Migrations\201710031142_AdicionaReavaliadoEmNoLote.cs" />
+    <Compile Include="Migrations\201710041000_AdicionaBarcodeNoProcesso.cs" />
+    <Compile Include="Migrations\201710091818_AdicionaAtualizacaoBrancoNoLote.cs" />
+    <Compile Include="Migrations\201710161400_AdicionaFaseTermoDeAutuacaoNaConfigFases.cs" />
+    <Compile Include="Migrations\201710161420_AtualizaFaseTermoDeAuturacaoNaConfigFases.cs" />
+    <Compile Include="Migrations\201710191052_CriaFileTransfer.cs" />
+    <Compile Include="Migrations\201710191144_AdicionaDataCenterNaPagina.cs" />
+    <Compile Include="Migrations\201710191445_AdicionaRecognitionOkNoDocumento.cs" />
+    <Compile Include="Migrations\201710191502_AdicionaRecognitionInicioNoDocumento.cs" />
+    <Compile Include="Migrations\201710241040_InsereTagDimensaoSeparador.cs" />
+    <Compile Include="Migrations\201711081733_InsereTagsExecucaoDirectory.cs" />
+    <Compile Include="Migrations\201711131031_AdicionaRecognitionInicioPosNoDocumento.cs" />
+    <Compile Include="Migrations\201711131647_AdicionaAtivadoNoPacoteProcessado.cs" />
+    <Compile Include="Migrations\201711131705_InsereSshInfoNaIpConfig.cs" />
+    <Compile Include="Migrations\201711161525_AlteraCampoPaginaEmRegraProc.cs" />
+    <Compile Include="Migrations\201711231058_AdicionaStartAjusteNoProcesso.cs" />
+    <Compile Include="Migrations\201711281519_AdicionaRecapturadoNoLote.cs" />
+    <Compile Include="Migrations\201712071022_CriaLoginLogout.cs" />
+    <Compile Include="Migrations\201712071528_AdicionaEtiquetaCefNoPacote.cs" />
+    <Compile Include="Migrations\201712071833_CriaConsumoCarimboDigital.cs" />
+    <Compile Include="Migrations\201712181501_AdicionaTriagemNaConfiguracaoDeFases.cs" />
+    <Compile Include="Migrations\201712201637_AdicionaQualidadeCefNaPacoteProcessado.cs" />
+    <Compile Include="Migrations\201712221500_AdicionaDataDeDevolucaoNoPack.cs" />
+    <Compile Include="Migrations\201801021132_AdicionaEnderecoWebNaIpConfig.cs" />
+    <Compile Include="Migrations\201801101400_AdicionaDataEUsuarioPreparoNoPack.cs" />
+    <Compile Include="Migrations\201802021018_CriaLoteCef.cs" />
+    <Compile Include="Migrations\201802051455_AdicionaDataInicioEUsuario2PreparoNoPack.cs" />
+    <Compile Include="Migrations\201802061000_AdicionaUsageNaDll.cs" />
+    <Compile Include="Migrations\201802071320_CriaTypeWord.cs" />
+    <Compile Include="Migrations\201802081300_AdicionaRegistroTdcampos.cs" />
+    <Compile Include="Migrations\201803141300_InsereTagsAssinaturaDocumento.cs" />
+    <Compile Include="Migrations\201803231020_AdicionaDatasLotecef.cs" />
+    <Compile Include="Migrations\201803271700_AdicionaMaisUsuariosPreparoNoPack.cs" />
+    <Compile Include="Migrations\201804030900_InsereTipoOcorrencia.cs" />
+    <Compile Include="Migrations\201804051100_AdicionaArquivoDigitalNoDoucmento.cs" />
+    <Compile Include="Migrations\201804261407_CriaLogDossieEsperado.cs" />
+    <Compile Include="Migrations\201805211700_CriaArquivoColeta.cs" />
+    <Compile Include="Migrations\201805211710_CriaPendenciaColeta.cs" />
+    <Compile Include="Migrations\201805231654_AdicionaColetaNoDossieEsperado.cs" />
+    <Compile Include="Migrations\201805241334_AdicionaStatusNaPendenciaColeta.cs" />
+    <Compile Include="Migrations\201806041426_AdicionaCloudNoFileTransfer.cs" />
+    <Compile Include="Migrations\201806041513_AdicionaCloudOkNaPagina.cs" />
+    <Compile Include="Migrations\201806041537_AdicionaCloudOkNoLote.cs" />
+    <Compile Include="Migrations\201806051129_InsereTagsAmazonStorage.cs" />
+    <Compile Include="Migrations\201806141500_CriaLogPack.cs" />
+    <Compile Include="Migrations\201807031112_InsereTagsAmazonUrlEntryPoint.cs" />
+    <Compile Include="Migrations\201807110930_InsereOcorrenciaDossieEsperado.cs" />
+    <Compile Include="Migrations\201807111112_AdicionaDatasCloudNoLote.cs" />
+    <Compile Include="Migrations\201807121642_AdicionaDataFilaExportNoLote.cs" />
+    <Compile Include="Migrations\201807131330_InsereTipoOcorrenciaDeAdicaoDeDossie.cs" />
+    <Compile Include="Migrations\201807171046_AdicionaTipoOcorrenciaFilho.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Repositorios\AberturaContaRepositorio.cs" />
+    <Compile Include="Repositorios\AcessoRepositorio.cs" />
+    <Compile Include="Repositorios\AgenciaRepositorio.cs" />
+    <Compile Include="Repositorios\AjusteDeDocumentoRepositorio.cs" />
+    <Compile Include="Repositorios\ArquivoColetaRepositorio.cs" />
+    <Compile Include="Repositorios\ArquivoPackRepositorio.cs" />
+    <Compile Include="Repositorios\BancoRepositorio.cs" />
+    <Compile Include="Repositorios\CampoRepositorio.cs" />
+    <Compile Include="Repositorios\CamposValidacaoRepositorio.cs" />
+    <Compile Include="Repositorios\ColetaRepositorio.cs" />
+    <Compile Include="Repositorios\ComparaBioRepositorio.cs" />
+    <Compile Include="Repositorios\ConfiguracaoDeFasesRepositorio.cs" />
+    <Compile Include="Repositorios\ConfiguracaoDeLoteCefRepositorio.cs" />
+    <Compile Include="Repositorios\ConfiguracaoDeTipoDeProcessoRepositorio.cs" />
+    <Compile Include="Repositorios\ConfiguracaoIpRepositorio.cs" />
+    <Compile Include="Repositorios\ConfiguracaoRemessaRepositorio.cs" />
+    <Compile Include="Repositorios\ConsumoCarimboDigitalRepositorio.cs" />
+    <Compile Include="Repositorios\CursoRepositorio.cs" />
+    <Compile Include="Repositorios\DllRepositorio.cs" />
+    <Compile Include="Repositorios\DocumentoExpurgoRepositorio.cs" />
+    <Compile Include="Repositorios\DocumentoRepositorio.cs" />
+    <Compile Include="Repositorios\DominioCampoRepositorio.cs" />
+    <Compile Include="Repositorios\DossieContingenciaRepositorio.cs" />
+    <Compile Include="Repositorios\DossieEsperadoRepositorio.cs" />
+    <Compile Include="Repositorios\EmailPendenteRepositorio.cs" />
+    <Compile Include="Repositorios\EnderecoDeInstituicaoDeEnsinoRepositorio.cs" />
+    <Compile Include="Repositorios\EnderecoRepositorio.cs" />
+    <Compile Include="Repositorios\EstatisticaAprovacaoRepositorio.cs" />
+    <Compile Include="Repositorios\EstatisticaQualidadeRepositorio.cs" />
+    <Compile Include="Repositorios\EstoquePortalRepositorio.cs" />
+    <Compile Include="Repositorios\ExpurgoConfigRepositorio.cs" />
+    <Compile Include="Repositorios\ExpurgoLogRepositorio.cs" />
+    <Compile Include="Repositorios\FaceRepositorio.cs" />
+    <Compile Include="Repositorios\FaturamentoRepositorio.cs" />
+    <Compile Include="Repositorios\FeriadoRepositorio.cs" />
+    <Compile Include="Repositorios\FileTransferRepositorio.cs" />
+    <Compile Include="Repositorios\GrupoCampoRepositorio.cs" />
+    <Compile Include="Repositorios\ImagemRepositorio.cs" />
+    <Compile Include="Repositorios\IndexacaoRepositorio.cs" />
+    <Compile Include="Repositorios\IndiceOcrRepositorio.cs" />
+    <Compile Include="Repositorios\InstituicaoDeEnsinoRepositorio.cs" />
+    <Compile Include="Repositorios\LicencaConsumidaRepositorio.cs" />
+    <Compile Include="Repositorios\ListaNegraCpfRepositorio.cs" />
+    <Compile Include="Repositorios\LogBatimentoRepositorio.cs" />
+    <Compile Include="Repositorios\LogDocumentoRepositorio.cs" />
+    <Compile Include="Repositorios\LogDossieEsperadoRepositorio.cs" />
+    <Compile Include="Repositorios\LogGenericoRepositorio.cs" />
+    <Compile Include="Repositorios\LoginLogoutRepositorio.cs" />
+    <Compile Include="Repositorios\LogLoteRepositorio.cs" />
+    <Compile Include="Repositorios\LogOperadorRepositorio.cs" />
+    <Compile Include="Repositorios\LogPacoteProcessadoRepositorio.cs" />
+    <Compile Include="Repositorios\LogPacoteRepositorio.cs" />
+    <Compile Include="Repositorios\LogPaginaRepositorio.cs" />
+    <Compile Include="Repositorios\LogProcessoRepositorio.cs" />
+    <Compile Include="Repositorios\LojaRepositorio.cs" />
+    <Compile Include="Repositorios\LoteCefRepositorio.cs" />
+    <Compile Include="Repositorios\LoteRepositorio.cs" />
+    <Compile Include="Repositorios\MapeamentoCampoRepositorio.cs" />
+    <Compile Include="Repositorios\OcorrenciaLogRepositorio.cs" />
+    <Compile Include="Repositorios\OcorrenciaRepositorio.cs" />
+    <Compile Include="Repositorios\OcorrenciaTipoRepositorio.cs" />
+    <Compile Include="Repositorios\PacoteProcessadoRepositorio.cs" />
+    <Compile Include="Repositorios\PacoteRepositorio.cs" />
+    <Compile Include="Repositorios\PaginaRepositorio.cs" />
+    <Compile Include="Repositorios\PaginaRestauradaRepositorio.cs" />
+    <Compile Include="Repositorios\PalavraReconhecidaRepositorio.cs" />
+    <Compile Include="Repositorios\PalavraTipoRepositorio.cs" />
+    <Compile Include="Repositorios\PendenciaColetaRepositorio.cs" />
+    <Compile Include="Repositorios\PendenciaPortalRepositorio.cs" />
+    <Compile Include="Repositorios\PerfilRepositorio.cs" />
+    <Compile Include="Repositorios\ProcedureRepositorio.cs" />
+    <Compile Include="Repositorios\ProcessoRepositorio.cs" />
+    <Compile Include="Repositorios\RankingReclassificacaoRepositorio.cs" />
+    <Compile Include="Repositorios\RecepcaoRepositorio.cs" />
+    <Compile Include="Repositorios\RegraAcaoRepositorio.cs" />
+    <Compile Include="Repositorios\RegraCondicionalRepositorio.cs" />
+    <Compile Include="Repositorios\RegraImportadaRepositorio.cs" />
+    <Compile Include="Repositorios\RegraRepositorio.cs" />
+    <Compile Include="Repositorios\RegraVioladaRepositorio.cs" />
+    <Compile Include="Repositorios\RelacionamentoDeCursoRepositorio.cs" />
+    <Compile Include="Repositorios\RemessaRepositorio.cs" />
+    <Compile Include="Repositorios\TabelaItensRepositorio.cs" />
+    <Compile Include="Repositorios\TagRepositorio.cs" />
+    <Compile Include="Repositorios\TarjaRepositorio.cs" />
+    <Compile Include="Repositorios\TemplateRepositorio.cs" />
+    <Compile Include="Repositorios\TipoDocumentoRepositorio.cs" />
+    <Compile Include="Repositorios\TipoProcessoRepositorio.cs" />
+    <Compile Include="Repositorios\TransportadoraRepositorio.cs" />
+    <Compile Include="Repositorios\TratamentoRegraRepositorio.cs" />
+    <Compile Include="Repositorios\UsuarioRepositorio.cs" />
+    <Compile Include="Repositorios\ValorReconhecidoRepositorio.cs" />
+    <Compile Include="SessaoDoUsuarioServidoDoWindows.cs" />
+    <Compile Include="Storage\Amazon\AmazonStorage.cs" />
+    <Compile Include="Storage\Amazon\AmazonStorageHelpers.cs" />
+    <Compile Include="Storage\Amazon\Aws4SignerBase.cs" />
+    <Compile Include="Storage\Amazon\Aws4SignerForAuthorizationHeader.cs" />
+    <Compile Include="Storage\Amazon\Aws4SignerForQueryParameterAuth.cs" />
+    <Compile Include="Storage\Amazon\BaixarArquivoAmazonS3.cs" />
+    <Compile Include="Storage\ApagaArquivoFileTransferServico.cs" />
+    <Compile Include="Storage\BaixaArquivoFileTransferServico.cs" />
+    <Compile Include="Storage\CacheDeImagensLocal.cs" />
+    <Compile Include="Storage\EspacoEmDisco.cs" />
+    <Compile Include="Storage\PostaArquivoAmazonS3.cs" />
+    <Compile Include="Storage\PostaArquivoFileTransferServico.cs" />
+    <Compile Include="Storage\PostaPaginaNoFileTransferServico.cs" />
+    <Compile Include="Storage\StorageLocal.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="app.config" />
+    <None Include="AssinaturaDigital\m2sys.pfx" />
+    <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Veros.Data\Veros.Data.csproj">
+      <Project>{5736f5e0-5773-4aaa-b826-2441f991f525}</Project>
+      <Name>Veros.Data</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Veros.Framework\Veros.Framework.csproj">
+      <Project>{1f95af6f-9ffd-4b33-86cd-08aa19e9c634}</Project>
+      <Name>Veros.Framework</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Veros.Paperless.Model\Veros.Paperless.Model.csproj">
+      <Project>{5bbdadf1-1789-4432-bbf1-021bd19e8366}</Project>
+      <Name>Veros.Paperless.Model</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

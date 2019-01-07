@@ -1,0 +1,1260 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{5BBDADF1-1789-4432-BBF1-021BD19E8366}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Veros.Paperless.Model</RootNamespace>
+    <AssemblyName>Veros.Paperless.Model</AssemblyName>
+    <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="AForge, Version=2.2.5.0, Culture=neutral, PublicKeyToken=c1db6ff4eaa06aeb, processorArchitecture=MSIL">
+      <HintPath>..\packages\AForge.2.2.5\lib\AForge.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="BouncyCastle.Crypto, Version=1.8.1.0, Culture=neutral, PublicKeyToken=0e99375e54769942, processorArchitecture=MSIL">
+      <HintPath>..\packages\Portable.BouncyCastle.1.8.1.3\lib\net40\BouncyCastle.Crypto.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Castle.Components.Validator, Version=2.5.0.0, Culture=neutral, PublicKeyToken=407dd0808d44fbdc, processorArchitecture=MSIL">
+      <HintPath>..\packages\Castle.Components.Validator.2.5.0\lib\NET40\Castle.Components.Validator.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Common.Logging, Version=3.4.1.0, Culture=neutral, PublicKeyToken=af08829b84f0328e, processorArchitecture=MSIL">
+      <HintPath>..\packages\Common.Logging.3.4.1\lib\net40\Common.Logging.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Common.Logging.Core, Version=3.4.1.0, Culture=neutral, PublicKeyToken=af08829b84f0328e, processorArchitecture=MSIL">
+      <HintPath>..\packages\Common.Logging.Core.3.4.1\lib\net40\Common.Logging.Core.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="HumbleNetwork, Version=2014.11.12.1, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\HumbleNetwork.2014.11.12.1\lib\HumbleNetwork.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Iesi.Collections, Version=4.0.0.4000, Culture=neutral, PublicKeyToken=aa95f207798dfdb4, processorArchitecture=MSIL">
+      <HintPath>..\packages\Iesi.Collections.4.0.4\lib\net40\Iesi.Collections.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="itext.barcodes, Version=7.1.4.0, Culture=neutral, PublicKeyToken=8354ae6d2174ddca, processorArchitecture=MSIL">
+      <HintPath>..\packages\itext7.7.1.4\lib\net40\itext.barcodes.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="itext.forms, Version=7.1.4.0, Culture=neutral, PublicKeyToken=8354ae6d2174ddca, processorArchitecture=MSIL">
+      <HintPath>..\packages\itext7.7.1.4\lib\net40\itext.forms.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="itext.io, Version=7.1.4.0, Culture=neutral, PublicKeyToken=8354ae6d2174ddca, processorArchitecture=MSIL">
+      <HintPath>..\packages\itext7.7.1.4\lib\net40\itext.io.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="itext.kernel, Version=7.1.4.0, Culture=neutral, PublicKeyToken=8354ae6d2174ddca, processorArchitecture=MSIL">
+      <HintPath>..\packages\itext7.7.1.4\lib\net40\itext.kernel.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="itext.layout, Version=7.1.4.0, Culture=neutral, PublicKeyToken=8354ae6d2174ddca, processorArchitecture=MSIL">
+      <HintPath>..\packages\itext7.7.1.4\lib\net40\itext.layout.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="itext.pdfa, Version=7.1.4.0, Culture=neutral, PublicKeyToken=8354ae6d2174ddca, processorArchitecture=MSIL">
+      <HintPath>..\packages\itext7.7.1.4\lib\net40\itext.pdfa.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="itext.sign, Version=7.1.4.0, Culture=neutral, PublicKeyToken=8354ae6d2174ddca, processorArchitecture=MSIL">
+      <HintPath>..\packages\itext7.7.1.4\lib\net40\itext.sign.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="itext.styledxmlparser, Version=7.1.4.0, Culture=neutral, PublicKeyToken=8354ae6d2174ddca, processorArchitecture=MSIL">
+      <HintPath>..\packages\itext7.7.1.4\lib\net40\itext.styledxmlparser.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="itext.svg, Version=7.1.4.0, Culture=neutral, PublicKeyToken=8354ae6d2174ddca, processorArchitecture=MSIL">
+      <HintPath>..\packages\itext7.7.1.4\lib\net40\itext.svg.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="log4net, Version=2.0.8.0, Culture=neutral, PublicKeyToken=669e0ddf0bb1aa2a, processorArchitecture=MSIL">
+      <HintPath>..\packages\log4net.2.0.8\lib\net45-full\log4net.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="NHibernate, Version=4.1.0.4000, Culture=neutral, PublicKeyToken=aa95f207798dfdb4, processorArchitecture=MSIL">
+      <HintPath>..\packages\NHibernate.4.1.2.4000\lib\net40\NHibernate.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="StructureMap, Version=4.7.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\StructureMap.4.7.0\lib\net45\StructureMap.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.configuration" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Boot\DependencyRegistry.cs" />
+    <Compile Include="Boot\InicializacaoDeServicoWindows.cs" />
+    <Compile Include="Configuracao.cs" />
+    <Compile Include="Consultas\AcompanhamentoCaixa.cs" />
+    <Compile Include="Consultas\AcompanhamentoProducaoConsulta.cs" />
+    <Compile Include="Consultas\AcompanhamentoProducaoM2Consulta.cs" />
+    <Compile Include="Consultas\AnaliseDevolucaoDeCaixa.cs" />
+    <Compile Include="Consultas\CaixaETotalDeDossies.cs" />
+    <Compile Include="Consultas\CaixaPorUniColRecArm.cs" />
+    <Compile Include="Consultas\CampoDocumentoConsulta.cs" />
+    <Compile Include="Consultas\CampoRecohecidoPorLote.cs" />
+    <Compile Include="Consultas\CampoReconhecivel.cs" />
+    <Compile Include="Consultas\CamposReconhecidosPorDocumentoECampo.cs" />
+    <Compile Include="Consultas\CertificadoDeEntregaConsulta.cs" />
+    <Compile Include="Consultas\CodigoView.cs" />
+    <Compile Include="Consultas\ConferenciaDevolucaoDeCaixa.cs" />
+    <Compile Include="Consultas\ContaLiberadaSemAprovacao.cs" />
+    <Compile Include="Consultas\ControleExpurgoConsulta.cs" />
+    <Compile Include="Consultas\DataExpurgoConsulta.cs" />
+    <Compile Include="Consultas\DataInstalacao.cs" />
+    <Compile Include="Consultas\Devolucao.cs" />
+    <Compile Include="Consultas\DevolucaoDeCaixa.cs" />
+    <Compile Include="Consultas\DocumentoParaPalavraChave.cs" />
+    <Compile Include="Consultas\DocumentoReconhecivel.cs" />
+    <Compile Include="Consultas\DocumentoRecontar.cs" />
+    <Compile Include="Consultas\DocumentosPdfConsulta.cs" />
+    <Compile Include="Consultas\DossieIndPrepDigPrev.cs" />
+    <Compile Include="Consultas\DossieParaFaturamento.cs" />
+    <Compile Include="Consultas\DossiesDaCaixa.cs" />
+    <Compile Include="Consultas\DossiesNaQualidadeCef.cs" />
+    <Compile Include="Consultas\FaturamentoPorPeriodo.cs" />
+    <Compile Include="Consultas\IAcompanhamentoProcessoDevolvidoOuLiberadoConsulta.cs" />
+    <Compile Include="Consultas\IAnaliseDevolucaoDeCaixaConsulta.cs" />
+    <Compile Include="Consultas\ICaixasParaDevolucaoConsulta.cs" />
+    <Compile Include="Consultas\ICamposReconhecidosPorDocumentoECampoConsulta.cs" />
+    <Compile Include="Consultas\ICamposReconhecidosPorLoteConsulta.cs" />
+    <Compile Include="Consultas\ICertificadosConcluidosConsulta.cs" />
+    <Compile Include="Consultas\IConferenciaDevolucaoDeCaixaConsulta.cs" />
+    <Compile Include="Consultas\IContasLiberadasSemAprovacaoConsulta.cs" />
+    <Compile Include="Consultas\IDataInstalacaoConsulta.cs" />
+    <Compile Include="Consultas\IDevolucaoConsulta.cs" />
+    <Compile Include="Consultas\IDevolucaoDeCaixaConsulta.cs" />
+    <Compile Include="Consultas\IDocumentosPdfPorStatusConsulta.cs" />
+    <Compile Include="Consultas\IDocumentosPdfPorStatusParaRecontagemPaginasConsulta.cs" />
+    <Compile Include="Consultas\IDossiePorLoteCefConsulta.cs" />
+    <Compile Include="Consultas\IDossiesDaCaixaConsulta.cs" />
+    <Compile Include="Consultas\IDossieStatusConsulta.cs" />
+    <Compile Include="Consultas\IFaturamentoPorPeriodoConsulta.cs" />
+    <Compile Include="Consultas\IGeracaoDeCertificadoConsulta.cs" />
+    <Compile Include="Consultas\IHistoricoBasicoConsulta.cs" />
+    <Compile Include="Consultas\ILicencaConsumidaPorTipoDocumentoConsulta.cs" />
+    <Compile Include="Consultas\ILogsAjusteConsulta.cs" />
+    <Compile Include="Consultas\ILogsReprovadosCefConsulta.cs" />
+    <Compile Include="Consultas\ILoteCefProntoParaFecharConsulta.cs" />
+    <Compile Include="Consultas\IMassaTesteConfigPalavrasChavesConsulta.cs" />
+    <Compile Include="Consultas\IObtemLoteParaExpurgoConsulta.cs" />
+    <Compile Include="Consultas\IObtemLotesParaAmostragemQualidadeCefConsulta.cs" />
+    <Compile Include="Consultas\IObtemPacotesParaExpurgoConsulta.cs" />
+    <Compile Include="Consultas\IObtemPaginasParaExpurgoConsulta.cs" />
+    <Compile Include="Consultas\IObterColetaParaConferenciaConsulta.cs" />
+    <Compile Include="Consultas\IPainelDeAcompanhamentoColetaConsulta.cs" />
+    <Compile Include="Consultas\IPainelDeAcompanhamentoPorCaixaConsulta.cs" />
+    <Compile Include="Consultas\IPeriodoFaturamentoConsulta.cs" />
+    <Compile Include="Consultas\IPh3Consulta.cs" />
+    <Compile Include="Consultas\IProdutividadeOperadorConsulta.cs" />
+    <Compile Include="Consultas\IRegrasReprovadasCefConsulta.cs" />
+    <Compile Include="Consultas\IRelatorioDeCaixasETotalDeDossiesConsulta.cs" />
+    <Compile Include="Consultas\IRelatorioDeCaixasPorUniColRecArmConsulta.cs" />
+    <Compile Include="Consultas\IRelatorioDeDossiesNaQualidadeCefConsulta.cs" />
+    <Compile Include="Consultas\IRelatorioDeFaturamentoConsulta.cs" />
+    <Compile Include="Consultas\IRelatorioDeQuantitativoDeAssinaturaDigitalConsulta.cs" />
+    <Compile Include="Consultas\IRelatorioDosIndPrepDigPrevConsulta.cs" />
+    <Compile Include="Consultas\IRelatorioFaturamentoConsulta.cs" />
+    <Compile Include="Consultas\IRemontagemDeTermoConsulta.cs" />
+    <Compile Include="Consultas\ISequencialDeIdentificadorConsulta.cs" />
+    <Compile Include="Consultas\ITotaisAguardandoQualidadeCefConsulta.cs" />
+    <Compile Include="Consultas\ITotaisPorPacoteProcessadoConsulta.cs" />
+    <Compile Include="Consultas\ITotalDeLotesPorSituacaoAmostragemConsulta.cs" />
+    <Compile Include="Consultas\IVersaoMigrateConsulta.cs" />
+    <Compile Include="Consultas\LicencaConsumidaPorTipoDocumento.cs" />
+    <Compile Include="Consultas\LotecefPronto.cs" />
+    <Compile Include="Consultas\LoteParaExpurgoView.cs" />
+    <Compile Include="Consultas\ObterColetaParaConferencia.cs" />
+    <Compile Include="Consultas\PacoteParaExpurgoView.cs" />
+    <Compile Include="Consultas\PacotesProcessadosConsulta.cs" />
+    <Compile Include="Consultas\PaginaExpurgoConsulta.cs" />
+    <Compile Include="Consultas\PainelDeAcompanhamentoColeta.cs" />
+    <Compile Include="Consultas\PeriodoFaturamento.cs" />
+    <Compile Include="Consultas\ProcessoDevolvidoOuLiberado.cs" />
+    <Compile Include="Consultas\QuantitativoDeAssinaturaDigital.cs" />
+    <Compile Include="Consultas\SomaDeEstatisticaDeAprovacaoConsulta.cs" />
+    <Compile Include="Consultas\TotaisAguardandoQualidadeCef.cs" />
+    <Compile Include="Consultas\TotaisPorPacoteProcessado.cs" />
+    <Compile Include="Consultas\TotalDeLotesPorPacotePorSituacaoAmostragem.cs" />
+    <Compile Include="Consultas\TotalDocumentoPorFaseConsulta.cs" />
+    <Compile Include="Consultas\VersaoMigrate.cs" />
+    <Compile Include="Contexto.cs" />
+    <Compile Include="Entidades\AberturaConta.cs" />
+    <Compile Include="Entidades\AberturaContaStatus.cs" />
+    <Compile Include="Entidades\AcaoAjusteDeDocumento.cs" />
+    <Compile Include="Entidades\AcaoVideo.cs" />
+    <Compile Include="Entidades\AcaoVideoStatus.cs" />
+    <Compile Include="Entidades\Acesso.cs" />
+    <Compile Include="Entidades\Agencia.cs" />
+    <Compile Include="Entidades\AjusteDeDocumento.cs" />
+    <Compile Include="Entidades\AmbienteRollout.cs" />
+    <Compile Include="Entidades\Arquivo.cs" />
+    <Compile Include="Entidades\ArquivoCapturado.cs" />
+    <Compile Include="Entidades\ArquivoColeta.cs" />
+    <Compile Include="Entidades\ArquivoPack.cs" />
+    <Compile Include="Entidades\ArquivoPackStatus.cs" />
+    <Compile Include="Entidades\Banco.cs" />
+    <Compile Include="Entidades\Binario.cs" />
+    <Compile Include="Entidades\Campo.cs" />
+    <Compile Include="Entidades\CampoData.cs" />
+    <Compile Include="Entidades\CampoReconhecido.cs" />
+    <Compile Include="Entidades\CamposValidacao.cs" />
+    <Compile Include="Entidades\CapturaFinalizada.cs" />
+    <Compile Include="Entidades\CarimboSeparador.cs" />
+    <Compile Include="Entidades\CodigoTipoDocumentoDominio.cs" />
+    <Compile Include="Entidades\Coleta.cs" />
+    <Compile Include="Entidades\ColetaStatus.cs" />
+    <Compile Include="Entidades\ColunaDestino.cs" />
+    <Compile Include="Entidades\ColunaOrigem.cs" />
+    <Compile Include="Entidades\ComparaBio.cs" />
+    <Compile Include="Entidades\ConectivoDeComparacao.cs" />
+    <Compile Include="Entidades\ConectivoLogico.cs" />
+    <Compile Include="Entidades\ConfiguracaoDeFases.cs" />
+    <Compile Include="Entidades\ConfiguracaoDeLoteCef.cs" />
+    <Compile Include="Entidades\ConfiguracaoDeTipoDeProcesso.cs" />
+    <Compile Include="Entidades\ConfiguracaoIp.cs" />
+    <Compile Include="Entidades\ConfiguracaoRemessa.cs" />
+    <Compile Include="Entidades\ConfiguracaoRemessaCampo.cs" />
+    <Compile Include="Entidades\ConsumoCarimboDigital.cs" />
+    <Compile Include="Entidades\Contrato.cs" />
+    <Compile Include="Entidades\CriadorDeIndexacao.cs" />
+    <Compile Include="Entidades\Curso.cs" />
+    <Compile Include="Entidades\DetalheDocumento.cs" />
+    <Compile Include="Entidades\DetalheLote.cs" />
+    <Compile Include="Entidades\DetalheRegra.cs" />
+    <Compile Include="Entidades\Dll.cs" />
+    <Compile Include="Entidades\Documento.cs" />
+    <Compile Include="Entidades\DocumentoExpurgo.cs" />
+    <Compile Include="Entidades\DocumentoParticipante.cs" />
+    <Compile Include="Entidades\DocumentoStatus.cs" />
+    <Compile Include="Entidades\DominioCampo.cs" />
+    <Compile Include="Entidades\Dossie.cs" />
+    <Compile Include="Entidades\DossieContingencia.cs" />
+    <Compile Include="Entidades\DossieEsperado.cs" />
+    <Compile Include="Entidades\DossieParaFaturar.cs" />
+    <Compile Include="Entidades\EmailPendente.cs" />
+    <Compile Include="Entidades\EmailPendenteStatus.cs" />
+    <Compile Include="Entidades\Endereco.cs" />
+    <Compile Include="Entidades\EnderecoDeInstituicaoDeEnsino.cs" />
+    <Compile Include="Entidades\EngineOcr.cs" />
+    <Compile Include="Entidades\EstadoCivilDominioOriginal.cs" />
+    <Compile Include="Entidades\EstadosBrasil.cs" />
+    <Compile Include="Entidades\EstatisticaAprovacao.cs" />
+    <Compile Include="Entidades\EstatisticaQualidade.cs" />
+    <Compile Include="Entidades\EstoqueFilasProducao.cs" />
+    <Compile Include="Entidades\EstoquePortal.cs" />
+    <Compile Include="Entidades\ExpurgoConfig.cs" />
+    <Compile Include="Entidades\ExpurgoLog.cs" />
+    <Compile Include="Entidades\Face.cs" />
+    <Compile Include="Entidades\FaceStatus.cs" />
+    <Compile Include="Entidades\Fase.cs" />
+    <Compile Include="Entidades\Faturamento.cs" />
+    <Compile Include="Entidades\Feriado.cs" />
+    <Compile Include="Entidades\FileTransfer.cs" />
+    <Compile Include="Entidades\Funcionalidade.cs" />
+    <Compile Include="Entidades\GroupType.cs" />
+    <Compile Include="Entidades\GrupoCampo.cs" />
+    <Compile Include="Entidades\Imagem.cs" />
+    <Compile Include="Entidades\ImagemConta.cs" />
+    <Compile Include="Entidades\ImagemDoLote.cs" />
+    <Compile Include="Entidades\ImagemProcessada.cs" />
+    <Compile Include="Entidades\ImagemReconhecida.cs" />
+    <Compile Include="Entidades\ImagensCapturadas.cs" />
+    <Compile Include="Entidades\Indexacao.cs" />
+    <Compile Include="Entidades\IndiceOcr.cs" />
+    <Compile Include="Entidades\InformacaoCadastral.cs" />
+    <Compile Include="Entidades\InstituicaoDeEnsino.cs" />
+    <Compile Include="Entidades\IProcessavelPeloWorkflow.cs" />
+    <Compile Include="Entidades\ItemDocumental.cs" />
+    <Compile Include="Entidades\ItemParaSeparacao.cs" />
+    <Compile Include="Entidades\LicencaConsumida.cs" />
+    <Compile Include="Entidades\ListaNegraCpf.cs" />
+    <Compile Include="Entidades\LogBase.cs" />
+    <Compile Include="Entidades\LogBatimento.cs" />
+    <Compile Include="Entidades\LogDocumento.cs" />
+    <Compile Include="Entidades\LogDossieEsperado.cs" />
+    <Compile Include="Entidades\LogGenerico.cs" />
+    <Compile Include="Entidades\LoginLogout.cs" />
+    <Compile Include="Entidades\LogLote.cs" />
+    <Compile Include="Entidades\LogOperador.cs" />
+    <Compile Include="Entidades\LogPacote.cs" />
+    <Compile Include="Entidades\LogPacoteProcessado.cs" />
+    <Compile Include="Entidades\LogPagina.cs" />
+    <Compile Include="Entidades\LogProcesso.cs" />
+    <Compile Include="Entidades\Loja.cs" />
+    <Compile Include="Entidades\Lote.cs" />
+    <Compile Include="Entidades\LoteCef.cs" />
+    <Compile Include="Entidades\LoteCefStatus.cs" />
+    <Compile Include="Entidades\LoteMarcaQualidade.cs" />
+    <Compile Include="Entidades\LoteStatus.cs" />
+    <Compile Include="Entidades\LoteStatusAuxiliar.cs" />
+    <Compile Include="Entidades\MapeamentoCampo.cs" />
+    <Compile Include="Entidades\MedirTempo.cs" />
+    <Compile Include="Entidades\Numero.cs" />
+    <Compile Include="Entidades\Ocorrencia.cs" />
+    <Compile Include="Entidades\OcorrenciaLog.cs" />
+    <Compile Include="Entidades\OcorrenciaStatus.cs" />
+    <Compile Include="Entidades\OcorrenciaTipo.cs" />
+    <Compile Include="Entidades\Operacao.cs" />
+    <Compile Include="Entidades\OperadorMatematico.cs" />
+    <Compile Include="Entidades\OrientacaoDePagina.cs" />
+    <Compile Include="Entidades\Pacote.cs" />
+    <Compile Include="Entidades\PacoteParaExportar.cs" />
+    <Compile Include="Entidades\PacoteProcessado.cs" />
+    <Compile Include="Entidades\Pagina.cs" />
+    <Compile Include="Entidades\PaginaRestaurada.cs" />
+    <Compile Include="Entidades\PaginaStatus.cs" />
+    <Compile Include="Entidades\PaginaTipoOcr.cs" />
+    <Compile Include="Entidades\PalavraReconhecida.cs" />
+    <Compile Include="Entidades\PalavraTipo.cs" />
+    <Compile Include="Entidades\PalavraTipoCategoria.cs" />
+    <Compile Include="Entidades\Participante.cs" />
+    <Compile Include="Entidades\PendenciaColeta.cs" />
+    <Compile Include="Entidades\PendenciaPortal.cs" />
+    <Compile Include="Entidades\Perfil.cs" />
+    <Compile Include="Entidades\Processo.cs" />
+    <Compile Include="Entidades\ProcessoDecisao.cs" />
+    <Compile Include="Entidades\ProcessoStatus.cs" />
+    <Compile Include="Entidades\ProcessoStatusAuxiliar.cs" />
+    <Compile Include="Entidades\RankingReclassificacao.cs" />
+    <Compile Include="Entidades\Recepcao.cs" />
+    <Compile Include="Entidades\RecepcaoConfiguracao.cs" />
+    <Compile Include="Entidades\RecepcaoStatus.cs" />
+    <Compile Include="Entidades\Regra.cs" />
+    <Compile Include="Entidades\RegraAcao.cs" />
+    <Compile Include="Entidades\RegraCondicional.cs" />
+    <Compile Include="Entidades\RegraImportada.cs" />
+    <Compile Include="Entidades\RegraImportadaStatus.cs" />
+    <Compile Include="Entidades\RegraViolada.cs" />
+    <Compile Include="Entidades\RegraVioladaDocumentoParticipante.cs" />
+    <Compile Include="Entidades\RegraVioladaStatus.cs" />
+    <Compile Include="Entidades\RelacionamentoDeCurso.cs" />
+    <Compile Include="Entidades\RelatorioFaturamento.cs" />
+    <Compile Include="Entidades\Remessa.cs" />
+    <Compile Include="Entidades\RemessaStatus.cs" />
+    <Compile Include="Entidades\RetornoBanco.cs" />
+    <Compile Include="Entidades\ScannerConfigurado.cs" />
+    <Compile Include="Entidades\SessaoDeCaptura.cs" />
+    <Compile Include="Entidades\SexoDominioOriginal.cs" />
+    <Compile Include="Entidades\Signo.cs" />
+    <Compile Include="Entidades\SshContext.cs" />
+    <Compile Include="Entidades\StatusDePacoteProcessadoFaturamento.cs" />
+    <Compile Include="Entidades\StatusPacote.cs" />
+    <Compile Include="Entidades\TabelaItens.cs" />
+    <Compile Include="Entidades\Tag.cs" />
+    <Compile Include="Entidades\TagConfiguracaoIp.cs" />
+    <Compile Include="Entidades\Tarja.cs" />
+    <Compile Include="Entidades\Template.cs" />
+    <Compile Include="Entidades\TemplateType.cs" />
+    <Compile Include="Entidades\TipoCampo.cs" />
+    <Compile Include="Entidades\TipoDado.cs" />
+    <Compile Include="Entidades\TipoDocumento.cs" />
+    <Compile Include="Entidades\TipoDocumentoDominioOriginal.cs" />
+    <Compile Include="Entidades\TipoDossie.cs" />
+    <Compile Include="Entidades\TipoNotificacao.cs" />
+    <Compile Include="Entidades\TipoOrigem.cs" />
+    <Compile Include="Entidades\TipoProcesso.cs" />
+    <Compile Include="Entidades\Transportadora.cs" />
+    <Compile Include="Entidades\TratamentoRegra.cs" />
+    <Compile Include="Entidades\Usuario.cs" />
+    <Compile Include="Entidades\ValorReconhecido.cs" />
+    <Compile Include="Entidades\ValorUtilizadoParaValorFinal.cs" />
+    <Compile Include="Filas\ConfiguracoesDeFila.cs" />
+    <Compile Include="Filas\IFilaAprovacaoCliente.cs" />
+    <Compile Include="Filas\IFilaAprovacaoEspecialCliente.cs" />
+    <Compile Include="Filas\IFilaClienteGenerica.cs" />
+    <Compile Include="Filas\IFilaIdentificacaoCliente.cs" />
+    <Compile Include="Filas\TiposDeFila.cs" />
+    <Compile Include="FrameworkLocal\Bool.cs" />
+    <Compile Include="FrameworkLocal\DoubleExtension.cs" />
+    <Compile Include="FrameworkLocal\Extensions.cs" />
+    <Compile Include="FrameworkLocal\IntExtension.cs" />
+    <Compile Include="FrameworkLocal\MimeTypes.cs" />
+    <Compile Include="FrameworkLocal\Throw.cs" />
+    <Compile Include="IRelogio.cs" />
+    <Compile Include="JobIntervalo.cs" />
+    <Compile Include="Ph3\AgregadosFamiliares.cs" />
+    <Compile Include="Ph3\Ccf.cs" />
+    <Compile Include="Ph3\Ccfs.cs" />
+    <Compile Include="Ph3\ConsultaPf.cs" />
+    <Compile Include="Ph3\Contato.cs" />
+    <Compile Include="Ph3\DadosCadastrais.cs" />
+    <Compile Include="Ph3\Emails.cs" />
+    <Compile Include="Ph3\Enderecos.cs" />
+    <Compile Include="Ph3\HistoricoProfissional.cs" />
+    <Compile Include="Ph3\ItemProfissional.cs" />
+    <Compile Include="Ph3\PessoasContato.cs" />
+    <Compile Include="Ph3\ReferenciaBancaria.cs" />
+    <Compile Include="Ph3\Renda.cs" />
+    <Compile Include="Ph3\Sociedades.cs" />
+    <Compile Include="Ph3\Telefones.cs" />
+    <Compile Include="Ph3\Veiculo.cs" />
+    <Compile Include="Ph3\Veiculos.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Repositorios\IAberturaContaRepositorio.cs" />
+    <Compile Include="Repositorios\IAcessoRepositorio.cs" />
+    <Compile Include="Repositorios\IAgenciaRepositorio.cs" />
+    <Compile Include="Repositorios\IAjusteDeDocumentoRepositorio.cs" />
+    <Compile Include="Repositorios\IArquivoColetaRepositorio.cs" />
+    <Compile Include="Repositorios\IArquivoPackRepositorio.cs" />
+    <Compile Include="Repositorios\IBancoRepositorio.cs" />
+    <Compile Include="Repositorios\ICampoRepositorio.cs" />
+    <Compile Include="Repositorios\ICamposValidacaoRepositorio.cs" />
+    <Compile Include="Repositorios\ICepRepositorio.cs" />
+    <Compile Include="Repositorios\IColetaRepositorio.cs" />
+    <Compile Include="Repositorios\IComparaBioRepositorio.cs" />
+    <Compile Include="Repositorios\IConfiguracaoDeFasesRepositorio.cs" />
+    <Compile Include="Repositorios\IConfiguracaoDeLoteCefRepositorio.cs" />
+    <Compile Include="Repositorios\IConfiguracaoDeTipoDeProcessoRepositorio.cs" />
+    <Compile Include="Repositorios\IConfiguracaoIpRepositorio.cs" />
+    <Compile Include="Repositorios\IConfiguracaoRemessaRepositorio.cs" />
+    <Compile Include="Repositorios\IConsumoCarimboDigitalRepositorio.cs" />
+    <Compile Include="Repositorios\ICursoRepositorio.cs" />
+    <Compile Include="Repositorios\IDllRepositorio.cs" />
+    <Compile Include="Repositorios\IDocumentoExpurgoRepositorio.cs" />
+    <Compile Include="Repositorios\IDocumentoRepositorio.cs" />
+    <Compile Include="Repositorios\IDominioCampoRepositorio.cs" />
+    <Compile Include="Repositorios\IDossieContingenciaRepositorio.cs" />
+    <Compile Include="Repositorios\IDossieEsperadoRepositorio.cs" />
+    <Compile Include="Repositorios\IEmailPendenteRepositorio.cs" />
+    <Compile Include="Repositorios\IEnderecoDeInstituicaoDeEnsinoRepositorio.cs" />
+    <Compile Include="Repositorios\IEnderecoRepositorio.cs" />
+    <Compile Include="Repositorios\IEstatisticaAprovacaoRepositorio.cs" />
+    <Compile Include="Repositorios\IEstatisticaQualidadeRepositorio.cs" />
+    <Compile Include="Repositorios\IEstoquePortalRepositorio.cs" />
+    <Compile Include="Repositorios\IExpurgoConfigRepositorio.cs" />
+    <Compile Include="Repositorios\IExpurgoLogRepositorio.cs" />
+    <Compile Include="Repositorios\IFaceRepositorio.cs" />
+    <Compile Include="Repositorios\IFaturamentoRepositorio.cs" />
+    <Compile Include="Repositorios\IFeriadoRepositorio.cs" />
+    <Compile Include="Repositorios\IFileTransferRepositorio.cs" />
+    <Compile Include="Repositorios\IGrupoCampoRepositorio.cs" />
+    <Compile Include="Repositorios\IImagemRepositorio.cs" />
+    <Compile Include="Repositorios\IIndexacaoRepositorio.cs" />
+    <Compile Include="Repositorios\IIndiceOcrRepositorio.cs" />
+    <Compile Include="Repositorios\IInstituicaoDeEnsinoRepositorio.cs" />
+    <Compile Include="Repositorios\ILicencaConsumidaRepositorio.cs" />
+    <Compile Include="Repositorios\IListaNegraCpfRepositorio.cs" />
+    <Compile Include="Repositorios\ILogBatimentoRepositorio.cs" />
+    <Compile Include="Repositorios\ILogDocumentoRepositorio.cs" />
+    <Compile Include="Repositorios\ILogDossieEsperadoRepositorio.cs" />
+    <Compile Include="Repositorios\ILogGenericoRepositorio.cs" />
+    <Compile Include="Repositorios\ILoginLogoutRepositorio.cs" />
+    <Compile Include="Repositorios\ILogLoteRepositorio.cs" />
+    <Compile Include="Repositorios\ILogOperadorRepositorio.cs" />
+    <Compile Include="Repositorios\ILogPacoteProcessadoRepositorio.cs" />
+    <Compile Include="Repositorios\ILogPacoteRepositorio.cs" />
+    <Compile Include="Repositorios\ILogPaginaRepositorio.cs" />
+    <Compile Include="Repositorios\ILogProcessoRepositorio.cs" />
+    <Compile Include="Repositorios\ILojaRepositorio.cs" />
+    <Compile Include="Repositorios\ILoteCefRepositorio.cs" />
+    <Compile Include="Repositorios\ILoteRepositorio.cs" />
+    <Compile Include="Repositorios\IMapeamentoCampoRepositorio.cs" />
+    <Compile Include="Repositorios\IOcorrenciaLogRepositorio.cs" />
+    <Compile Include="Repositorios\IOcorrenciaRepositorio.cs" />
+    <Compile Include="Repositorios\IOcorrenciaTipoRepositorio.cs" />
+    <Compile Include="Repositorios\IPacoteProcessadoRepositorio.cs" />
+    <Compile Include="Repositorios\IPacoteRepositorio.cs" />
+    <Compile Include="Repositorios\IPaginaRepositorio.cs" />
+    <Compile Include="Repositorios\IPaginaRestauradaRepositorio.cs" />
+    <Compile Include="Repositorios\IPalavraReconhecidaRepositorio.cs" />
+    <Compile Include="Repositorios\IPalavraTipoRepositorio.cs" />
+    <Compile Include="Repositorios\IPendenciaColetaRepositorio.cs" />
+    <Compile Include="Repositorios\IPendenciaPortalRepositorio.cs" />
+    <Compile Include="Repositorios\IPerfilRepositorio.cs" />
+    <Compile Include="Repositorios\IProcedureRepositorio.cs" />
+    <Compile Include="Repositorios\IProcessoRepositorio.cs" />
+    <Compile Include="Repositorios\IRankingReclassificacaoRepositorio.cs" />
+    <Compile Include="Repositorios\IRecepcaoRepositorio.cs" />
+    <Compile Include="Repositorios\IRegraAcaoRepositorio.cs" />
+    <Compile Include="Repositorios\IRegraCondicionalRepositorio.cs" />
+    <Compile Include="Repositorios\IRegraImportadaRepositorio.cs" />
+    <Compile Include="Repositorios\IRegraRepositorio.cs" />
+    <Compile Include="Repositorios\IRegraVioladaRepositorio.cs" />
+    <Compile Include="Repositorios\IRelacionamentoDeCursoRepositorio.cs" />
+    <Compile Include="Repositorios\IRemessaRepositorio.cs" />
+    <Compile Include="Repositorios\ITabelaItensRepositorio.cs" />
+    <Compile Include="Repositorios\ITagRepositorio.cs" />
+    <Compile Include="Repositorios\ITarjaRepositorio.cs" />
+    <Compile Include="Repositorios\ITemplateRepositorio.cs" />
+    <Compile Include="Repositorios\ITipoDocumentoRepositorio.cs" />
+    <Compile Include="Repositorios\ITipoProcessoRepositorio.cs" />
+    <Compile Include="Repositorios\ITransportadoraRepositorio.cs" />
+    <Compile Include="Repositorios\ITratamentoRegraRepositorio.cs" />
+    <Compile Include="Repositorios\IUsuarioRepositorio.cs" />
+    <Compile Include="Repositorios\IValorReconhecidoRepositorio.cs" />
+    <Compile Include="Servicos\AcompanhamentoDeOcorrencia\AtualizaOcorrenciaServico.cs" />
+    <Compile Include="Servicos\AcompanhamentoDeOcorrencia\IAtualizaOcorrenciaServico.cs" />
+    <Compile Include="Servicos\Ajustes\AjusteImagemServico.cs" />
+    <Compile Include="Servicos\Ajustes\AplicarAjusteDeExclusaoDePagina.cs" />
+    <Compile Include="Servicos\Ajustes\AplicarAjusteDePaginaPorDocumento.cs" />
+    <Compile Include="Servicos\Ajustes\AplicarAjustesNaPaginaServico.cs" />
+    <Compile Include="Servicos\Ajustes\ConfiguracaoAjusteImagem.cs" />
+    <Compile Include="Servicos\Ajustes\CriaListaDeAjustesServico.cs" />
+    <Compile Include="Servicos\Ajustes\ExcluiAjusteDeDocumentoServico.cs" />
+    <Compile Include="Servicos\Ajustes\ExecutaAjusteDeReclassificacaoServico.cs" />
+    <Compile Include="Servicos\Ajustes\ExecutaAjustesDeExclusaoServico.cs" />
+    <Compile Include="Servicos\Ajustes\GravaAjustesDoProcessoServico.cs" />
+    <Compile Include="Servicos\Ajustes\GravaAjustesServico.cs" />
+    <Compile Include="Servicos\Ajustes\IAjustesDoDocumentoFabrica.cs" />
+    <Compile Include="Servicos\Ajustes\IAplicarAjusteDeExclusaoDePagina.cs" />
+    <Compile Include="Servicos\Ajustes\IAplicarAjusteDePaginaPorDocumento.cs" />
+    <Compile Include="Servicos\Ajustes\IAplicarAjustesNaPaginaServico.cs" />
+    <Compile Include="Servicos\Ajustes\ICriaListaDeAjustesServico.cs" />
+    <Compile Include="Servicos\Ajustes\IExcluiAjusteDeDocumentoServico.cs" />
+    <Compile Include="Servicos\Ajustes\IExecutaAjusteDeReclassificacaoServico.cs" />
+    <Compile Include="Servicos\Ajustes\IExecutaAjustesDeExclusaoServico.cs" />
+    <Compile Include="Servicos\Ajustes\IGravaAjustesDoProcessoServico.cs" />
+    <Compile Include="Servicos\Ajustes\IGravaAjustesServico.cs" />
+    <Compile Include="Servicos\Ajustes\IPreparaAjusteServico.cs" />
+    <Compile Include="Servicos\Ajustes\IRealizaAjusteServico.cs" />
+    <Compile Include="Servicos\Ajustes\IRetornaFluxoServico.cs" />
+    <Compile Include="Servicos\Ajustes\IRotacionarImagemServico.cs" />
+    <Compile Include="Servicos\Ajustes\IValidaSePodeSalvarAjustesServico.cs" />
+    <Compile Include="Servicos\Ajustes\RealizaAjusteServico.cs" />
+    <Compile Include="Servicos\Ajustes\RetornaFluxoServico.cs" />
+    <Compile Include="Servicos\Ajustes\ValidarSeEstaEmAjustes.cs" />
+    <Compile Include="Servicos\Ajustes\ValidaSePodeSalvarAjustesServico.cs" />
+    <Compile Include="Servicos\ArquivosDeColeta\AdicionaPendenciaDeColetaServico.cs" />
+    <Compile Include="Servicos\ArquivosDeColeta\GravaArquivoDeColetaServico.cs" />
+    <Compile Include="Servicos\ArquivosDeColeta\GravaRecebimentoDeArquivoDeColetaServico.cs" />
+    <Compile Include="Servicos\ArquivosDeColeta\IAdicionaPendenciaDeColetaServico.cs" />
+    <Compile Include="Servicos\ArquivosDeColeta\IGravaArquivoDeColetaServico.cs" />
+    <Compile Include="Servicos\ArquivosDeColeta\IGravaRecebimentoDeArquivoDeColetaServico.cs" />
+    <Compile Include="Servicos\AssinaturaDigital\AssinarPdf.cs" />
+    <Compile Include="Servicos\AssinaturaDigital\RepositorioCertificadosException.cs" />
+    <Compile Include="Servicos\AssinaturaDigital\SingInfo.cs" />
+    <Compile Include="Servicos\AssinaturaDigital\VerificarPdf.cs" />
+    <Compile Include="Servicos\Autenticacao\AutenticacaoServico.cs" />
+    <Compile Include="Servicos\Batimento\AreaRetangularDeBusca.cs" />
+    <Compile Include="Servicos\Batimento\BateLoteServico.cs" />
+    <Compile Include="Servicos\Batimento\BatimentoCampoFactory.cs" />
+    <Compile Include="Servicos\Batimento\BatimentoDo.cs" />
+    <Compile Include="Servicos\Batimento\BatimentoEComplementacaoAtestadoMatricula.cs" />
+    <Compile Include="Servicos\Batimento\BatimentoEComplementacaoBoleto.cs" />
+    <Compile Include="Servicos\Batimento\BatimentoEComplementacaoCie.cs" />
+    <Compile Include="Servicos\Batimento\BatimentoEComplementacaoCnh.cs" />
+    <Compile Include="Servicos\Batimento\BatimentoEComplementacaoComprovantePagamentoServico.cs" />
+    <Compile Include="Servicos\Batimento\BatimentoEComplementacaoComprovanteResidenciaServico.cs" />
+    <Compile Include="Servicos\Batimento\BatimentoEComplementacaoDocumentoBase.cs" />
+    <Compile Include="Servicos\Batimento\BatimentoEComplementacaoDocumentoMestreServico.cs" />
+    <Compile Include="Servicos\Batimento\BatimentoEComplementacaoDocumentoServico.cs" />
+    <Compile Include="Servicos\Batimento\BatimentoEComplementacaoNaoIdentificado.cs" />
+    <Compile Include="Servicos\Batimento\BatimentoEComplementacaoPassaporte.cs" />
+    <Compile Include="Servicos\Batimento\BatimentoEComplementacaoRg.cs" />
+    <Compile Include="Servicos\Batimento\BatimentoFactory.cs" />
+    <Compile Include="Servicos\Batimento\BatimentoFullText.cs" />
+    <Compile Include="Servicos\Batimento\ClassificaDocumentoServico.cs" />
+    <Compile Include="Servicos\Batimento\ComplementaIndexacaoDocumentoServico.cs" />
+    <Compile Include="Servicos\Batimento\ConversorLinhaDigitavel.cs" />
+    <Compile Include="Servicos\Batimento\Experimental\BaterDocumento.cs" />
+    <Compile Include="Servicos\Batimento\Experimental\BatimentoCampo.cs" />
+    <Compile Include="Servicos\Batimento\Experimental\BatimentoDocumento.cs" />
+    <Compile Include="Servicos\Batimento\Experimental\BatimentoPorCampo\DataQualquerBatimento.cs" />
+    <Compile Include="Servicos\Batimento\Experimental\BatimentoPorCampo\IBatimentoCampo.cs" />
+    <Compile Include="Servicos\Batimento\Experimental\BatimentoPorCampo\IBatimentoFullTextCampo.cs" />
+    <Compile Include="Servicos\Batimento\Experimental\BatimentoPorCampo\LogradouroBatimento.cs" />
+    <Compile Include="Servicos\Batimento\Experimental\BatimentoPorCampo\ModuloBatimentoCampo.cs" />
+    <Compile Include="Servicos\Batimento\Experimental\BatimentoPorCampo\NomeMaeBatimento.cs" />
+    <Compile Include="Servicos\Batimento\Experimental\BatimentoPorCampo\NomeMaeCnhBatimento.cs" />
+    <Compile Include="Servicos\Batimento\Experimental\BatimentoPorCampo\NomePaiBatimento.cs" />
+    <Compile Include="Servicos\Batimento\Experimental\BatimentoPorCampo\NomePaiCnhBatimento.cs" />
+    <Compile Include="Servicos\Batimento\Experimental\BatimentoPorCampo\NomeTitularBatimento.cs" />
+    <Compile Include="Servicos\Batimento\Experimental\BatimentoPorCampo\NumeroRegistroBatimento.cs" />
+    <Compile Include="Servicos\Batimento\Experimental\BatimentoPorCampo\NumeroResidencialBatimento.cs" />
+    <Compile Include="Servicos\Batimento\Experimental\BatimentoPorCampo\QualquerCampoBatimento.cs" />
+    <Compile Include="Servicos\Batimento\Experimental\BatimentoPorDocumento\ComprovanteResidenciaConsultaCepBatimento.cs" />
+    <Compile Include="Servicos\Batimento\Experimental\BatimentoPorDocumento\IBatimentoDocumento.cs" />
+    <Compile Include="Servicos\Batimento\Experimental\BatimentoPorDocumento\IBatimentoIndexacaoMapeada.cs" />
+    <Compile Include="Servicos\Batimento\Experimental\BatimentoPorDocumento\ModuloBatimentoIndexacaoMapeada.cs" />
+    <Compile Include="Servicos\Batimento\Experimental\BatimentoPorDocumento\QualquerDocumentoBatimento.cs" />
+    <Compile Include="Servicos\Batimento\Experimental\CampoBatido.cs" />
+    <Compile Include="Servicos\Batimento\Experimental\IBaterDocumento.cs" />
+    <Compile Include="Servicos\Batimento\Experimental\IIndexacaoMapeada.cs" />
+    <Compile Include="Servicos\Batimento\Experimental\IndexacaoMapeada.cs" />
+    <Compile Include="Servicos\Batimento\Experimental\IValidarResultadoBatimento.cs" />
+    <Compile Include="Servicos\Batimento\Experimental\ResultadoBatimentoDocumento.cs" />
+    <Compile Include="Servicos\Batimento\Experimental\TipoBatimento.cs" />
+    <Compile Include="Servicos\Batimento\Experimental\ValidarResultadoBatimento.cs" />
+    <Compile Include="Servicos\Batimento\IBateLoteServico.cs" />
+    <Compile Include="Servicos\Batimento\IBatimentoEComplementacaoDocumentoServico.cs" />
+    <Compile Include="Servicos\Batimento\IClassificaDocumentoServico.cs" />
+    <Compile Include="Servicos\Batimento\IComplementaIndexacaoDocumentoServico.cs" />
+    <Compile Include="Servicos\Batimento\IInformacoesReconhecimento.cs" />
+    <Compile Include="Servicos\Batimento\ILogBatimentoServico.cs" />
+    <Compile Include="Servicos\Batimento\InformacoesReconhecimento.cs" />
+    <Compile Include="Servicos\Batimento\LogBatimentoServico.cs" />
+    <Compile Include="Servicos\Batimento\OcorrenciaCampoDataNaCnh.cs" />
+    <Compile Include="Servicos\Batimento\stringExtensions.cs" />
+    <Compile Include="Servicos\Campos\IObtemCampoFormatadoServico.cs" />
+    <Compile Include="Servicos\Campos\IObtemDetalhamentoDoCampoServico.cs" />
+    <Compile Include="Servicos\Campos\Nome.cs" />
+    <Compile Include="Servicos\Campos\ObtemCampoFormatadoServico.cs" />
+    <Compile Include="Servicos\Campos\ObtemDetalhamentoDoCampoServico.cs" />
+    <Compile Include="Servicos\Captura\CriarEntidadesCaptura.cs" />
+    <Compile Include="Servicos\Captura\FinalizaCapturaServico.cs" />
+    <Compile Include="Servicos\Captura\ICriarEntidadesCaptura.cs" />
+    <Compile Include="Servicos\Captura\IFinalizaCapturaServico.cs" />
+    <Compile Include="Servicos\Captura\IObtemLotePorCapturaViewModelServico.cs" />
+    <Compile Include="Servicos\Captura\IObtemPacotePorBarcodeServico.cs" />
+    <Compile Include="Servicos\Captura\IObtemProcessoPorCapturaViewModelServico.cs" />
+    <Compile Include="Servicos\Captura\IPrecisaSolicitarFichaServico.cs" />
+    <Compile Include="Servicos\Captura\ISalvaFichaDeCadastroServico.cs" />
+    <Compile Include="Servicos\Captura\IVerificaSeEhFichaDeCadastroServico.cs" />
+    <Compile Include="Servicos\Captura\ObtemLotePorCapturaViewModelServico.cs" />
+    <Compile Include="Servicos\Captura\ObtemPacotePorBarcodeServico.cs" />
+    <Compile Include="Servicos\Captura\ObtemProcessoPorCapturaViewModelServico.cs" />
+    <Compile Include="Servicos\Captura\PrecisaSolicitarFichaServico.cs" />
+    <Compile Include="Servicos\Captura\SalvaFichaDeCadastroServico.cs" />
+    <Compile Include="Servicos\Captura\VerificaSeEhFichaDeCadastroServico.cs" />
+    <Compile Include="Servicos\Coletas\CriaDevolucaoColetaViewModelServico.cs" />
+    <Compile Include="Servicos\Coletas\CriaSolicitacaoDeColetaViewModelServico.cs" />
+    <Compile Include="Servicos\Comparacao\ComparadorBoleano.cs" />
+    <Compile Include="Servicos\Comparacao\ComparadorDeCodigoDeBarras.cs" />
+    <Compile Include="Servicos\Comparacao\ComparadorDeDatas.cs" />
+    <Compile Include="Servicos\Comparacao\ComparadorDeDatasComMesEAno.cs" />
+    <Compile Include="Servicos\Comparacao\ComparadorDeNumeros.cs" />
+    <Compile Include="Servicos\Comparacao\ComparadorDeParecidos.cs" />
+    <Compile Include="Servicos\Comparacao\ComparadorDeTextoCurto.cs" />
+    <Compile Include="Servicos\Comparacao\ComparadorDeTextos.cs" />
+    <Compile Include="Servicos\Comparacao\ComparadorFiliacao.cs" />
+    <Compile Include="Servicos\Comparacao\ComparadorMae.cs" />
+    <Compile Include="Servicos\Comparacao\ComparadorNome.cs" />
+    <Compile Include="Servicos\Comparacao\ComparadorPrimeiroEUltimoNome.cs" />
+    <Compile Include="Servicos\Comparacao\ComparadorRegistroRg.cs" />
+    <Compile Include="Servicos\Comparacao\CriadorDeComparador.cs" />
+    <Compile Include="Servicos\Comparacao\DateTimeExtensions.cs" />
+    <Compile Include="Servicos\Comparacao\Equivalencia.cs" />
+    <Compile Include="Servicos\Comparacao\IComparador.cs" />
+    <Compile Include="Servicos\Comparacao\ICriadorDeComparador.cs" />
+    <Compile Include="Servicos\Comparacao\PalavrasAbreviadas.cs" />
+    <Compile Include="Servicos\Comparacao\StringExtensions.cs" />
+    <Compile Include="Servicos\Complementacao\ComplementacaoPh3Servico.cs" />
+    <Compile Include="Servicos\Complementacao\ComplementacaoVertrosServico.cs" />
+    <Compile Include="Servicos\Complementacao\IPortalPh3.cs" />
+    <Compile Include="Servicos\Complementacao\IPortalVertros.cs" />
+    <Compile Include="Servicos\Complementacao\Ph3SimuladoServico.cs" />
+    <Compile Include="Servicos\Complementacao\VertrosStatus.cs" />
+    <Compile Include="Servicos\ComplementaEnderecoServico.cs" />
+    <Compile Include="Servicos\ConferenciaCaixa\ConferenciaDaCaixaServico.cs" />
+    <Compile Include="Servicos\ConferenciaCaixa\IConferenciaDaCaixaServico.cs" />
+    <Compile Include="Servicos\ControleDeQualidade\AtualizaLoteCefNoControleDeQualidadeCefServico.cs" />
+    <Compile Include="Servicos\ControleDeQualidade\DevePassarPelaQualidadeCef.cs" />
+    <Compile Include="Servicos\ControleDeQualidade\GravaControleDeQualidadeCefServico.cs" />
+    <Compile Include="Servicos\ControleDeQualidade\GravaControleDeQualidadeM2Servico.cs" />
+    <Compile Include="Servicos\ControleDeQualidade\IAtualizaLoteCefNoControleDeQualidadeCefServico.cs" />
+    <Compile Include="Servicos\ControleDeQualidade\IGravaControleDeQualidadeCefServico.cs" />
+    <Compile Include="Servicos\ControleDeQualidade\IGravaControleDeQualidadeM2Servico.cs" />
+    <Compile Include="Servicos\ControleDeQualidade\IObtemControleQualidadeCefViewModelServico.cs" />
+    <Compile Include="Servicos\ControleDeQualidade\ISolicitaNovaAmostraServico.cs" />
+    <Compile Include="Servicos\ControleDeQualidade\ObtemControleQualidadeCefViewModelServico.cs" />
+    <Compile Include="Servicos\ControleDeQualidade\SolicitaNovaAmostraServico.cs" />
+    <Compile Include="Servicos\ControleDeQualidade\ValidarSeEstaEmControleQualidadeM2.cs" />
+    <Compile Include="Servicos\Correspondencia\IMarcarEnviadosServicos.cs" />
+    <Compile Include="Servicos\Correspondencia\MarcarEnviadosServico.cs" />
+    <Compile Include="Servicos\DefineLoteCef\AtualizaAmostraParaQualidadeCefServico.cs" />
+    <Compile Include="Servicos\DefineLoteCef\DefineLoteCefServico.cs" />
+    <Compile Include="Servicos\DefineLoteCef\GravaLotesCefDoContextoServico.cs" />
+    <Compile Include="Servicos\DefineLoteCef\IAtualizaAmostraParaQualidadeCefServico.cs" />
+    <Compile Include="Servicos\DefineLoteCef\IDefineLoteCefServico.cs" />
+    <Compile Include="Servicos\DefineLoteCef\IGravaLotesCefDoContextoServico.cs" />
+    <Compile Include="Servicos\DefineLoteCef\IPreparaContextoLoteCefServico.cs" />
+    <Compile Include="Servicos\DefineLoteCef\ISelecionaNovaAmostraLoteCefServico.cs" />
+    <Compile Include="Servicos\DefineLoteCef\PreparaContextoLoteCefServico.cs" />
+    <Compile Include="Servicos\DefineLoteCef\SelecionaNovaAmostraLoteCefServico.cs" />
+    <Compile Include="Servicos\Detalhe\Aprovacao.cs" />
+    <Compile Include="Servicos\Detalhe\BaixarPaginasDoDocumentoServico.cs" />
+    <Compile Include="Servicos\Detalhe\CriarDetalheLoteServico.cs" />
+    <Compile Include="Servicos\Detalhe\EncerraAprovacaoServico.cs" />
+    <Compile Include="Servicos\Detalhe\EstatisticaAprovacaoServico.cs" />
+    <Compile Include="Servicos\Detalhe\ICriarDetalheLoteServico.cs" />
+    <Compile Include="Servicos\Detalhe\IDevolveAprovacaoServico.cs" />
+    <Compile Include="Servicos\Detalhe\IEncerraAprovacaoServico.cs" />
+    <Compile Include="Servicos\Detalhe\ILiberaAprovacaoServico.cs" />
+    <Compile Include="Servicos\Detalhe\IMontaDescricaoRegraAprovacaoServico.cs" />
+    <Compile Include="Servicos\Detalhe\IObtemAprovacaoPorAgenciaEContaServico.cs" />
+    <Compile Include="Servicos\Detalhe\IObtemAprovacaoPorAgenciaServico.cs" />
+    <Compile Include="Servicos\Detalhe\IObtemAprovacaoServico.cs" />
+    <Compile Include="Servicos\Detalhe\IObtemProcessoPorFilaDeAprovacaoEspecialServico.cs" />
+    <Compile Include="Servicos\Detalhe\IObtemProcessoPorFilaDeAprovacaoServico.cs" />
+    <Compile Include="Servicos\Detalhe\IObterDetalheLoteServico.cs" />
+    <Compile Include="Servicos\Detalhe\IRegistraTextoPadraoParaDocumentosComFraudeServico.cs" />
+    <Compile Include="Servicos\Detalhe\IValidaSeProcessoDisponivelParaAprovacaoServico.cs" />
+    <Compile Include="Servicos\Detalhe\LiberaAprovacaoServico.cs" />
+    <Compile Include="Servicos\Detalhe\MontaDescricaoRegraAprovacaoServico.cs" />
+    <Compile Include="Servicos\Detalhe\ObtemAprovacaoPorAgenciaEContaServico.cs" />
+    <Compile Include="Servicos\Detalhe\ObtemAprovacaoPorAgenciaServico.cs" />
+    <Compile Include="Servicos\Detalhe\ObtemAprovacaoServico.cs" />
+    <Compile Include="Servicos\Detalhe\ObtemProcessoPorFilaDeAprovacaoEspecialServico.cs" />
+    <Compile Include="Servicos\Detalhe\ObtemProcessoPorFilaDeAprovacaoServico.cs" />
+    <Compile Include="Servicos\Detalhe\ObterDetalheLoteServico.cs" />
+    <Compile Include="Servicos\Detalhe\RegistraTextoPadraoParaDocumentosComFraudeServico.cs" />
+    <Compile Include="Servicos\Detalhe\ValidaSeProcessoDisponivelParaAprovacaoServico.cs" />
+    <Compile Include="Servicos\Detalhe\VisualizadorImagem.cs" />
+    <Compile Include="Servicos\Directory\FluxoAjuste\IPreparaInboxAjusteDeBrancosServico.cs" />
+    <Compile Include="Servicos\Directory\FluxoAjuste\IPreparaInboxPosAjusteServico.cs" />
+    <Compile Include="Servicos\Directory\FluxoAjuste\IProcessaOutboxAjusteBrancosServico.cs" />
+    <Compile Include="Servicos\Directory\FluxoAjuste\IProcessaOutboxPosAjusteServico.cs" />
+    <Compile Include="Servicos\Directory\FluxoAjuste\PreparaInboxAjusteDeBrancosServico.cs" />
+    <Compile Include="Servicos\Directory\FluxoAjuste\PreparaInboxPosAjusteServico.cs" />
+    <Compile Include="Servicos\Directory\FluxoAjuste\ProcessaOutboxAjusteBrancosServico.cs" />
+    <Compile Include="Servicos\Directory\FluxoAjuste\ProcessaOutboxPosAjusteServico.cs" />
+    <Compile Include="Servicos\Directory\FluxoNormal\IPreparaInboxServico.cs" />
+    <Compile Include="Servicos\Directory\FluxoNormal\IProcessaOutboxServico.cs" />
+    <Compile Include="Servicos\Directory\FluxoNormal\IRealizaGiroServico.cs" />
+    <Compile Include="Servicos\Directory\FluxoNormal\PreparaInboxServico.cs" />
+    <Compile Include="Servicos\Directory\FluxoNormal\ProcessaOutboxServico.cs" />
+    <Compile Include="Servicos\DocumentoComProblema\IMarcarDocumentoComProblema.cs" />
+    <Compile Include="Servicos\DocumentoComProblema\MarcarDocumentoComProblema.cs" />
+    <Compile Include="Servicos\Documentos\ArquivoCapturado.cs" />
+    <Compile Include="Servicos\Documentos\CamposDeDocumento.cs" />
+    <Compile Include="Servicos\Documentos\ContarPaginasPdfDoProcesso.cs" />
+    <Compile Include="Servicos\Documentos\CriaDocumentoCapturaServico.cs" />
+    <Compile Include="Servicos\Documentos\CriaDocumentoPdfServico.cs" />
+    <Compile Include="Servicos\Documentos\DetalhamentoDoDocumento.cs" />
+    <Compile Include="Servicos\Documentos\DetalhamentoDoDocumentoCampo.cs" />
+    <Compile Include="Servicos\Documentos\DetalhamentoDoDocumentoGrupo.cs" />
+    <Compile Include="Servicos\Documentos\GerarNovaVersaoDocumentoServico.cs" />
+    <Compile Include="Servicos\Documentos\GerarNovaVersaoPaginaServico.cs" />
+    <Compile Include="Servicos\Documentos\GerarNovoDocumentoServico.cs" />
+    <Compile Include="Servicos\Documentos\GerarPaginasServico.cs" />
+    <Compile Include="Servicos\Documentos\GerarTermosServico.cs" />
+    <Compile Include="Servicos\Documentos\GravaIndicioDeFraudeServico.cs" />
+    <Compile Include="Servicos\Documentos\ICriaDocumentoCapturaServico.cs" />
+    <Compile Include="Servicos\Documentos\ICriaDocumentoPdfServico.cs" />
+    <Compile Include="Servicos\Documentos\IGerarNovaVersaoDocumentoServico.cs" />
+    <Compile Include="Servicos\Documentos\IGerarNovaVersaoPaginaServico.cs" />
+    <Compile Include="Servicos\Documentos\IGerarNovoDocumentoServico.cs" />
+    <Compile Include="Servicos\Documentos\IGerarPaginasServico.cs" />
+    <Compile Include="Servicos\Documentos\IGravaIndicioDeFraudeServico.cs" />
+    <Compile Include="Servicos\Documentos\IIncluirNovoItemComoArquivoServico.cs" />
+    <Compile Include="Servicos\Documentos\IncluirNovoItemComoArquivoServico.cs" />
+    <Compile Include="Servicos\Documentos\IObtemCamposDeDocumentoServico.cs" />
+    <Compile Include="Servicos\Documentos\IObtemDetalhamentoDoDocumentoCampoServico.cs" />
+    <Compile Include="Servicos\Documentos\IObtemDetalhamentoDoDocumentoServico.cs" />
+    <Compile Include="Servicos\Documentos\IObtemGruposDeTiposDeDocumentosServico.cs" />
+    <Compile Include="Servicos\Documentos\IObtemOpcoesDeValorDeIndexacaoServico.cs" />
+    <Compile Include="Servicos\Documentos\ObtemCamposDeDocumentoServico.cs" />
+    <Compile Include="Servicos\Documentos\ObtemDetalhamentoDoDocumentoCampoServico.cs" />
+    <Compile Include="Servicos\Documentos\ObtemDetalhamentoDoDocumentoServico.cs" />
+    <Compile Include="Servicos\Documentos\ObtemGruposDeTiposDeDocumentosServico.cs" />
+    <Compile Include="Servicos\Documentos\ObtemOpcoesDeValorDeIndexacaoServico.cs" />
+    <Compile Include="Servicos\DossiesContingentes\GeraDossieEsperadoDaContingenciaServico.cs" />
+    <Compile Include="Servicos\DossiesContingentes\IGeraDossieEsperadoDaContingenciaServico.cs" />
+    <Compile Include="Servicos\Dossies\DossiersPorLoteCef.cs" />
+    <Compile Include="Servicos\Dossies\IRelatorioDossiersPorLoteCef.cs" />
+    <Compile Include="Servicos\Dossies\ISalvaDossieEsperadoServico.cs" />
+    <Compile Include="Servicos\Dossies\RelatorioDossiersPorLoteCef.cs" />
+    <Compile Include="Servicos\Dossies\SalvaDossieEsperadoServico.cs" />
+    <Compile Include="Servicos\EngineDeRegras\AtribuiValorCalculadoNaRegra.cs" />
+    <Compile Include="Servicos\EngineDeRegras\CriadorDeProcessadorDeBinario.cs" />
+    <Compile Include="Servicos\EngineDeRegras\ExecutorDeCondicoes.cs" />
+    <Compile Include="Servicos\EngineDeRegras\ExecutorDeExpressoes.cs" />
+    <Compile Include="Servicos\EngineDeRegras\ExecutorDeRegra.cs" />
+    <Compile Include="Servicos\EngineDeRegras\FatorMatematico.cs" />
+    <Compile Include="Servicos\EngineDeRegras\IAtribuiValorCalculadoNaRegra.cs" />
+    <Compile Include="Servicos\EngineDeRegras\ICriadorDeProcessadorDeBinario.cs" />
+    <Compile Include="Servicos\EngineDeRegras\IExecutorDeCondicoes.cs" />
+    <Compile Include="Servicos\EngineDeRegras\IExecutorDeExpressoes.cs" />
+    <Compile Include="Servicos\EngineDeRegras\IExecutorDeRegra.cs" />
+    <Compile Include="Servicos\EngineDeRegras\IProcessadorDeBinario.cs" />
+    <Compile Include="Servicos\EngineDeRegras\ISalvaRegraViolada.cs" />
+    <Compile Include="Servicos\EngineDeRegras\IValidaCondicaoDeRegra.cs" />
+    <Compile Include="Servicos\EngineDeRegras\ProcessadorBinarioB0.cs" />
+    <Compile Include="Servicos\EngineDeRegras\ProcessadorBinarioB1.cs" />
+    <Compile Include="Servicos\EngineDeRegras\ProcessadorBinarioB128.cs" />
+    <Compile Include="Servicos\EngineDeRegras\ProcessadorBinarioB16.cs" />
+    <Compile Include="Servicos\EngineDeRegras\ProcessadorBinarioB2.cs" />
+    <Compile Include="Servicos\EngineDeRegras\ProcessadorBinarioB256.cs" />
+    <Compile Include="Servicos\EngineDeRegras\ProcessadorBinarioB32.cs" />
+    <Compile Include="Servicos\EngineDeRegras\ProcessadorBinarioB4.cs" />
+    <Compile Include="Servicos\EngineDeRegras\ProcessadorBinarioB64.cs" />
+    <Compile Include="Servicos\EngineDeRegras\ProcessadorBinarioB8.cs" />
+    <Compile Include="Servicos\EngineDeRegras\ResultadoCondicaoDeRegra.cs" />
+    <Compile Include="Servicos\EngineDeRegras\ResultadoDasCondicoes.cs" />
+    <Compile Include="Servicos\EngineDeRegras\SalvaRegraViolada.cs" />
+    <Compile Include="Servicos\EngineDeRegras\ValidaCondicaoDeRegra.cs" />
+    <Compile Include="Servicos\Exportacao\EnviaJpgsDoLoteParaCloud.cs" />
+    <Compile Include="Servicos\Exportacao\EnviaPdfsDoLoteParaCloud.cs" />
+    <Compile Include="Servicos\Exportacao\ExportarPacote.cs" />
+    <Compile Include="Servicos\Exportacao\IEnviaJpgsDoLoteParaCloud.cs" />
+    <Compile Include="Servicos\Exportacao\IEnviaPdfsDoLoteParaCloud.cs" />
+    <Compile Include="Servicos\Exportacao\IRemoveArquivosDoLote.cs" />
+    <Compile Include="Servicos\Exportacao\PacoteParaExportarFabrica.cs" />
+    <Compile Include="Servicos\Exportacao\RemoveArquivosDoLote.cs" />
+    <Compile Include="Servicos\ExpurgaProcessoServico.cs" />
+    <Compile Include="Servicos\FileTransferBalance\IObtemFileTransferDaPaginaServico.cs" />
+    <Compile Include="Servicos\FileTransferBalance\IObtemFileTransferParaArquivoServico.cs" />
+    <Compile Include="Servicos\FileTransferBalance\IRegistraFileTransferDaPaginaServico.cs" />
+    <Compile Include="Servicos\FileTransferBalance\ObtemFileTransferDaPaginaServico.cs" />
+    <Compile Include="Servicos\FileTransferBalance\ObtemFileTransferParaArquivoServico.cs" />
+    <Compile Include="Servicos\FileTransferBalance\RegistraFileTransferDaPaginaServico.cs" />
+    <Compile Include="Servicos\GravaLogDaOcorrenciaServico.cs" />
+    <Compile Include="Servicos\GravaLogDaPaginaServico.cs" />
+    <Compile Include="Servicos\GravaLogDoDocumentoServico.cs" />
+    <Compile Include="Servicos\GravaLogDoDossieEsperadoServico.cs" />
+    <Compile Include="Servicos\GravaLogDoLoteServico.cs" />
+    <Compile Include="Servicos\GravaLogDoPacoteProcessadoServico.cs" />
+    <Compile Include="Servicos\GravaLogDoPacoteServico.cs" />
+    <Compile Include="Servicos\GravaLogDoProcessoServico.cs" />
+    <Compile Include="Servicos\GravaLogGenericoServico.cs" />
+    <Compile Include="Servicos\GrupoTipoDeDocumento\AjustaGrupoTipoDeDocumentoServico.cs" />
+    <Compile Include="Servicos\GrupoTipoDeDocumento\IAjustaGrupoTipoDeDocumentoServico.cs" />
+    <Compile Include="Servicos\IAjusteImagemServico.cs" />
+    <Compile Include="Servicos\IApagaArquivoFileTransferServico.cs" />
+    <Compile Include="Servicos\IAssinarPdf.cs" />
+    <Compile Include="Servicos\IBaixaArquivoFileTransferServico.cs" />
+    <Compile Include="Servicos\ICertificadoA3.cs" />
+    <Compile Include="Servicos\IComplementaEnderecoServico.cs" />
+    <Compile Include="Servicos\IContarPaginasPdfDoProcesso.cs" />
+    <Compile Include="Servicos\IContasFinalizadasServico.cs" />
+    <Compile Include="Servicos\IConversorFormatoImgServico.cs" />
+    <Compile Include="Servicos\IdentificacaoManual\IMarcaTipoDocumentoNaoEncontradoServico.cs" />
+    <Compile Include="Servicos\IdentificacaoManual\IReclassificaDocumentoSeparadoServico.cs" />
+    <Compile Include="Servicos\IdentificacaoManual\MarcaTipoDocumentoNaoEncontradoServico.cs" />
+    <Compile Include="Servicos\IdentificacaoManual\ReclassificaDocumentoSeparadoServico.cs" />
+    <Compile Include="Servicos\IdentificacaoManual\ReclassificaDocumentoServico.cs" />
+    <Compile Include="Servicos\IdentificacaoManual\ValidaSeDocumentoAindaEstaNaIdentificacaoManual.cs" />
+    <Compile Include="Servicos\Identificacao\AlteraIndexacaoServico.cs" />
+    <Compile Include="Servicos\Identificacao\AlteraTipoDeDocumentoServico.cs" />
+    <Compile Include="Servicos\Identificacao\CriaPaginaNaPacServico.cs" />
+    <Compile Include="Servicos\Identificacao\IAlteraIndexacaoServico.cs" />
+    <Compile Include="Servicos\Identificacao\IAlteraTipoDeDocumentoServico.cs" />
+    <Compile Include="Servicos\Identificacao\ICriaPaginaNaPacServico.cs" />
+    <Compile Include="Servicos\Identificacao\IObtemTiposBloqueadosParaIdenficacaoServico.cs" />
+    <Compile Include="Servicos\Identificacao\IRankingReclassificacaoService.cs" />
+    <Compile Include="Servicos\Identificacao\ObtemTiposBloqueadosParaIdentificacaoServico.cs" />
+    <Compile Include="Servicos\Identificacao\RankingReclassificacaoService.cs" />
+    <Compile Include="Servicos\IDevePassarPelaQualidadeCef.cs" />
+    <Compile Include="Servicos\IExpurgaProcessoServico.cs" />
+    <Compile Include="Servicos\IGerarFolhaRostoVirtual.cs" />
+    <Compile Include="Servicos\IGerarTermoDeAutuacaoVirtual.cs" />
+    <Compile Include="Servicos\IGerarTermosServico.cs" />
+    <Compile Include="Servicos\IGravaLogDaOcorrenciaServico.cs" />
+    <Compile Include="Servicos\IGravaLogDaPaginaServico.cs" />
+    <Compile Include="Servicos\IGravaLogDoDocumentoServico.cs" />
+    <Compile Include="Servicos\IGravaLogDoDossieEsperadoServico.cs" />
+    <Compile Include="Servicos\IGravaLogDoLoteServico.cs" />
+    <Compile Include="Servicos\IGravaLogDoPacoteProcessadoServico.cs" />
+    <Compile Include="Servicos\IGravaLogDoPacoteServico.cs" />
+    <Compile Include="Servicos\IGravaLogDoProcessoServico.cs" />
+    <Compile Include="Servicos\IGravaLogGenericoServico.cs" />
+    <Compile Include="Servicos\IImportacaoDossieEsperadoServico.cs" />
+    <Compile Include="Servicos\ILogLoteServico.cs" />
+    <Compile Include="Servicos\ImagemOriginal\IObtemPaginaOriginalServico.cs" />
+    <Compile Include="Servicos\ImagemOriginal\ObtemPaginaOriginalServico.cs" />
+    <Compile Include="Servicos\IManipulaImagemServico.cs" />
+    <Compile Include="Servicos\Importacao\AdicionaDocumentoAoProcessoServico.cs" />
+    <Compile Include="Servicos\Importacao\AproveitaDadosDeSolicitacoesAntigasServico.cs" />
+    <Compile Include="Servicos\Importacao\CapturaServico.cs" />
+    <Compile Include="Servicos\Importacao\CriaLoteServico.cs" />
+    <Compile Include="Servicos\Importacao\CriaPacoteProcessadoServico.cs" />
+    <Compile Include="Servicos\Importacao\DocumentoFabrica.cs" />
+    <Compile Include="Servicos\Importacao\ExtraiDadosDoArquivoOcr.cs" />
+    <Compile Include="Servicos\Importacao\FinalizaImportadosServico.cs" />
+    <Compile Include="Servicos\Importacao\GravaFlagDeFichaVirtualServico.cs" />
+    <Compile Include="Servicos\Importacao\IAdicionaDocumentoAoProcessoServico.cs" />
+    <Compile Include="Servicos\Importacao\IAproveitaDadosDeSolicitacoesAntigasServico.cs" />
+    <Compile Include="Servicos\Importacao\ICapturaServico.cs" />
+    <Compile Include="Servicos\Importacao\IConverterImagem.cs" />
+    <Compile Include="Servicos\Importacao\ICriaLoteServico.cs" />
+    <Compile Include="Servicos\Importacao\ICriaPacoteProcessadoServico.cs" />
+    <Compile Include="Servicos\Importacao\IDocumentoFabrica.cs" />
+    <Compile Include="Servicos\Importacao\IExtraiDadosDoArquivoOcr.cs" />
+    <Compile Include="Servicos\Importacao\IFinalizaImportadosServico.cs" />
+    <Compile Include="Servicos\Importacao\IGravaFlagDeFichaVirtualServico.cs" />
+    <Compile Include="Servicos\Importacao\IImportacaoPropostaServico.cs" />
+    <Compile Include="Servicos\Importacao\IIndexacaoFabrica.cs" />
+    <Compile Include="Servicos\Importacao\ImportacaoPropostaServico.cs" />
+    <Compile Include="Servicos\Importacao\IndexacaoDocumento.cs" />
+    <Compile Include="Servicos\Importacao\IndexacaoFabrica.cs" />
+    <Compile Include="Servicos\Importacao\IPacoteFactory.cs" />
+    <Compile Include="Servicos\Importacao\IPaginaFabrica.cs" />
+    <Compile Include="Servicos\Importacao\IPostaPaginaNoFileTransferServico.cs" />
+    <Compile Include="Servicos\Importacao\IPropostaAberturaContaServico.cs" />
+    <Compile Include="Servicos\Importacao\ITipoDocumentoFabrica.cs" />
+    <Compile Include="Servicos\Importacao\IValorReconhecidoFabrica.cs" />
+    <Compile Include="Servicos\Importacao\PacoteFactory.cs" />
+    <Compile Include="Servicos\Importacao\PaginaFabrica.cs" />
+    <Compile Include="Servicos\Importacao\ParametrosDeImportacao.cs" />
+    <Compile Include="Servicos\Importacao\PropostaAberturaContaServico.cs" />
+    <Compile Include="Servicos\Importacao\StringExtensions.cs" />
+    <Compile Include="Servicos\Importacao\TipoDocumentoFabrica.cs" />
+    <Compile Include="Servicos\Importacao\ValorReconhecidoFabrica.cs" />
+    <Compile Include="Servicos\InclusaoDeCaixa\IIncluiNovaCaixaServico.cs" />
+    <Compile Include="Servicos\InclusaoDeCaixa\IncluiNovaCaixaServico.cs" />
+    <Compile Include="Servicos\Indexacoes\AlteraValorFinalIndexacaoServico.cs" />
+    <Compile Include="Servicos\Indexacoes\FixaCampoNumeroResidencia.cs" />
+    <Compile Include="Servicos\Indexacoes\FixaIndexacaoCnhServico.cs" />
+    <Compile Include="Servicos\Indexacoes\FixaIndexacaoComprovanteResidenciaServico.cs" />
+    <Compile Include="Servicos\Indexacoes\FixaIndexacaoDocumentoIdentificacaoServico.cs" />
+    <Compile Include="Servicos\Indexacoes\FixaIndexacaoDocumentoServico.cs" />
+    <Compile Include="Servicos\Indexacoes\FixarCampo.cs" />
+    <Compile Include="Servicos\Indexacoes\FixarCampoComplementoResidencia.cs" />
+    <Compile Include="Servicos\Indexacoes\FixarCampoEmissorCnh.cs" />
+    <Compile Include="Servicos\Indexacoes\FixarCampoPaiCnh.cs" />
+    <Compile Include="Servicos\Indexacoes\FixarCampoPaiDocumentoIdentificacao.cs" />
+    <Compile Include="Servicos\Indexacoes\IAlteraValorFinalIndexacaoServico.cs" />
+    <Compile Include="Servicos\Indexacoes\IAtualizaIndexacao.cs" />
+    <Compile Include="Servicos\Indexacoes\IFixaIndexacaoCnhServico.cs" />
+    <Compile Include="Servicos\Indexacoes\IFixaIndexacaoComprovanteResidenciaServico.cs" />
+    <Compile Include="Servicos\Indexacoes\IFixaIndexacaoDocumentoIdentificacaoServico.cs" />
+    <Compile Include="Servicos\Indexacoes\IFixaIndexacaoDocumentoServico.cs" />
+    <Compile Include="Servicos\Indexacoes\IValidaAlteracaoDeValorFinalServico.cs" />
+    <Compile Include="Servicos\Indexacoes\ValidaAlteracaoDeValorFinalServico.cs" />
+    <Compile Include="Servicos\IPacoteProcessadoFactory.cs" />
+    <Compile Include="Servicos\IParticipantesServico.cs" />
+    <Compile Include="Servicos\IPostaArquivoAmazonS3.cs" />
+    <Compile Include="Servicos\IPostaArquivoFileTransferServico.cs" />
+    <Compile Include="Servicos\IRecepcionarImagemTScan.cs" />
+    <Compile Include="Servicos\IReconheceDocumentoServico.cs" />
+    <Compile Include="Servicos\IReconheceLoteServico.cs" />
+    <Compile Include="Servicos\IRegistraPendenciaPortal.cs" />
+    <Compile Include="Servicos\IRegrasVioladasDoDocumentoParticipanteServico.cs" />
+    <Compile Include="Servicos\IRemoverDocumentoFileTransfer.cs" />
+    <Compile Include="Servicos\IRemoverPaginaFileTransfer.cs" />
+    <Compile Include="Servicos\ISsh.cs" />
+    <Compile Include="Servicos\ITimeStampSigner.cs" />
+    <Compile Include="Servicos\ITitularDocumentoMestreComCertidaoCasamento.cs" />
+    <Compile Include="Servicos\IValidarSeEstaEmAjustes.cs" />
+    <Compile Include="Servicos\IValidarSeEstaEmControleQualidadeM2.cs" />
+    <Compile Include="Servicos\IValidaSeDocumentoAindaEstaNaClassificacao.cs" />
+    <Compile Include="Servicos\IValidaSeDocumentoAindaEstaNaIdentificacaoManual.cs" />
+    <Compile Include="Servicos\IVerificarPdf.cs" />
+    <Compile Include="Servicos\LocalizaPaginaPorNomeServico.cs" />
+    <Compile Include="Servicos\Login\IRegistraLoginServico.cs" />
+    <Compile Include="Servicos\Login\RegistraLoginServico.cs" />
+    <Compile Include="Servicos\LoteLogServico.cs" />
+    <Compile Include="Servicos\MigraDossie\IMigraDossieServico.cs" />
+    <Compile Include="Servicos\MigraDossie\MigraDossieServico.cs" />
+    <Compile Include="Servicos\Monitor\ITotalDocumentosPorFaseServico.cs" />
+    <Compile Include="Servicos\Monitor\TotalDocumentosPorFaseServico.cs" />
+    <Compile Include="Servicos\Montagem\DefiniTemplatesDeDocumentoServico.cs" />
+    <Compile Include="Servicos\Montagem\IDefiniTemplatesDeDocumentoServico.cs" />
+    <Compile Include="Servicos\Montagem\IMontaProcessoServico.cs" />
+    <Compile Include="Servicos\Montagem\IObtemTemplatesOrdenadosServico.cs" />
+    <Compile Include="Servicos\Montagem\MontaProcessoServico.cs" />
+    <Compile Include="Servicos\Montagem\ObtemTemplatesOrdenadosServico.cs" />
+    <Compile Include="Servicos\Neurotech\ConsultaNeurotech.cs" />
+    <Compile Include="Servicos\Neurotech\Credencial.cs" />
+    <Compile Include="Servicos\Neurotech\INeurotechRepositorio.cs" />
+    <Compile Include="Servicos\Neurotech\Parametro.cs" />
+    <Compile Include="Servicos\Neurotech\RegrasNeurotech.cs" />
+    <Compile Include="Servicos\Neurotech\ResultadoConsultaNeurotech.cs" />
+    <Compile Include="Servicos\Neurotech\RetornoNeurotech.cs" />
+    <Compile Include="Servicos\Ocorrencias\GravaOcorrenciasNosFilhosServico.cs" />
+    <Compile Include="Servicos\Ocorrencias\IGravaOcorrenciasNosFilhosServico.cs" />
+    <Compile Include="Servicos\Pacotes\AtualizaStatusArquivoPack.cs" />
+    <Compile Include="Servicos\Pacotes\AtualizaStatusPacoteProcessado.cs" />
+    <Compile Include="Servicos\Pacotes\CriaArquivoPack.cs" />
+    <Compile Include="Servicos\Pacotes\CriaPacoteProcessado.cs" />
+    <Compile Include="Servicos\Pacotes\IAtualizaStatusArquivoPack.cs" />
+    <Compile Include="Servicos\Pacotes\IAtualizaStatusPacoteProcessado.cs" />
+    <Compile Include="Servicos\Pacotes\ICriaArquivoPack.cs" />
+    <Compile Include="Servicos\Pacotes\ICriaPacoteProcessado.cs" />
+    <Compile Include="Servicos\Pacotes\IObtemRelatorioDePacotesProcessadosServico.cs" />
+    <Compile Include="Servicos\Pacotes\ObtemRelatorioDePacotesProcessadosServico.cs" />
+    <Compile Include="Servicos\Pacotes\PacoteFabrica.cs" />
+    <Compile Include="Servicos\Pdf\IPdfServico.cs" />
+    <Compile Include="Servicos\Perfis\ExcluiPerfilServico.cs" />
+    <Compile Include="Servicos\Perfis\IExcluiPerfilServico.cs" />
+    <Compile Include="Servicos\Perfis\IObtemRelatoriosPermitidosServico.cs" />
+    <Compile Include="Servicos\Perfis\IPodeAcessarFuncionalidadeServico.cs" />
+    <Compile Include="Servicos\Perfis\ObtemRelatoriosPermitidosServico.cs" />
+    <Compile Include="Servicos\Perfis\PodeAcessarFuncionalidadeServico.cs" />
+    <Compile Include="Servicos\PreparaAjuste\ExisteDocumentoPngAtivoServico.cs" />
+    <Compile Include="Servicos\PreparaAjuste\IExisteDocumentoPngAtivoServico.cs" />
+    <Compile Include="Servicos\Preparo\GravaHorasPreparoServico.cs" />
+    <Compile Include="Servicos\Preparo\IGravaHorasPreparoServico.cs" />
+    <Compile Include="Servicos\RecepcaoColeta\IRecepcaoDeColetaServico.cs" />
+    <Compile Include="Servicos\RecepcaoColeta\RecepcaoDeColetaServico.cs" />
+    <Compile Include="Servicos\RecepcaoDossieEsperado\DossieEsperadoFabrica.cs" />
+    <Compile Include="Servicos\ReconhecimentoPorCampo\IObtemEstatisticaDeReconhecimentoPorCampoServico.cs" />
+    <Compile Include="Servicos\ReconhecimentoPorCampo\IRelatorioEstatisticaDeReconhecimentoServico.cs" />
+    <Compile Include="Servicos\ReconhecimentoPorCampo\ItemRelatorioDeReconhecimentoPorCampo.cs" />
+    <Compile Include="Servicos\ReconhecimentoPorCampo\ObtemEstatisticaDeReconhecimentoPorCampoServico.cs" />
+    <Compile Include="Servicos\ReconhecimentoPorCampo\RelatorioDeReconhecimentoPorCampo.cs" />
+    <Compile Include="Servicos\ReconhecimentoPorCampo\RelatorioEstatisticaDeReconhecimentoServico.cs" />
+    <Compile Include="Servicos\Reconhecimento\AdicionaQuantidadeLicencaConsumida.cs" />
+    <Compile Include="Servicos\Reconhecimento\IAdicionaQuantidadeLicencaConsumida.cs" />
+    <Compile Include="Servicos\Reconhecimento\IJuntaImagensDeCabecalhoRodapePacServico.cs" />
+    <Compile Include="Servicos\Reconhecimento\IObterImagemParaReconhecimentoServico.cs" />
+    <Compile Include="Servicos\Reconhecimento\IOrdenarPaginasPacServico.cs" />
+    <Compile Include="Servicos\Reconhecimento\IProcessaPaginaPac.cs" />
+    <Compile Include="Servicos\Reconhecimento\IReconhecePaginaComum.cs" />
+    <Compile Include="Servicos\Reconhecimento\IReconhecePaginaPac.cs" />
+    <Compile Include="Servicos\Reconhecimento\IReconhecePaginaServico.cs" />
+    <Compile Include="Servicos\Reconhecimento\IRecortaCabecalhoRodapeDocumentoPacServico.cs" />
+    <Compile Include="Servicos\Reconhecimento\ISalvarPropriedadesImagemServico.cs" />
+    <Compile Include="Servicos\Reconhecimento\ProcessaPaginaPac.cs" />
+    <Compile Include="Servicos\Reconhecimento\SalvarPropriedadesImagemServico.cs" />
+    <Compile Include="Servicos\RegistraPendenciaPortal.cs" />
+    <Compile Include="Servicos\RegrasVioladasDoDocumentoParticipanteServico.cs" />
+    <Compile Include="Servicos\RemoverDocumentoFileTransfer.cs" />
+    <Compile Include="Servicos\RemoverPaginaFileTransfer.cs" />
+    <Compile Include="Servicos\Separacao\AcaoDeSeparacao.cs" />
+    <Compile Include="Servicos\Separacao\AtualizaStatusSeparacaoServico.cs" />
+    <Compile Include="Servicos\Separacao\CriaDocumentoNaSeparacaoServico.cs" />
+    <Compile Include="Servicos\Separacao\ExcluiPaginaNaSeparacaoServico.cs" />
+    <Compile Include="Servicos\Separacao\IAtualizaStatusSeparacaoServico.cs" />
+    <Compile Include="Servicos\Separacao\ICriaDocumentoNaSeparacaoServico.cs" />
+    <Compile Include="Servicos\Separacao\IExcluiPaginaNaSeparacaoServico.cs" />
+    <Compile Include="Servicos\Separacao\IMontaDocumentosParaSeparacaoServico.cs" />
+    <Compile Include="Servicos\Separacao\IObtemLoteParaSeparacaoServico.cs" />
+    <Compile Include="Servicos\Separacao\IReclassificaDocumentoNaSeparacaoServico.cs" />
+    <Compile Include="Servicos\Separacao\IRemoveDocumentosSemPaginaServico.cs" />
+    <Compile Include="Servicos\Separacao\IRemovePdfSeparadoServico.cs" />
+    <Compile Include="Servicos\Separacao\IReordenarDocumentosServico.cs" />
+    <Compile Include="Servicos\Separacao\IRessuscitaPaginaNaSeparacaoServico.cs" />
+    <Compile Include="Servicos\Separacao\ISalvaSeparacaoServico.cs" />
+    <Compile Include="Servicos\Separacao\MontaDocumentosParaSeparacaoServico.cs" />
+    <Compile Include="Servicos\Separacao\ObtemLoteParaSeparacaoServico.cs" />
+    <Compile Include="Servicos\Separacao\ReclassificaDocumentoNaSeparacaoServico.cs" />
+    <Compile Include="Servicos\Separacao\RemoveDocumentosSemPaginaServico.cs" />
+    <Compile Include="Servicos\Separacao\RemovePdfSeparadoServico.cs" />
+    <Compile Include="Servicos\Separacao\ReordenarDocumentosServico.cs" />
+    <Compile Include="Servicos\Separacao\RessuscitaPaginaNaSeparacaoServico.cs" />
+    <Compile Include="Servicos\Separacao\SalvaSeparacaoServico.cs" />
+    <Compile Include="Servicos\Suporte\IRegerarPdfServico.cs" />
+    <Compile Include="Servicos\Suporte\IRetornaSeparacaoServico.cs" />
+    <Compile Include="Servicos\Suporte\IRetornaTriagemServico.cs" />
+    <Compile Include="Servicos\Suporte\ISetarExcluidoServico.cs" />
+    <Compile Include="Servicos\Suporte\ISolicitarRecapturaServico.cs" />
+    <Compile Include="Servicos\Suporte\RegerarPdfServico.cs" />
+    <Compile Include="Servicos\Suporte\RetornaSeparacaoServico.cs" />
+    <Compile Include="Servicos\Suporte\RetornaTriagemServico.cs" />
+    <Compile Include="Servicos\Suporte\SetarExcluidoServico.cs" />
+    <Compile Include="Servicos\Suporte\SolicitarRecapturaServico.cs" />
+    <Compile Include="Servicos\TriagemPreOcr\AcaoDeTriagemPreOcr.cs" />
+    <Compile Include="Servicos\TriagemPreOcr\CriaDocumentoNaTriagemServico.cs" />
+    <Compile Include="Servicos\TriagemPreOcr\EnviaParaRecapturaServico.cs" />
+    <Compile Include="Servicos\TriagemPreOcr\ExcluiPaginaNaTriagemServico.cs" />
+    <Compile Include="Servicos\TriagemPreOcr\ExecutaAcoesTriagemServico.cs" />
+    <Compile Include="Servicos\TriagemPreOcr\GravaGiroNaTriagemServico.cs" />
+    <Compile Include="Servicos\TriagemPreOcr\ICriaDocumentoNaTriagemServico.cs" />
+    <Compile Include="Servicos\TriagemPreOcr\IEnviaParaRecapturaServico.cs" />
+    <Compile Include="Servicos\TriagemPreOcr\IExcluiPaginaNaTriagemServico.cs" />
+    <Compile Include="Servicos\TriagemPreOcr\IExecutaAcoesTriagemServico.cs" />
+    <Compile Include="Servicos\TriagemPreOcr\IMontaDocumentosParaTriagemServico.cs" />
+    <Compile Include="Servicos\TriagemPreOcr\IObtemLoteParaTriagemPreOcrServico.cs" />
+    <Compile Include="Servicos\TriagemPreOcr\IReclassificaDocumentoNaTriagemServico.cs" />
+    <Compile Include="Servicos\TriagemPreOcr\IRessuscitaPaginaNaTriagemServico.cs" />
+    <Compile Include="Servicos\TriagemPreOcr\ISalvaTriagemPreOcrServico.cs" />
+    <Compile Include="Servicos\TriagemPreOcr\IValidarSeEstaEmTriagem.cs" />
+    <Compile Include="Servicos\TriagemPreOcr\MontaDocumentosParaTriagemServico.cs" />
+    <Compile Include="Servicos\TriagemPreOcr\MudaPaginaDeDocumentoNaTriagemServico.cs" />
+    <Compile Include="Servicos\TriagemPreOcr\ObtemLoteParaTriagemPreOcrServico.cs" />
+    <Compile Include="Servicos\TriagemPreOcr\ReclassificaDocumentoNaTriagemServico.cs" />
+    <Compile Include="Servicos\TriagemPreOcr\RemoveDocumentosSemPaginaServico.cs" />
+    <Compile Include="Servicos\TriagemPreOcr\ReordenaDocumentosTriagemServico.cs" />
+    <Compile Include="Servicos\TriagemPreOcr\ReordenaPaginasTriagemServico.cs" />
+    <Compile Include="Servicos\TriagemPreOcr\RessuscitaPaginaNaTriagemServico.cs" />
+    <Compile Include="Servicos\TriagemPreOcr\SalvaTriagemPreOcrServico.cs" />
+    <Compile Include="Servicos\TriagemPreOcr\ValidarSeEstaEmTriagem.cs" />
+    <Compile Include="Servicos\TScan\RecepcionarImagemTScan.cs" />
+    <Compile Include="Servicos\Usuarios\AlteraSenhaServico.cs" />
+    <Compile Include="Servicos\Usuarios\IAlteraSenhaServico.cs" />
+    <Compile Include="Servicos\Usuarios\IObterFotoUsuarioServico.cs" />
+    <Compile Include="Servicos\Usuarios\ISalvaFotoUsuarioServico.cs" />
+    <Compile Include="Servicos\Usuarios\ISalvaUsuarioServico.cs" />
+    <Compile Include="Servicos\Usuarios\ISolicitaSenhaServico.cs" />
+    <Compile Include="Servicos\Usuarios\ObterFotoUsuarioServico.cs" />
+    <Compile Include="Servicos\Usuarios\SalvaFotoUsuarioServico.cs" />
+    <Compile Include="Servicos\Usuarios\SalvaUsuarioServico.cs" />
+    <Compile Include="Servicos\Usuarios\SolicitaSenhaServico.cs" />
+    <Compile Include="Servicos\Validacao\AplicaAcaoRegraProcessoServico.cs" />
+    <Compile Include="Servicos\Validacao\CodigoDeBarras.cs" />
+    <Compile Include="Servicos\Validacao\ComplementaIndexacaoDocumentoMestreServico.cs" />
+    <Compile Include="Servicos\Validacao\ComplementaIndexacaoDocumentosDoProcessoServico.cs" />
+    <Compile Include="Servicos\Validacao\CorrecaoDeNomeServico.cs" />
+    <Compile Include="Servicos\Validacao\ICorrecaoDeNomeServico.cs" />
+    <Compile Include="Servicos\Validacao\IValidaDadosReconhecidosCampoData.cs" />
+    <Compile Include="Servicos\Validacao\IVerificaSeNomeReconhecidoServico.cs" />
+    <Compile Include="Servicos\Validacao\ObtemPalavrasDiferentesEntreNomesServico.cs" />
+    <Compile Include="Servicos\Validacao\SalvarIndexacaoDocumentoMestre.cs" />
+    <Compile Include="Servicos\Validacao\TitularDocumentoMestreComCertidaoCasamento.cs" />
+    <Compile Include="Servicos\Validacao\ValidaDadosReconhecidosCampoData.cs" />
+    <Compile Include="Servicos\Validacao\ValidaIndexacaoProcesso.cs" />
+    <Compile Include="Servicos\Validacao\VerificaSeNomeReconhecidoServico.cs" />
+    <Compile Include="Servicos\Workflow\FaseDeWorkflow.cs" />
+    <Compile Include="Servicos\Workflow\FaseLoteAguardandoAssinatura.cs" />
+    <Compile Include="Servicos\Workflow\FaseLoteAguardandoCaptura.cs" />
+    <Compile Include="Servicos\Workflow\FaseLoteAguardandoClassifier.cs" />
+    <Compile Include="Servicos\Workflow\FaseLoteAguardandoFaturamento.cs" />
+    <Compile Include="Servicos\Workflow\FaseLoteAguardandoIdentificacao.cs" />
+    <Compile Include="Servicos\Workflow\FaseLoteAguardandoPreparacaoDeAjuste.cs" />
+    <Compile Include="Servicos\Workflow\FaseLoteAguardandoQualidadeCef.cs" />
+    <Compile Include="Servicos\Workflow\FaseLoteAguardandoRealizacaoDeAjuste.cs" />
+    <Compile Include="Servicos\Workflow\FaseLoteAguardandoReconhecimento.cs" />
+    <Compile Include="Servicos\Workflow\FaseLoteAjusteRealizado.cs" />
+    <Compile Include="Servicos\Workflow\FaseLoteAssinaturaFinalizada.cs" />
+    <Compile Include="Servicos\Workflow\FaseLoteBatimentoFinalizado.cs" />
+    <Compile Include="Servicos\Workflow\FaseLoteCapturaFinalizada.cs" />
+    <Compile Include="Servicos\Workflow\FaseLoteClassifierConcluido.cs" />
+    <Compile Include="Servicos\Workflow\FaseLoteEmAjuste.cs" />
+    <Compile Include="Servicos\Workflow\FaseLoteExportadoParaCloud.cs" />
+    <Compile Include="Servicos\Workflow\FaseLoteGeracaoTermosConcluido.cs" />
+    <Compile Include="Servicos\Workflow\FaseLoteIdentificacaoManual.cs" />
+    <Compile Include="Servicos\Workflow\FaseLoteIdentificado.cs" />
+    <Compile Include="Servicos\Workflow\FaseLotePreparacaoAjustes.cs" />
+    <Compile Include="Servicos\Workflow\FaseLoteQualidadeCefFinalizado.cs" />
+    <Compile Include="Servicos\Workflow\FaseLoteReconhecido.cs" />
+    <Compile Include="Servicos\Workflow\FaseLoteSetaClassifier.cs" />
+    <Compile Include="Servicos\Workflow\FaseLoteSetaIdentificacao.cs" />
+    <Compile Include="Servicos\Workflow\FaseLoteSetaQualidadeCef.cs" />
+    <Compile Include="Servicos\Workflow\FaseLoteSetaQualidadeM2sys.cs" />
+    <Compile Include="Servicos\Workflow\FaseLoteSetaReconhecimento.cs" />
+    <Compile Include="Servicos\Workflow\FaseLoteSetaTriagemPreOcr.cs" />
+    <Compile Include="Servicos\Workflow\FaseLoteTransmissaoFinalizada.cs" />
+    <Compile Include="Servicos\Workflow\FaseProcessoAguardandoConsulta.cs" />
+    <Compile Include="Servicos\Workflow\FaseProcessoAguardandoDigitacao.cs" />
+    <Compile Include="Servicos\Workflow\FaseProcessoAguardandoFormalistica.cs" />
+    <Compile Include="Servicos\Workflow\FaseProcessoAguardandoMontagem.cs" />
+    <Compile Include="Servicos\Workflow\FaseProcessoAguardandoProvaZero.cs" />
+    <Compile Include="Servicos\Workflow\FaseProcessoAguardandoRevisao.cs" />
+    <Compile Include="Servicos\Workflow\FaseProcessoAguardandoValidacao.cs" />
+    <Compile Include="Servicos\Workflow\FaseProcessoAprovado.cs" />
+    <Compile Include="Servicos\Workflow\FaseProcessoConsultado.cs" />
+    <Compile Include="Servicos\Workflow\FaseProcessoDigitado.cs" />
+    <Compile Include="Servicos\Workflow\FaseProcessoEnviado.cs" />
+    <Compile Include="Servicos\Workflow\FaseProcessoErro.cs" />
+    <Compile Include="Servicos\Workflow\FaseProcessoExportado.cs" />
+    <Compile Include="Servicos\Workflow\FaseProcessoFinalizado.cs" />
+    <Compile Include="Servicos\Workflow\FaseProcessoFormalisticaRealizada.cs" />
+    <Compile Include="Servicos\Workflow\FaseProcessoMontado.cs" />
+    <Compile Include="Servicos\Workflow\FaseProcessoPdfMontado.cs" />
+    <Compile Include="Servicos\Workflow\FaseProcessoProvaZeroRealizada.cs" />
+    <Compile Include="Servicos\Workflow\FaseProcessoRetornoFinalizado.cs" />
+    <Compile Include="Servicos\Workflow\FaseProcessoRevisaoRealizada.cs" />
+    <Compile Include="Servicos\Workflow\FaseProcessoSetaAprovacao.cs" />
+    <Compile Include="Servicos\Workflow\FaseProcessoSetaConsulta.cs" />
+    <Compile Include="Servicos\Workflow\FaseProcessoSetaDigitacao.cs" />
+    <Compile Include="Servicos\Workflow\FaseProcessoSetaEnvio.cs" />
+    <Compile Include="Servicos\Workflow\FaseProcessoSetaErro.cs" />
+    <Compile Include="Servicos\Workflow\FaseProcessoSetaExportacao.cs" />
+    <Compile Include="Servicos\Workflow\FaseProcessoSetaFormalistica.cs" />
+    <Compile Include="Servicos\Workflow\FaseProcessoSetaProvaZero.cs" />
+    <Compile Include="Servicos\Workflow\FaseProcessoSetaRetorno.cs" />
+    <Compile Include="Servicos\Workflow\FaseProcessoSetaRevisao.cs" />
+    <Compile Include="Servicos\Workflow\FaseProcessoSetaValidacao.cs" />
+    <Compile Include="Servicos\Workflow\FaseProcessoValidado.cs" />
+    <Compile Include="Servicos\Workflow\FasesDeProcesso.cs" />
+    <Compile Include="Servicos\Workflow\IFaseDeWorkflow.cs" />
+    <Compile Include="Servicos\Workflow\IFasesDeProcesso.cs" />
+    <Compile Include="Servicos\Workflow\IProcessaFase.cs" />
+    <Compile Include="Servicos\Workflow\IUnificaDocumentosServico.cs" />
+    <Compile Include="Servicos\Workflow\IValidaDatasDoComprovanteDeRenda.cs" />
+    <Compile Include="Servicos\Workflow\IValidaNomeConjugeIncompleto.cs" />
+    <Compile Include="Servicos\Workflow\IValidaRegraDeFaces.cs" />
+    <Compile Include="Servicos\Workflow\IValidaRegraDeListaNegra.cs" />
+    <Compile Include="Servicos\Workflow\ProcessaLoteEmTransmissao.cs" />
+    <Compile Include="Servicos\Workflow\UnificaDocumentosServico.cs" />
+    <Compile Include="Servicos\Workflow\ValidaNomeConjugeIncompleto.cs" />
+    <Compile Include="Servicos\Workflow\ValidaRegraDeFaces.cs" />
+    <Compile Include="Servicos\Workflow\ValidaRegraDeListaNegra.cs" />
+    <Compile Include="Servicos\Workflow\WorkflowDeLote.cs" />
+    <Compile Include="Servicos\Workflow\WorkflowDeProcesso.cs" />
+    <Compile Include="Storages\IBaixarArquivoAmazonS3.cs" />
+    <Compile Include="Storages\IConsultaPfStorage.cs" />
+    <Compile Include="Storages\IConsultaVertrosStorage.cs" />
+    <Compile Include="Storages\IPalavraReconhecidaStorage.cs" />
+    <Compile Include="Storages\IStorageFileTransfer.cs" />
+    <Compile Include="VerosQueues\QueueConfiguration.cs" />
+    <Compile Include="ViewModel\AjusteDeDocumentoViewModel.cs" />
+    <Compile Include="ViewModel\ArquivoDownloadViewModel.cs" />
+    <Compile Include="ViewModel\CaixaParaDevolucaoViewModel.cs" />
+    <Compile Include="ViewModel\CapturaViewModel.cs" />
+    <Compile Include="ViewModel\CertificadoDeEntregaViewModel.cs" />
+    <Compile Include="ViewModel\DetalheLogReprovacaoCefViewModel.cs" />
+    <Compile Include="ViewModel\DetalheProcessamentoQualidadeCefViewModel.cs" />
+    <Compile Include="ViewModel\DetalhesArquivoViewModel.cs" />
+    <Compile Include="ViewModel\DevolucaoColetaViewModel.cs" />
+    <Compile Include="ViewModel\DocumentoComProblemaViewModel.cs" />
+    <Compile Include="ViewModel\DocumentoParaSeparacaoViewModel.cs" />
+    <Compile Include="ViewModel\DocumentoViewModel.cs" />
+    <Compile Include="ViewModel\DocumentoVisualizadorViewModel.cs" />
+    <Compile Include="ViewModel\DossieStatusViewModel.cs" />
+    <Compile Include="ViewModel\DossieViewModel.cs" />
+    <Compile Include="ViewModel\EtiquetaCefViewModel.cs" />
+    <Compile Include="ViewModel\EtiquetaViewModel.cs" />
+    <Compile Include="ViewModel\FolhaDePreparoViewModel.cs" />
+    <Compile Include="ViewModel\HistoricoBasicoViewModel.cs" />
+    <Compile Include="ViewModel\LogDeAjusteViewModel.cs" />
+    <Compile Include="ViewModel\LogDeReprovacaoCefViewModel.cs" />
+    <Compile Include="ViewModel\LoteParaSeparacaoViewModel.cs" />
+    <Compile Include="ViewModel\LoteTriagemViewModel.cs" />
+    <Compile Include="ViewModel\PacotePreparoViewModel.cs" />
+    <Compile Include="ViewModel\PaginaFileTransferViewModel.cs" />
+    <Compile Include="ViewModel\PaginaParaSeparacaoViewModel.cs" />
+    <Compile Include="ViewModel\PaginasDoVisualizadorViewModel.cs" />
+    <Compile Include="ViewModel\PareadorViewModel.cs" />
+    <Compile Include="ViewModel\PesquisaDossieViewModel.cs" />
+    <Compile Include="ViewModel\PesquisaPacoteViewModel.cs" />
+    <Compile Include="ViewModel\ProcessamentoQualidadeCefViewModel.cs" />
+    <Compile Include="ViewModel\ProdutividadeOperadorViewModel.cs" />
+    <Compile Include="ViewModel\RegraVioladaReprovacaoCefViewModel.cs" />
+    <Compile Include="ViewModel\SolicitacaoDaColetaViewModel.cs" />
+    <Compile Include="ViewModel\UploadViewModel.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Servicos\Contas\" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Veros.Data\Veros.Data.csproj">
+      <Project>{5736f5e0-5773-4aaa-b826-2441f991f525}</Project>
+      <Name>Veros.Data</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Veros.Framework\Veros.Framework.csproj">
+      <Project>{1f95af6f-9ffd-4b33-86cd-08aa19e9c634}</Project>
+      <Name>Veros.Framework</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="app.config" />
+    <None Include="packages.config" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
